@@ -1,0 +1,17 @@
+**/*.pdf
+**/*.ps
+**/*.dvi
+
+**/*.bmp
+**/*.jpg
+**/*.png
+
+**/*.backup
+**/*.toc
+**/*.aux
+**/*.lof
+**/*.loc
+**/*.lot
+**/*.aux
+**/*.swp
+
