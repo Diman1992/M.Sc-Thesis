@@ -1,0 +1,181 @@
+\documentclass[11pt,a4paper,twoside]{article}
+\input{longheader.tex}
+\usepackage{xfrac}
+\usepackage{xcolor}
+\usepackage{setspace}\usepackage{threeparttable}
+
+
+ %\setlength{\parskip}{1.5ex}
+\begin{document}
+\begin{spacing}{1,2}
+\pagenumbering{Roman}
+
+% Anmerkung: Die Seitenraender wurden asymmetrisch gewaehlt,
+%            damit genug Platz fuer eine Klemmbindung da ist.
+%            Da neue Kapitel auf der rechten Seite (ungerade
+%            Seitennummer) beginnen sollten, muss ggf. am Ende
+%            des vorhergehenden Kapitels eine Leerseite
+%            eingefuegt werden:
+%
+%            \newpage
+%            \thispagestyle{empty}
+%            \ \\
+%            \newpage
+%
+%            Die Seitenraender koennen aber auch in der Datei Tex/global.tex
+%            veraendert werden.
+
+% >>> Titelseite <<<
+
+\newcommand{\thetitle}{Flavour Portal to Dark Matter}
+
+\thispagestyle{empty}
+\begin{center}
+
+\Huge\textbf{\thetitle}
+\vfill
+% Note that the size is given in normal parentheses
+% instead of curly brackets.
+% Define external vertices from bottom to top
+\vfill
+\Large
+Masterarbeit\\ zur Erlangung des akademischen Grades \\ Master of Science \\
+\vspace{20pt}
+\normalsize
+vorgelegt von \\[5pt]
+{\Large Dimitrios Skodras} \\[5pt]
+geboren in Aschaffenburg \\
+\vspace{20pt}
+Lehrstuhl für Theoretische Physik IV \\ Fakultät Physik \\
+Technische Universität Dortmund \\ 2014
+\end{center}
+\newpage
+% % >>> Gutachterseite <<<
+% \thispagestyle{empty}
+% \newpage
+% \cleardoublepage
+
+\thispagestyle{empty}
+\vspace*{\fill}
+\begin{tabbing}
+1. Gutachter : \=\kill
+1. Gutachter : \>Prof. Dr. Gudrun Hiller \\[11pt]
+2. Gutachter : \> \\[11pt]
+\end{tabbing}
+\vspace{11pt}
+Datum des Einreichens der Arbeit: 31. Oktober, 2016
+\newpage
+\thispagestyle{empty}
+\begin{flushright} 
+\textit{\glqq Es gibt nichts Praktischeres, als eine gute Theorie.\grqq}\\
+- \textit{Kant, Immanuel}\\
+\vspace{2cm}
+% \textit{``Was dürfen wir hoffen?''}\\
+% - \textit{Kant, Immanuel}\\
+% \vspace{2cm}
+% \textit{``Kein Mensch ist so wichtig, wie er sich nimmt.''}\\
+% - \textit{Kant, Immanuel}
+\end{flushright}
+
+\newpage
+
+
+% >>> Kurzfassung/Abstract <<<
+
+\thispagestyle{empty}
+%Kuzfassung
+ \section*{Kurzfassung}
+
+ \section*{Abstract}
+
+ \section*{Abrégé}
+ \newpage
+
+% >>> Hauptteil <<<
+
+%\addcontentsline{toc}{chapter}{Inhaltsverzeichnis}
+\end{spacing}
+\begin{spacing}{1,1}
+\tableofcontents\newpage
+
+\end{spacing}
+\begin{spacing}{1,2}
+
+\thispagestyle{empty}
+% \cleardoublepage
+
+\setcounter{page}{0}
+\pagenumbering{arabic}
+
+\section{Introduction}
+After the prediction (1964) and the experimental verification (2012) of the
+now called Higgs-boson, the Standard Model (SM) could be considered self-
+contained. The forecasts it makes for processes described therein are proven
+remarkably well by various experiments. At least at the energy scales they
+are currently operating. That said it already contains associations that the
+contributions to this magnificent theory made by our scientific forefathers are
+not the end of the story. It still lacks for example a quantum field theoretical
+description of gravity or does not contain the experimentally shown masses
+of the neutrinos. Besides, its dynamics depend on 19 parameters, including
+the masses of the fermions, which are quite a lot and are wanted to decrease
+in number by finding relations among one another. Furthermore cosmology
+tells us that the SM is only covering about tenty per cent of the mass content
+of the universe where the rest is made of the nowadays called dark matter
+(DM). Since this thesis contains the words flavour and dark matter, we
+should have a closer look on the way things stand at the moment.
+
+\subsection{Flavour in the SM}
+The Standard Model is a gauge quantum field theory whose internal symmetry is the unitary product group $SU(3)_C\times SU(2)_L\times U(1)_{Y_W}$ representing
+the quantum chromodynamics (QCD) whose charge is called color $C$ and the electroweak theory (GSW-Theory) whose charges are the weak isospin $T$ 
+(hold by left handed particles) and the 
+weak hypercharge $Y_W$. These interactions are mediated by a total oftwelve gauge boson fields, eight gluon fields $G_a$ for strong interactions and four 
+electroweak boson fields from which $W_1$, $W_2$, $W_3$ couple to the weak isospin and $B$ to the weak hypercharge. The field $\phi$ of the already mentioned 
+Higgs holds a special role in the SM. It is known that the boson fields $W^\pm$ and $Z$, responsible for weak processes, have nonzero masses. But their
+mass terms would break the gauge invariance of the lagrangian. So the Higgs-mechanism was considered wherein $\phi$ develops a non vanishin vacuum expectation
+value $v$ (vev) which breaks the electroweak symmetry spontaniously down to the electromagnetic symmetry $U(1)_Q$ resulting in a still massless photon field 
+$A$ and the three just named massive ones.
+\subsubsection*{Yukawa interaction}
+Not only the bosons get their masses from this mechanism but the fermions as well - at least the electrically charged ($Q$ ones - what is represented by the
+Yukawa (scalar-fermion interaction) term in the SM-lagrangian
+\begin{equation}
+ \mathcal{L}_{Y} = - \lambda^u_{ij}\, \bar Q^i_L \, \phi^c\, u^j_R - \lambda^d_{ij}\, \bar Q^i_L\, \phi\, d^j_R + \lambda^e_{ij}\, \bar L^i_L\, \phi\, e^j_R - \text{h.c.}.
+ \label{eq_yukawaSM}
+\end{equation}
+\noindent
+This equation needs some explanation. $\lambda^u$, $\lambda^d$ and $\lambda^e$ are $3\times 3$ real, so called yukawa matrices, thinking of three generations of fermions, and represent the 
+coupling of the fermions to the Higgs. ``h.c.'' stands for hermetian conjugate so that it holds for the antiparticles as well. 
+$Q_L$, $L_L$ and $\phi$ are doublets of the $SU(2)_L$, since they are build out of two fermion fields each holding a 
+weak isospin of $T=\sfrac12$ with the 3rd component $T_3 = \pm\sfrac12$, e.g. $L^2_L = (\nu_{\mu\, L}, \mu_L)^T_{\textbf{2}}$ with the left handed muon-neutrino and muon. 
+Their counterparts $u_R$, $d_R$ and $e_R$ are singlets of the $SU(2)_L$ because they have no weak isospin, e.g. $e^2_R = (\mu_R)_{\textbf{1}}$. After 
+the symmetry breaking and rotating the fermion fields in a basis where the yukawa matrices become diagonal, we can write down their mass terms 
+\begin{equation}
+ \mathcal{L}_m = -m^u_i \bar u^i_L u^i_R -m^d_i \bar d^i_L d^i_R -m^e_i \bar e^i_L e^i_R 
+\end{equation}
+\noindent
+where $m^{u,d,e}_i \sim \lambda^{u,d,e}_i \cdot v$. You could ask,
+what happened with a term like $\nu_R$ in \eqref{eq_yukawaSM}. This would imply a particle which has neither a color charge, nor electrical charge, nor 
+weak isospin and hence ($Q = T_3 + \sfrac12 Y_W$) no hypercharge which means that the SM is totally blind to it. Furthermore it seemed obvious not to be
+able to construct a neutrino mass since they were considered massless. But to answer the question we could add 
+such a term somehow when it can be shown for example that righthanded neutrinos exist, which is likely due to the measurements of neutrino oscillations.
+
+\subsubsection*{Weak interaction}
+Neutrino oscillations already suggest that we have to distinguish between 
+
+\subsection{DM in cosmology}
+
+\section{DM candidate coupling to light quarks in T' framework}
+\subsection{Aspects of discrete group}
+\subsection{Assigning particles to multiplets}
+\subsection{Messenger $\xi''$ mediating SM and DM}
+\subsubsection{DM annihilation into light mesons}
+\subsubsection{Meson-Mixing}
+\subsubsection{DM-nucleus scattering}
+
+
+\addcontentsline{toc}{section}{List of figures}
+\newpage\listoffigures\newpage
+\addcontentsline{toc}{section}{List of tables}
+\listoftables\newpage
+\end{spacing}
+
+\end{document}
