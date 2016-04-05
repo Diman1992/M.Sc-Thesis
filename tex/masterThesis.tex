@@ -3,6 +3,11 @@
 \usepackage{xfrac}
 \usepackage{xcolor}
 \usepackage{setspace}\usepackage{threeparttable}
+\usepackage{fancyhdr}
+\fancyfoot{}
+\fancyhead[RO,LE]{\thepage}
+\fancyhead[LO]{\leftmark}
+\fancyhead[RE]{\rightmark}
 
 
  %\setlength{\parskip}{1.5ex}
@@ -67,7 +72,7 @@ Datum des Einreichens der Arbeit: 31. Oktober, 2016
 \newpage
 \thispagestyle{empty}
 \begin{flushright} 
-\textit{\glqq Es gibt nichts Praktischeres, als eine gute Theorie.\grqq}\\
+\textit{\grqq Es gibt nichts Praktischeres, als eine gute Theorie.\grqq}\\
 - \textit{Kant, Immanuel}\\
 \vspace{2cm}
 % \textit{``Was dürfen wir hoffen?''}\\
@@ -102,10 +107,11 @@ Datum des Einreichens der Arbeit: 31. Oktober, 2016
 \begin{spacing}{1,2}
 
 \thispagestyle{empty}
-% \cleardoublepage
+ \cleardoublepage
 
-\setcounter{page}{0}
 \pagenumbering{arabic}
+\setcounter{page}{1}
+\pagestyle{fancy}
 
 \section{Introduction}
 After the prediction (1964) and the experimental verification (2012) of the
@@ -113,40 +119,41 @@ now called Higgs-boson, the Standard Model (SM) could be considered self-
 contained. The forecasts it makes for processes described therein are proven
 remarkably well by various experiments. At least at the energy scales they
 are currently operating. That said it already contains associations that the
-contributions to this magnificent theory made by our scientific forefathers are
-not the end of the story. It still lacks for example a quantum field theoretical
-description of gravity or does not contain the experimentally shown masses
+contributions to this magnificent theory made by our scientific forefathers might not be
+the end of the story. It still lacks for example a quantum field theoretical
+description for gravity or does not contain the experimentally shown masses
 of the neutrinos. Besides, its dynamics depend on 19 parameters, including
 the masses of the fermions, which are quite a lot and are wanted to decrease
 in number by finding relations among one another. Furthermore cosmology
-tells us that the SM is only covering about tenty per cent of the mass content
+tells us that the SM is only covering about twenty per cent of the mass content
 of the universe where the rest is made of the nowadays called dark matter
-(DM). Since this thesis contains the words flavour and dark matter, we
+(DM). Since this thesis is about flavour and dark matter, we
 should have a closer look on the way things stand at the moment.
 
 \subsection{Flavour in the SM}
 The Standard Model is a gauge quantum field theory whose internal symmetry is the unitary product group $SU(3)_C\times SU(2)_L\times U(1)_{Y_W}$ representing
 the quantum chromodynamics (QCD) whose charge is called color $C$ and the electroweak theory (GSW-Theory) whose charges are the weak isospin $T$ 
 (hold by left handed particles) and the 
-weak hypercharge $Y_W$. These interactions are mediated by a total oftwelve gauge boson fields, eight gluon fields $G_a$ for strong interactions and four 
-electroweak boson fields from which $W_1$, $W_2$, $W_3$ couple to the weak isospin and $B$ to the weak hypercharge. The field $\phi$ of the already mentioned 
-Higgs holds a special role in the SM. It is known that the boson fields $W^\pm$ and $Z$, responsible for weak processes, have nonzero masses. But their
-mass terms would break the gauge invariance of the lagrangian. So the Higgs-mechanism was considered wherein $\phi$ develops a non vanishin vacuum expectation
+weak hypercharge $Y_W$. These interactions are mediated by a total of twelve gauge vector boson fields, eight gluon fields $G_a$ for strong interactions and four 
+electroweak boson fields from which $W_1$, $W_2$, $W_3$ couple to the weak isospin and $B$ to the weak hypercharge. The field $\phi$ of the already mentioned scalar
+Higgs-boson holds a special role in the SM. It is known that the boson fields $W^\pm$ and $Z$, responsible for weak processes, have nonzero masses. But their
+mass terms would break the gauge invariance of the lagrangian. So the Higgs-mechanism was considered wherein $\phi$ develops a non vanishing vacuum expectation
 value $v$ (vev) which breaks the electroweak symmetry spontaniously down to the electromagnetic symmetry $U(1)_Q$ resulting in a still massless photon field 
 $A$ and the three just named massive ones.
 \subsubsection*{Yukawa interaction}
-Not only the bosons get their masses from this mechanism but the fermions as well - at least the electrically charged ($Q$) ones - what is represented by the
+Not only the bosons get their masses from this mechanism but the fermions as well - at least the electrically charged ($Q$) ones - which is represented by the
 Yukawa (scalar-fermion interaction) term in the SM-lagrangian
 \begin{equation}
- \mathcal{L}_{Y} = - y^u_{ij}\, \bar Q^i_L \, \phi^c\, u^j_R - y^d_{ij}\, \bar Q^i_L\, \phi\, d^j_R + y^e_{ij}\, \bar L^i_L\, \phi\, e^j_R - \text{h.c.}.
+ \mathcal{L}_{Y} = - y^u_{ij}\, \bar Q^i_L \, \phi^c\, u^j_R - y^d_{ij}\, \bar Q^i_L\, \phi\, d^j_R - y^e_{ij}\, \bar L^i_L\, \phi\, e^j_R + \text{h.c.}.
  \label{eq_yukawaSM}
 \end{equation}
 \noindent
-This equation needs some explanation. $y^u$, $y^d$ and $y^e$ are $3\times 3$ real, so called yukawa matrices, thinking of three generations of fermions, and represent the 
+$y^u$, $y^d$ and $y^e$ are $3\times 3$ (three generations) real, so called yukawa matrices and represent the 
 coupling of the fermions to the Higgs. ``h.c.'' stands for hermetian conjugate so that it holds for the antiparticles as well. 
 $Q_L$, $L_L$ and $\phi$ are doublets of the $SU(2)_L$, since they are build out of two fermion fields each holding a 
-weak isospin of $T=\sfrac12$ with the 3rd component $T_3 = \pm\sfrac12$, e.g. $L^2_L = (\nu_{\mu\, L}, \mu_L)^T_{\textbf{2}}$ with the left handed muon-neutrino and muon. 
-Their counterparts $u_R$, $d_R$ and $e_R$ are singlets of the $SU(2)_L$ because they have no weak isospin, e.g. $e^2_R = (\mu_R)_{\textbf{1}}$. After 
+weak isospin of $T=\sfrac12$ with the 3rd component $T_3 = \pm\sfrac12$, e.g. $L^2_L = (\nu_{\mu\, L}, \mu_L)^T_{\textbf{2}}$ with the left handed muon-neutrino and the muon. 
+Their counterparts $u_R$, $d_R$ and $e_R$ are singlets of the $SU(2)_L$ because they have no weak isospin, e.g. $e^2_R = (\mu_R)_{\textbf{1}}$, and hence don't take part
+in the weak interaction. After 
 the symmetry breaking and rotating the fermion fields in a basis where the yukawa matrices become diagonal, we can write down their mass terms 
 \begin{equation}
  \mathcal{L}_m = -m^u_i \bar u'^i_L u'^i_R -m^d_i \bar d'^i_L d'^i_R -m^e_i \bar e'^i_L e'^i_R 
@@ -154,7 +161,7 @@ the symmetry breaking and rotating the fermion fields in a basis where the yukaw
 \end{equation}
 \noindent
 where $m^\alpha_i \sim y^\alpha_i \cdot v$ ($\alpha = u,d,e$). Here you can see that the SM does not distinguish between generations. 
-It treats a left handed up quark the same way it treats a charm or a top. So if the eigenvalues of $m^\alpha$ would be degenerate, i.e. the masses would
+It treats a left handed up quark the same way it treats a left handed charm or a left handed top. So if the eigenvalues of $m^\alpha$ would be degenerate, i.e. the masses would
 be all the same, one would not have a method to differentiate them. 
 
 \vspace{-0.3cm}
@@ -165,12 +172,15 @@ able to construct a neutrino mass since they were considered massless. But to an
 such a term somehow when it can be shown for example that righthanded neutrinos exist, which is likely due to the measurements of neutrino oscillations.
 \vspace{1cm}
 \subsubsection*{Weak interaction}
-Neutrino oscillations suggest that \textit{flavour} is not conserved in nature. As this phenomenon is still rather young (2001) and not implemented in the 
+Neutrino oscillation is a process where a neutrino of one generation changes its \textit{flavour} while propagating through space. This suggest that 
+flavour is not a conserved quantum number in nature unlike the electrical charge for example. As this phenomenon is still rather young (2001) and not implemented in the 
 SM we already have flavour violation (FV) therein, in the quark sector. There is a huge list of Mesons and Baryons (composites of one quark and one anti-quark,
-or three quarks respectively) decaying in others with different quark content enabled by the $W$-bosons. Formerly started by Cabibbo and pursued by 
-Kobayashi and Maskawa for CP-violation reasons (charge conjugation C, parity P), the CKM-matrix is an unitary $3\times 3$ matrix which can be thought of as a rotation
-matrix, rotating the weak eigenstates of the down-type quarks $d^i$ (like in \eqref{eq_yukawaSM}) in the mass eigenstates $d'^i$ 
-(like in \eqref{eq_massSM}) by three Euler angles, $\theta_{12} = \theta_C$ called Cabibbo angle as well as $\theta_{23}$ and $\theta_{13}$.
+or three quarks, respectively) decaying in others with different quark content enabled by the $W$-bosons. So it was thought, that the down-type quark mass
+eigenstates $d^i$ are superpositions of their interaction eigenstates $d^i$. Formerly started by Cabibbo and pursued by 
+Kobayashi and Maskawa (1973) for CP-violation reasons (charge conjugation C, parity P), the CKM-matrix as an unitary $3\times 3$ matrix was invented,
+which can be thought of as a rotation
+matrix, rotating the weak eigenstates of the down-type quarks in the mass eigenstates by three Euler angles, $\theta_{12} = \theta_C$ called Cabibbo angle 
+as well as $\theta_{23}$ and $\theta_{13}$.
 \begin{equation}
  \begin{pmatrix}
   d' \\ s' \\ b'
@@ -196,7 +206,7 @@ Now comes one of the basic questions motivating this thesis: Are these patterns 
 could serve as a blindman's stick for the SM? We go with our guts and prefer the latter suggestion.
 
 \subsection{DM in cosmology}
-dfasdölkj\\d\\d\\d\\d\\d\\d\\d\\d\\d\\d\\d
+% dfasdölkj\\d\\d\\d\\d\\d\\d\\d\\d\\d\\d\\d
 
 \section{DM candidate coupling to light quarks in T' framework}
 \subsection{Aspects of discrete group}
