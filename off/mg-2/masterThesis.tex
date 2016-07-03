@@ -1,0 +1,181 @@
+\documentclass[11pt,a4paper,twoside]{article}
+\input{longheader.tex}
+\usepackage{xfrac}
+\usepackage{xcolor}
+\usepackage{setspace}\usepackage{threeparttable}
+\usepackage{fancyhdr}
+\fancyfoot{}
+\fancyhead[RO,LE]{\thepage}
+\fancyhead[LO]{\leftmark}
+\fancyhead[RE]{\rightmark}
+
+
+ %\setlength{\parskip}{1.5ex}
+\begin{document}
+\begin{spacing}{1,2}
+\pagenumbering{Roman}
+
+% Anmerkung: Die Seitenraender wurden asymmetrisch gewaehlt,
+%            damit genug Platz fuer eine Klemmbindung da ist.
+%            Da neue Kapitel auf der rechten Seite (ungerade
+%            Seitennummer) beginnen sollten, muss ggf. am Ende
+%            des vorhergehenden Kapitels eine Leerseite
+%            eingefuegt werden:
+%
+%            \newpage
+%            \thispagestyle{empty}
+%            \ \\
+%            \newpage
+%
+%            Die Seitenraender koennen aber auch in der Datei Tex/global.tex
+%            veraendert werden.
+
+% >>> Titelseite <<<
+
+\newcommand{\thetitle}{DM sheds light (up)on flavor anomalies}
+
+\thispagestyle{empty}
+\begin{center}
+
+\Huge\textbf{\thetitle}
+\vfill
+% Note that the size is given in normal parentheses
+% instead of curly brackets.
+% Define external vertices from bottom to top
+\vfill
+
+\end{center}
+\newpage
+% % >>> Gutachterseite <<<
+% \thispagestyle{empty}
+% \newpage
+% \cleardoublepage
+
+
+
+
+% >>> Kurzfassung/Abstract <<<
+
+
+% >>> Hauptteil <<<
+
+%\addcontentsline{toc}{chapter}{Inhaltsverzeichnis}
+
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\section{Model outline}
+The SM-group $SU(3)_C\times SU(2)_L\times U(1)_{Y_W}$ gets extended by additional groups as $U(1)_{B'}\times U(1)_{L'}\times U(1)_{\chi}$ 
+\cite{Grip} and even three more $G_F = A_4 \times U(1)_\text{FN} \times Z_3$ as flavour groups. Following \cite{Grip}, we introduce a new fermion $\psi$ which eventually serves
+as a DM particle and two scalars $\Phi_l$ and $\Phi_q$ coupling to leptons or quarks, respectively. Some representations for $\Phi_l$ were just taken out
+for several interactions coming up which would cause problems. So $G_F$ shall prohibit these interactions by charging the respective particles so that
+the representations themselves are again enabled.\\
+\noindent This can be achieved in many ways depending on what you want to get in the end. Our main interest here is a particular position for the muon in
+order to explain anomalies in the $B$-sector, e.g. $R_K$. Therefore, we want $\Phi_l$ to only couple to muons which is achieved by a certain pattern 
+of representing the particles which can be seen in table \ref{tab_model}.
+\begin{table}
+ \begin{tabular}{c|c|c|c}
+  Field & $SU(3)_C\times SU(2)_L\times U(1)_{Y_W}$ & $A_4 \times U(1)_\text{FN} \times Z_3$ & $U(1)_\chi$\\
+  \hline
+  $Q^i_L$ & (3,2,$\frac16$) & (1,$a^i$,$\omega$) & 0\\
+  $U^i_R$ & (3,1,$\frac23$) & (1,$b^i$,$\omega^2$)& 0\\
+  $D^i_R$ & (3,1,$-\frac13$) & (1,$c^i$,$\omega^2$)& 0\\
+  $L^i_L$ & (1,2,$-\frac12$) & (3,0,$\omega$)& 0\\
+  $E^i_R$ & (1,1,$-1$) & ($1 {^(} {'} {^,} '' {^)} $,$d^i$,$\omega^2$)& 0\\
+  $\Phi_H$ & (1,2,$\frac12$) & (1,0,1)& 0\\
+  \hline
+  $\psi$ & (1,1,0) & (1,0,$\omega^2$)& 1\\
+  $\Phi_l$ & (1,2,-$\frac12$) & ($1''$,0,1)& 1\\
+  $\Phi_q$ & (3,2,$\frac16$) & ($1$,0,1)& 1\\
+  \hline
+  $\Phi_T$ & (1,1,0) & ($3$,0,1)& 0\\
+
+ \end{tabular}
+\caption{Transformation rules for our SM and BSM fields. The index $i$ stands for the three generations which influence the charges under the 
+$U(1)_\text{FN}$ $a-d$. The representation for $E_R$ also depends on the generation ($e^c \sim 1$, $\mu \sim 1''$, $\tau \sim 1'$).}
+\label{tab_model}
+\end{table}
+The Yukawa part of our renormalizable lagrangian is given by
+\begin{align}
+ \mathcal{L}_\text{yuk} = \alpha^q_i \bar \psi_R Q^i_L \Phi_q + \alpha^l_i\bar \psi_R L^i_L \Phi_l \frac{\Phi_T}{\Lambda_A} + \text{h.c.}
+\end{align}
+with the couplings $\alpha$. The scalar $\Phi_T$ helps to make it $A_4$ invariant in a way that $\Phi_l$ only couples to muons. At the scale $\Lambda_A$ 
+the $A_4$ group breaks spontaneously and gives $\Phi_T$ a vacuum expectation value $\langle \Phi_T \rangle = v_T = \epsilon \Lambda_A$ with a small parameter
+$\epsilon \approx 0.2$.
+
+\textbf{The lagrangian has additional FN-terms depending on their respective charge. In order to save free parameters I would guess that the breaking scales
+of the groups might be equal (Feruglio et al. do this). The A4 ensures the interaction to muons only. I don't see how to give the b-mesons a special role
+as well, so we do not observe something in the $K\rightarrow \pi \mu\mu / K \rightarrow \pi e e$ fraction. Direct DM decay $\psi\rightarrow fff$ appears to
+be forbidden by at least one group in the end. DM annihilation $\psi\psi\rightarrow ff$ occurs at tree level.}
+
+
+\section{Possible processes to look at}
+Now we can check on some processes to give estimations for the masses of our BSM particles.
+\subsection{anomalous magnetic momentum of the muon $\Delta a_\mu$}
+This is probably the easiest process in this model since it occurs at one-loop level and has no hadronic contributions. The Feynman graph can be seen
+in figure \ref{pic_feyn} and will be computed now and follows mainly \cite{Peskin}.
+\begin{figure}
+ \includegraphics[width=0.7\textwidth]{feynmg2.jpg}
+ \centering
+ \caption{Feynman graph contributing to the anomalous magnetic moment of the muon. Since $\psi$ is electrically neutral, this is the only diagram}
+ \label{pic_feyn}
+\end{figure}
+The matrix element $M$ reads
+\begin{align}
+ M^\rho = \lambda_\mu^2 e \int \frac{\dx^4 k}{(2\pi)^4} \frac{(\slashed{k}+\slashed{p} + m)(2k-q)^\rho}{[(k+p)^2-m^2+\text{i}\epsilon][k^2-M^2+\text{i}\epsilon][(k-q)^2-M^2+\text{i}\epsilon]}
+\end{align}
+contracting with the polarization vector $\epsilon_\rho$ of the outgoing photon. The masses are $m=m_\psi$ and $M = M_{\Phi_l}$. Using Feynman 
+parametrization, this can be written as
+\begin{align}
+ M^\rho = \lambda_\mu^2 e \int \frac{\dx^4 k}{(2\pi)^4} (\slashed{k}+\slashed{p} + m)(2k-q)^\rho \int\limits_0^1 \dx x \dx y \dx z \delta(x+y+z-1) \frac{2}{D^3}
+\end{align}
+with the denominator $D$ we want to facilitate now.
+\begin{align}
+ D =& x(k^2-M^2 + y((k-q)^2-M^2) + z((k+p)^2-m^2) + (x+y+z)\text{i}\epsilon\\
+ =& k^2 + 2k(zp-yq) + yq^2 + zp^2 - M^2(x+y) - m^2z + \text{i}\epsilon
+\end{align}
+where we want to shift $k$ to $l=k-yq+zp$ which leaves $D$ being quadratic in $l$
+\begin{align}
+ D = l^2 - \Delta + \text{i}\epsilon,
+\end{align}
+with 
+\begin{align}
+ \Delta := -yq^2 -zp^2 + M^2(x+y)-m^2z.
+\end{align}
+The numerator gets shifted as well. After keeping only the terms quadratic in $l$ or not depending on $l$ at all, we are left with
+\begin{align}
+ N^\rho = 2\slashed{l} l^\rho + y^2\slashed{q}q^\rho + z^2\slashed{p}p^\rho + yz(\slashed{q}p^\rho+\slashed{p}q^\rho) + y\slashed{q}q^\rho + z\slashed{p}q^\rho + \slashed{p}q^\rho \\ + m(yq^\rho-q^\rho-zp^\rho)    .
+\end{align}
+Now we can perform the momentum integral. That for the term constant in $l$ is non-divergent and gives a finite expression 
+\begin{align}
+ \int \frac{\dx^4 l}{(2\pi)^4} \frac{1}{(l-\Delta)^m} =& \frac{\text{i}(-1)^m}{(4\pi)^2}\frac{1}{(m-1)(m-2)} \frac{1}{\Delta^{m-2}} \\
+ \stackrel{m=3}{=}& \frac{-\text{i}}{(4\pi)^2}\frac{1}{2\Delta}.
+\end{align}
+If we want to compute the other one, we encounter a divergent integral. We use dimensional regularization and a Master formula from a problem sheet 
+from G. Hiller
+\begin{align}
+ \int \frac{\dx^d l}{(2\pi)^d} \frac{l^\mu l^\nu}{(l^2-\Delta)^n} =& \frac{\text{i}g^{\mu\nu}}{32\pi^2} \frac{\Gamma(n-3+\epsilon)}{\Gamma(n)}\left(-\frac{1}{\Delta}\right)^{n-3}\left(\frac{4\pi \mu^2}{\Delta}\right)^\epsilon\\
+ =& \frac{\text{i}g^{\mu\nu}}{64\pi^2} \left(\frac{1}{\epsilon}-\gamma_E + \ln\left(\frac{4\pi\mu^2}{\Delta} \right) +\mathcal{O}(\epsilon) \right)
+\end{align}
+with the generalized factorial $\Gamma(x)$, the dimension $d=4-2\epsilon$ and $\mu$ to ensure the action to be dimensionless. In the second step
+$\Gamma(\epsilon)$ and the last fraction were expanded. \\
+\textbf{This is where I got so far. I try to figure out how to deal with the divergence in $M$ and how to get the $\Delta a_\mu$ out of this calculus.
+So far I'd like to know, if you see problems with the representations and maybe with the calculus (which I will rerun at least one more time.)}
+
+
+\subsection{$B \rightarrow K\mu\mu$}
+\subsection{$b\rightarrow s\gamma$}
+\subsection{$\bar B_s B_s$ - mixing}
+\subsection{DM-annihilation $\bar \psi\psi \rightarrow \bar f f$ }
+
+
+
+\newpage
+\end{spacing}
+\newpage
+\begin{thebibliography}{xxx}
+ \bibitem[1]{Grip}B. Gripaios et al. \textit{Linear flavour violation and anomalies in $B$ physics}\\ \href{http://arxiv.org/abs/1509.05020v1}{http://arxiv.org/abs/1509.05020v1}
+ \bibitem[2]{Peskin}M. Peskin et al. \textit{An Introduction To Quantum Field Theory}\\ ISBN: 0-201-50397-2
+\end{thebibliography}
+\end{document}
