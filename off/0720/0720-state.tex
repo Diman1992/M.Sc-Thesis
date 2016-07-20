@@ -1,0 +1,162 @@
+\documentclass[11pt,a4paper,twoside]{article}
+\input{longheader.tex}
+\usepackage{xfrac}
+\usepackage{xcolor}
+\usepackage{setspace}\usepackage{threeparttable}
+\usepackage{fancyhdr}
+\fancyfoot{}
+\fancyhead[RO,LE]{\thepage}
+\fancyhead[LO]{\leftmark}
+\fancyhead[RE]{\rightmark}
+
+
+ %\setlength{\parskip}{1.5ex}
+\begin{document}
+\begin{spacing}{1,2}
+\pagenumbering{Roman}
+
+% Anmerkung: Die Seitenraender wurden asymmetrisch gewaehlt,
+%            damit genug Platz fuer eine Klemmbindung da ist.
+%            Da neue Kapitel auf der rechten Seite (ungerade
+%            Seitennummer) beginnen sollten, muss ggf. am Ende
+%            des vorhergehenden Kapitels eine Leerseite
+%            eingefuegt werden:
+%
+%            \newpage
+%            \thispagestyle{empty}
+%            \ \\
+%            \newpage
+%
+%            Die Seitenraender koennen aber auch in der Datei Tex/global.tex
+%            veraendert werden.
+
+% >>> Titelseite <<<
+
+\newcommand{\thetitle}{DM sheds light (up)on flavor anomalies}
+
+\thispagestyle{empty}
+\begin{center}
+
+\Huge\textbf{\thetitle}
+\vfill
+% Note that the size is given in normal parentheses
+% instead of curly brackets.
+% Define external vertices from bottom to top
+\vfill
+
+\end{center}
+\newpage
+% % >>> Gutachterseite <<<
+% \thispagestyle{empty}
+% \newpage
+% \cleardoublepage
+
+
+
+
+% >>> Kurzfassung/Abstract <<<
+
+
+% >>> Hauptteil <<<
+
+%\addcontentsline{toc}{chapter}{Inhaltsverzeichnis}
+
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\section{Model outline}
+
+\begin{table}
+ \begin{tabular}{c|c|c|c}
+  Field & $SU(3)_C\times SU(2)_L\times U(1)_{Y_W}$ & $A_4 \times U(1)_\text{FN} \times Z_3$ & $U(1)_\chi$\\
+  \hline
+  $Q^i_L$ & (3,2,$\frac16$) & (1,$a^i$,$\omega$) & 0\\
+  $U^i_R$ & (3,1,$\frac23$) & (1,$b^i$,$\omega^2$)& 0\\
+  $D^i_R$ & (3,1,$-\frac13$) & (1,$c^i$,$\omega^2$)& 0\\
+  $L^i_L$ & (1,2,$-\frac12$) & (3,0,$\omega$)& 0\\
+  $E^i_R$ & (1,1,$-1$) & ($1 {^(} {'} {^,} '' {^)} $,$d^i$,$\omega^2$)& 0\\
+  $\Phi_H$ & (1,2,$\frac12$) & (1,0,1)& 0\\
+  \hline
+  $\psi$ & (1,1,0) & (1,0,$\omega^2$)& 1\\
+  $\Phi_l$ & (1,2,-$\frac12$) & ($1''$,0,1)& 1\\
+  $\Phi_q$ & (3,2,$\frac16$) & ($1$,0,1)& 1\\
+  \hline
+  $\Phi_T$ & (1,1,0) & ($3$,0,1)& 0\\
+
+ \end{tabular}
+\caption{Transformation rules for our SM and BSM fields. The index $i$ stands for the three generations which influence the charges under the 
+$U(1)_\text{FN}$ $a-d$. The representation for $E_R$ also depends on the generation ($e^c \sim 1$, $\mu \sim 1''$, $\tau \sim 1'$).}
+\label{tab_model}
+\end{table}
+\begin{align}
+ \mathcal{L}_\text{yuk} = \alpha^q_i \bar \psi_R Q^i_L \Phi_q + \alpha^l_i\bar \psi_R L^i_L \Phi_l + \text{h.c.}
+\end{align}
+
+
+
+
+\section{Possible processes to look at}
+Now we can check on some processes to give estimations for the masses of our BSM particles.
+\subsection{anomalous magnetic momentum of the muon $\Delta a_\mu$}
+
+\subsection{$B \rightarrow K\mu\mu$}
+The goal for this section was to reproduce the effective Lagrangian for processes depicted in figure \ref{pic_boxqqll} in eq. 3.1 from \cite{Grip} which reads
+\begin{align}
+ \mathcal{L}_\text{eff} \supset \frac{K(x_q,x_l)}{m^2}\frac{\alpha_i^{q*} \alpha_j^{q*} \alpha_m^l \alpha_n^l}{64\pi^2}\left[\left(\bar Q^i_L\gamma^\mu Q^j_L\right)\left(L^m_L\gamma_\mu L^n_L\right)+\frac59\left(\bar Q^i_L\gamma^\mu \vec \tau Q^j_L\right)\left(L^m_L\gamma_\mu \vec \tau L^n_L\right)\right].
+ \label{eq_effLag}
+\end{align}
+with $x_i = M_i^2/m^2$. Indeed I reproduced the loop function which gave me an additional 1/2 factor compared to the one stated in the paper. The normalisation of 1/$(2\pi)^4$, $2\pi^2$
+from the $\Omega$-Integral a $1/4$ from reexpressing the internal momentum and the mentioned 1/2 from the $q$-integral add up to 1/$64\pi^2$. From the 
+Fierz-transformation \cite{Fierz}
+\begin{align}
+ e_S(1234) = FSF e_V(4231)
+\end{align}
+we get just a factor 1, if we say we start with scalar couplings but want (axial-)vector ones. I want to sketch the main steps for \eqref{eq_effLag}. 
+To me the effective Lagrangian expresses the 4-point-fermion-operatorwith an effective coupling which can be obtained by the full theory. 
+So we start with the matrix element in the full theory
+\begin{align}
+ M &= \alpha_i^{q*} \alpha_j^{q*} \alpha_m^l \alpha_n^l \int \frac{\dx^4 q}{(2\pi)^4} \bar L_L^n \frac{\slashed{q}}{q^2-m^2+\text{i}\epsilon}Q_L^j \Delta_q \Delta_l \bar L_L^m \frac{\slashed{q}-\slashed{p_1}-\slashed{p_2}}{q^2-m^2+\text{i}\epsilon}Q_L^i\\
+ &=\frac{\alpha^4}{(2\pi)^4} \int \dx^4 q \frac{q^\rho}{q^2-m^2}\Delta_q \Delta_l \frac{q^\sigma}{q^2-m^2} \left(\bar L_L^n \gamma_\rho Q_L^j\right)\left(\bar L_L^m \gamma_\sigma Q_L^i\right)
+\end{align}
+The $\Delta$ are the propagators of the scalars $\Phi_q$ and $\Phi_l$. The external momenta are neglectable. \textbf{Do the i$\epsilon$ terms disappear due to
+Wick-rotation?} We can reexpress $q^\rho q^\sigma = q^2 g^{\rho\sigma}/4$ under the integral. After going into spherical coordinates every unequal combination
+of $\rho$ and $\sigma$ would include an uneven function with respect to at least one angle and therefore lead to zero after the spherical integration. 
+\textbf{For the moment I'm not sure, where the 4 is coming from.} Maybe when it is contracted with the $\gamma$ for example it gives another 4 from dimension.
+From the $\Omega$-integration we get a $2\pi^2$. Another thing concerning about the Fierzing. I said that I transform from scalar to vector coupling whilst
+swapping the first and fourth isospin-doublet. \textbf{But shouldn't it be a transformation from vector to vector when we look at the operator in the expression?}
+Well they are still scalar couplings... 
+\begin{align}
+ M &= \frac{\alpha^4}{32\pi^2} \int\limits_0^\infty \dx q \frac{q^5}{(q^2-m^2)^2(q^2-M_l^2)(q^2-M_q^2)} \left(\bar Q_L^i \gamma_\rho Q_L^j\right)\left(\bar L_L^m \gamma_\rho L_L^n\right).
+\end{align}
+The integral, computed with \texttt{mathematica}, yields
+\begin{align}
+ \int \limits_0^\infty \dx q \frac{q^5}{D} = \frac{K(x_q,x_l)}{2m^2}
+\end{align}
+giving the correct prefactor. So, this was actually not the major thing I did the last three weeks but this will certainly be in my master thesis. 
+One can already see that eq. 3.1 from \cite{Grip} is not totally reproduced. The second term with the Pauli matrices $\vec \tau$ is not there.
+Now I have two problems concerning this term. First, why does it exist anyway and second, how do I get the prefactor of 5/9. In respect of the former, I think
+we said that it is there because these two terms are the possible $SU(2)_L$ invariant ones we can build. But J. Brod told me that this term should drop out 
+of the box calculus and should not be put in just by generality. 
+
+\begin{figure}[t]
+ \includegraphics[width=\textwidth]{boxBs-mumu.png}
+ \caption{Box diagram for $qq\rightarrow ll$ processes. The numbers in the parentheses are the electric charges of the components of the respective $SU(2)_L$-multiplets.}
+ \label{pic_boxqqll}
+\end{figure}
+
+
+\subsection{$\bar B_s B_s$ - mixing}
+\subsection{DM-annihilation $\bar \psi\psi \rightarrow \bar f f$ }
+
+
+
+\newpage
+\end{spacing}
+\newpage
+\begin{thebibliography}{xxx}
+ \bibitem[1]{Grip}B. Gripaios et al. \textit{Linear flavour violation and anomalies in $B$ physics}\\ \href{http://arxiv.org/abs/1509.05020v1}{http://arxiv.org/abs/1509.05020v1}
+ \bibitem[2]{Peskin}M. Peskin et al. \textit{An Introduction To Quantum Field Theory}\\ ISBN: 0-201-50397-2
+ \bibitem[3]{Fierz}J.F. Nieves et al. \textit{Generalized Fierz identities}
+\end{thebibliography}
+\end{document}
