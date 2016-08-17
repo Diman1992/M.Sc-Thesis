@@ -90,10 +90,8 @@ $U(1)_\text{FN}$ $a-d$. The representation for $E_R$ also depends on the generat
 \label{tab_model}
 \end{table}
 \begin{align}
- \mathcal{L}_\text{yuk} = \alpha^q_i \bar \psi_R Q^i_L \Phi_q + \alpha^l_i\bar \psi_R L^i_L \Phi_l + \text{h.c.}
+ \mathcal{L}_\text{yuk} = \alpha^q_i \bar \psi Q^i_L \Phi_q + \alpha^l_i\bar \psi L^i_L \Phi_l + \text{h.c.}
 \end{align}
-
-
 
 
 \section{Possible processes to look at}
@@ -108,23 +106,30 @@ The goal for this section was to reproduce the effective Lagrangian for processe
 \end{align}
 with $x_i = M_i^2/m^2$. Indeed I reproduced the loop function which gave me an additional 1/2 factor compared to the one stated in the paper. The normalisation of 1/$(2\pi)^4$, $2\pi^2$
 from the $\Omega$-Integral a $1/4$ from reexpressing the internal momentum and the mentioned 1/2 from the $q$-integral add up to 1/$64\pi^2$. From the 
+\begin{figure}[t]
+ \includegraphics[width=\textwidth]{boxBs-mumu.png}
+ \caption{Box diagram for $qq\rightarrow ll$ processes. The numbers in the parentheses are the electric charges of the components of the respective $SU(2)_L$-multiplets.}
+ \label{pic_boxqqll}
+\end{figure}
 Fierz-transformation \cite{Fierz}
 \begin{align}
- e_S(1234) = FSF e_V(4231)
+ e_S(1234) = F e_V(3214)
 \end{align}
-we get just a factor 1, if we say we start with scalar couplings but want (axial-)vector ones. I want to sketch the main steps for \eqref{eq_effLag}. 
+
+\noindent 
+with $e_\Gamma(abcd) = (a\Gamma b)(c\Gamma d)$, we get just a factor 1, if we say we start with scalar couplings but want (axial-)vector ones. I want to sketch the main steps for \eqref{eq_effLag}. 
 To me the effective Lagrangian expresses the 4-point-fermion-operatorwith an effective coupling which can be obtained by the full theory. 
 So we start with the matrix element in the full theory
 \begin{align}
- M &= \alpha_i^{q*} \alpha_j^{q*} \alpha_m^l \alpha_n^l \int \frac{\dx^4 q}{(2\pi)^4} \bar L_L^n \frac{\slashed{q}}{q^2-m^2+\text{i}\epsilon}Q_L^j \Delta_q \Delta_l \bar L_L^m \frac{\slashed{q}-\slashed{p_1}-\slashed{p_2}}{q^2-m^2+\text{i}\epsilon}Q_L^i\\
+ M &= \alpha_i^{q*} \alpha_j^{q*} \alpha_m^l \alpha_n^l \int \frac{\dx^4 q}{(2\pi)^4} \bar L_L^n \frac{\slashed{q}}{q^2-m^2+\text{i}\epsilon}Q_L^j \Delta_q \Delta_l \bar Q_L^m \frac{\slashed{q}-\slashed{p_1}-\slashed{p_2}}{q^2-m^2+\text{i}\epsilon}L_L^i\\
  &=\frac{\alpha^4}{(2\pi)^4} \int \dx^4 q \frac{q^\rho}{q^2-m^2}\Delta_q \Delta_l \frac{q^\sigma}{q^2-m^2} \left(\bar L_L^n \gamma_\rho Q_L^j\right)\left(\bar L_L^m \gamma_\sigma Q_L^i\right)
 \end{align}
 The $\Delta$ are the propagators of the scalars $\Phi_q$ and $\Phi_l$. The external momenta are neglectable. \textbf{Do the i$\epsilon$ terms disappear due to
 Wick-rotation?} We can reexpress $q^\rho q^\sigma = q^2 g^{\rho\sigma}/4$ under the integral. After going into spherical coordinates every unequal combination
 of $\rho$ and $\sigma$ would include an uneven function with respect to at least one angle and therefore lead to zero after the spherical integration. 
 \textbf{For the moment I'm not sure, where the 4 is coming from.} Maybe when it is contracted with the $\gamma$ for example it gives another 4 from dimension.
-From the $\Omega$-integration we get a $2\pi^2$. Another thing concerning about the Fierzing. I said that I transform from scalar to vector coupling whilst
-swapping the first and fourth isospin-doublet. \textbf{But shouldn't it be a transformation from vector to vector when we look at the operator in the expression?}
+Another thing concerning about the Fierzing. I said that I transform from scalar to vector coupling whilst
+swapping the first and third isospin-doublet. \textbf{But shouldn't it be a transformation from vector to vector when we look at the operator in the expression?}
 Well they are still scalar couplings... 
 \begin{align}
  M &= \frac{\alpha^4}{32\pi^2} \int\limits_0^\infty \dx q \frac{q^5}{(q^2-m^2)^2(q^2-M_l^2)(q^2-M_q^2)} \left(\bar Q_L^i \gamma_\rho Q_L^j\right)\left(\bar L_L^m \gamma_\rho L_L^n\right).
@@ -137,14 +142,86 @@ giving the correct prefactor. So, this was actually not the major thing I did th
 One can already see that eq. 3.1 from \cite{Grip} is not totally reproduced. The second term with the Pauli matrices $\vec \tau$ is not there.
 Now I have two problems concerning this term. First, why does it exist anyway and second, how do I get the prefactor of 5/9. In respect of the former, I think
 we said that it is there because these two terms are the possible $SU(2)_L$ invariant ones we can build. But J. Brod told me that this term should drop out 
-of the box calculus and should not be put in just by generality. 
-
+of the box calculus and should not be put in just out of generality. The 5/9 can come from Clebsch-Gordan as we stated. So I checked for the singlet
+representation in the $\textbf{2}_{Q,L}\times\textbf{3}_\Phi\times\textbf{4}_\Psi$ product. 
+\begin{align}
+ \nonumber
+ 2\times3\times4 \subset 1 =\frac{1}{\sqrt4}&\left(D_1\Phi_1\Psi_4 - \frac{1}{\sqrt{3}}(D_2\Phi_1+\sqrt{2}D_1\Phi_2)\Psi_3  + \right. \\ 
+  &+\left.\frac{1}{\sqrt{3}}(\sqrt{2}D_2\Phi_2+D_1\Phi_3)\Psi_2 - D_2\Phi_3\Psi_1  \right)
+\label{eq_CGSU2singlet}
+ \end{align}
+My goal herein is to check which components of each multiplet I can put together at one vertex which is $SU(2)$-invariant. So I thought I could make a 
+coup double and write down every possible process in the model like $(\bar u l)(\bar l u)$ or $(\bar d l)(\bar l d)$ etc (which can be fierzed later on)
+and take the Clebsch Gordan coefficient at all four vertices per possible diagram for a certain process. I will give a short example in figure \ref{pic_CG}.
 \begin{figure}[t]
- \includegraphics[width=\textwidth]{boxBs-mumu.png}
- \caption{Box diagram for $qq\rightarrow ll$ processes. The numbers in the parentheses are the electric charges of the components of the respective $SU(2)_L$-multiplets.}
- \label{pic_boxqqll}
+ \includegraphics[width=1.2\textwidth]{CG.png}
+ \caption{Three contributing diagrams for $dd\rightarrow ll$. Since you integrate over all internal momenta, the signs of the electic charges which are given
+ within the box aren't known. The roman numers represent the component of the respective multiplet}
+ \label{pic_CG}
 \end{figure}
+The upper left box looks like $D_2\Phi_3\Psi_1$ for the first roman numbers which gives compared to \eqref{eq_CGSU2singlet}  $-\frac{1}{2\sqrt{3}}$. 
+As the inner momentum changes its sign during the integration, the inner particles becoming their charged conjugates which have due to the change of their
+hypercharges another sign and order with respect to the charged components. The second roman numbers represent them and they give the same Clebsch Gordan
+coefficient. Since we have four vertices, the number I will keep is $-\frac{1}{2\sqrt{3}}^4$. The upper right with the same argumentation yields a CG-coefficient
+of $\frac{\sqrt{2}}{2\sqrt{3}}^4$ and the middle one $-\frac{1}{2}^4$. Now we add them up and get $\frac{7}{72}$ but we wanted $1+\frac59 = \frac{14}{9}$.
+The factor between these two results is 16 which I still don't have an reason for. \textbf{But to me it looks like the right way to get this prefactor}.
+That means that at least for our model A, the second term does not occur since we have no charged currents and all other processes are equal by means 
+that they have the same CG-coefficients at each vertex. To get the 5/9 and the Pauli-term right was my main task the last two weeks. \textbf{If you want to, we
+can talk about these things next week.}
 
+\newpage
+\begin{table}[ht]
+ \begin{tabular}{c|c|c|c}
+  Field & $SU(3)_C\times SU(2)_L\times U(1)_{Y_W}$ & $A_4 \times U(1)_\text{FN} \times Z_3$ & $U(1)_\chi$\\
+  \hline
+  $Q^i_L$ & (3,2,$\frac16$) & (1,$a^i$,$\omega$) & 0\\
+  $U^i_R$ & (3,1,$\frac23$) & (1,$b^i$,$\omega^2$)& 0\\
+  $D^i_R$ & (3,1,$-\frac13$) & (1,$c^i$,$\omega^2$)& 0\\
+  $L^i_L$ & (1,2,$-\frac12$) & (3,0,$\omega$)& 0\\
+  $E^i_R$ & (1,1,$-1$) & ($1 {^(} {'} {^,} '' {^)} $,$d^i$,$\omega^2$)& 0\\
+  $\Phi_H$ & (1,2,$\frac12$) & (1,0,1)& 0\\
+  \hline
+  $\psi$ & (1,3,1) & (1,0,$\omega^2$)& 1\\
+  $\Phi_l$ & (1,2,-$\frac12$) & ($1''$,0,1)& 1\\
+  $\Phi_q$ & (3,2,-$\frac76$) & ($1$,0,1)& 1\\
+  \hline
+  $\Phi_T$ & (1,1,0) & ($3$,0,1)& 0\\
+
+ \end{tabular}
+\caption{Model B: Transformation rules for our SM and BSM fields. The index $i$ stands for the three generations which influence the charges under the 
+$U(1)_\text{FN}$ $a-d$. The representation for $E_R$ also depends on the generation ($e^c \sim 1$, $\mu \sim 1''$, $\tau \sim 1'$).}
+\label{tab_modelb}
+\end{table}
+\noindent Now I transfered the idea to our model B \ref{tab_modelb} and build at first the CG-term:
+\begin{align}
+ 2\times2\times3 \subset 1 = \frac{1}{\sqrt{3}}\left(D_1\Phi_1\psi_3 - \frac{1}{\sqrt{2}}\left(D_1\Phi_2+D_2\Phi_1 \right)\psi_2 + D_2\Phi_2\psi_1 \right).
+\end{align}
+I thought a $Y_\psi = +1$ is nicer, since it is easier to identify the respective $SU(2)$-component due to their absolute charge and the electrically uncharged
+one is the third component. In this case I got 10 diagrams in total: for $dd\rightarrow ll$, $du\rightarrow l\nu$, $ud\rightarrow \nu l$ and $uu\rightarrow \nu\nu$
+two each and for $dd\rightarrow \nu\nu$ and $uu\rightarrow ll$ one each (the first fermion has each a bar above). The prefactors I get out of this with the same idea are: 
+$\frac{5}{36}, \frac{4}{36}, \frac{1}{36}$ which have the same problem as in the former case, so I multiplied them by 12 so that they fit the following rules
+\begin{align}
+ 1+X=C\frac{5}{36}\\
+ 1-X=C\frac{1}{36}\\
+ 2\cdot X = C\frac{4}{36}
+\end{align}
+These rules come out of \eqref{eq_effLag} if you expand the whole $\tau$-stuff. $X$ is the fraction I'm looking for, which is $\frac59$ in Gripaios case.
+The factor $C$ is so far not motivated but has to be introduced to fit these rules. It was 16 in Gripaios case and 12 in mine. This means that my $X$ is
+$\frac23$. Heureka. 
+\begin{align}
+ \mathcal{L}_\text{eff} \supset \frac{K(x_q,x_l)}{m^2}\frac{\alpha_i^{q*} \alpha_j^{q*} \alpha_m^l \alpha_n^l}{64\pi^2}\left[\left(\bar Q^i_L\gamma^\mu Q^j_L\right)\left(L^m_L\gamma_\mu L^n_L\right)+\frac23\left(\bar Q^i_L\gamma^\mu \vec \tau Q^j_L\right)\left(L^m_L\gamma_\mu \vec \tau L^n_L\right)\right].
+ \label{eq_effLagMine}
+\end{align}
+I had two write this one down after all this work. 
+At first I thought $C$ is the total number of processes. In Gripaios paper thats true. In the same order of processes as above, he has
+for the first four ones 3 possible processes and the last two only two each which gives 16. So I'm afraid this would have just been too easy and it somehow
+follows from another group theoretical consideration. But another
+thing occured to me, which is a bit funny. Let's say we'd have a model wherein $Y_\psi=0$ as one could easily expect and therefore $Y_{\Phi_q} = -\frac16$ and
+$Y_{\Phi_l}= +\frac12$. The processes as $dd\rightarrow \nu\nu$ have two diagrams now. I will sketch the origin. In the $Y_\psi = 1$ case we assign the 
+scalars as $|Q(\Phi_q)|=\frac53$ and as a result $|Q(\Phi_l)|$ should be 2, but this doesn't exist. In the $Y_\psi = 0$ case we have $|Q(\Phi_q)|=\frac13$
+which leads to $|Q(\Phi_l)|=0$ and $|Q(\Phi_q)|=\frac23$ to $|Q(\Phi_l)|=1$ which are both possible. I checked on the $SU(2)$-invariance at each vertex but
+they all are allowed. So basically the question here is: \textbf{May a change in Hypercharge really have an influence on the amount of processes which are
+$SU(2)$-invariant?} Well this would actually lead to 12 diagrams but the prefactor for the respective process would also change, so no real progress...
 
 \subsection{$\bar B_s B_s$ - mixing}
 \subsection{DM-annihilation $\bar \psi\psi \rightarrow \bar f f$ }
@@ -155,8 +232,8 @@ of the box calculus and should not be put in just by generality.
 \end{spacing}
 \newpage
 \begin{thebibliography}{xxx}
- \bibitem[1]{Grip}B. Gripaios et al. \textit{Linear flavour violation and anomalies in $B$ physics}\\ \href{http://arxiv.org/abs/1509.05020v1}{http://arxiv.org/abs/1509.05020v1}
+ \bibitem[1]{Grip}B. Gripaios et al. \textit{Linear flavour violation and anomalies in $B$ physics}\\ \href{http://arxiv.org/abs/1509.05020v1}{arxiv.org/abs/1509.05020v1}
  \bibitem[2]{Peskin}M. Peskin et al. \textit{An Introduction To Quantum Field Theory}\\ ISBN: 0-201-50397-2
- \bibitem[3]{Fierz}J.F. Nieves et al. \textit{Generalized Fierz identities}
+ \bibitem[3]{Fierz}J.F. Nieves et al. \textit{Generalized Fierz identities}\\ \href{http://http://arxiv.org/abs/hep-ph/0306087v1}{arxiv.org/abs/hep-ph/0306087v1}
 \end{thebibliography}
 \end{document}
