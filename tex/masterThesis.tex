@@ -156,8 +156,7 @@ related topics in the SM and cosmology.
 % The leptons can be subdivided into three electrically ($Q=T+Y_W$) charged and three uncharged ones and the quarks into three up-type ($T=\sfrac12$) and
 % three down-type ($T=-\sfrac12$). Last but not least, the already mentioned scalar Higgs-field $\phi$ which develops a non vanishing vacuum expectation value
 % (vev) $v$. This is the source for the spontanious breaking of the electroweak symmetry into the electromagnetic 
-(NOT)
-
+% (NOT)
 The Standard Model is a gauge quantum field theory whose internal symmetry is the unitary product group $SU(3)_C\times SU(2)_L\times U(1)_{Y_W}$ representing
 the quantum chromodynamics (QCD) whose charge is called color $C$ and the electroweak theory (GSW-Theory) whose charges are the weak isospin $T$ 
 (hold by left handed particles) and the weak hypercharge $Y_W$. These quantum numbers (QN) are carried by a set of particle fields, ordinary matter is composed
@@ -201,15 +200,17 @@ what happened with a term like $\nu_R$ in \eqref{eq_yukawaSM}. This would imply 
 weak isospin and hence ($Q = T_3 + Y_W$) no hypercharge which means that the SM is totally blind to it. Furthermore it seemed obvious not to be
 able to construct a neutrino mass since they were considered massless. But to answer the question we could add 
 such a term somehow when it can be shown for example that righthanded neutrinos exist, which is likely due to the measurements of neutrino oscillations.
-\vspace{1cm}
+
 \subsubsection{Weak interaction}
-
-
-Neutrino oscillation is a process where a neutrino of one generation changes its \textit{flavour} while propagating through space. This suggest that 
+Neutrino oscillation is a process where a neutrino of one generation changes its flavour while propagating through space described by the PMNS matrix. 
+This suggests that 
 flavour is not a conserved quantum number in nature unlike the electrical charge for example. As this phenomenon is still rather young (2001) and not implemented in the 
-SM we already have flavour violation (FV) therein, in the quark sector. There is a huge list of Mesons and Baryons (composites of one quark and one anti-quark,
-or three quarks, respectively) decaying in others with different quark content enabled by the $W$-bosons. So it was thought, that the down-type quark mass
-eigenstates $d^i$ are superpositions of their interaction eigenstates $d^i$. Formerly started by Cabibbo and pursued by 
+SM, we already have flavour violation (FV) therein, in the quark sector. There is a huge list of Mesons and Baryons (composites of one quark and one anti-quark,
+or three quarks, respectively) decaying into others with different quark content enabled by the $W$-bosons via charged currents. 
+
+\textit{Flavour Changing Charged Currents}\\
+\noindent So it was thought, that the down-type quark mass
+eigenstates $d'^i$ are superpositions of their interaction eigenstates $d^i$. Formerly started by Cabibbo and pursued by 
 Kobayashi and Maskawa (1973) for CP-violation reasons (charge conjugation C, parity P), the CKM-matrix as an unitary $3\times 3$ matrix was invented,
 which can be thought of as a rotation
 matrix, rotating the weak eigenstates of the down-type quarks in the mass eigenstates by three Euler angles, $\theta_{12} = \theta_C$ called Cabibbo angle 
@@ -232,8 +233,13 @@ where $V_\text{CKM}$ can be parameterised by $\lambda = \sin(\theta_C) \approx 0
 \end{equation}
 The up-type quarks have no differences between their weak and mass eigenstates, but we could have played the same game with them leading to the 
 same mixing, since $V_\text{CKM}$ is unitary. Looking at this matrix one can see that it is almost diagonal and hierachical which
-means that the farther you leave the main diagonal the smaller become the magnitudes of the entries. Furthermore it is symmetric in respect of the 
-their moduli.
+means that the farther you leave the main diagonal the smaller become the magnitudes of the entries. It can be asked 
+
+\textit{Flavour Changing Neutral Currents}\\
+\noindent
+One problem of Cabibbo's theory is that a process $d'\bar {d'} \rightarrow Z$ would lead to an FCNC at tree level but is in fact highly suppressed. This
+could be explained by the GIM-mechanism 
+
 
 Now comes one of the basic questions motivating this thesis: Are these patterns random or is there rather an underlying broken family-symmetry which
 could serve as a blindman's stick for the SM? We go with our guts and prefer the latter suggestion.
@@ -245,16 +251,64 @@ could serve as a blindman's stick for the SM? We go with our guts and prefer the
 \subsection{Group Invariance}
 symmetry breaking
 \subsection{$U(1)_\text{FN}$ and Continuous Groups}
+\label{sec_FNGT}
+clebsch-gordan
 \subsection{$A4$ and Discrete Groups}
+\label{sec_A4GT}
 
 \section{Model Outline}
+\textit{The Underlying Model}\\
+\noindent Now that we know the actors on the stage, we can build a model trying to reveal their behaviour altogether. We will follow basically the model constructed
+in \cite{Grip}. They build a renormalisable theory which generates the anomalies associated with the $b$ and the $\mu$ at loop level. To do so, they 
+introduce two new scalar fields $\Phi_l$ and $\Phi_q$ and a single fermion field $\chi$ which couple to SM-fermions via Yukawa interactions. 
+Their conditions to reduce the amount of possible charge assignments for them are 
+\begin{enumerate}
+ \item the preservation of the accidental symmetries as baryon and lepton number and the prevention of other sources of flavour violation.
+ \item scalar couplings with the Higgs as $\Phi H H$ or $\Phi H H H$ which could modify the observed Higgs phenomenology should be prevented.
+ \item the coloured particle, required by quark interaction, should be a scalar since it will have weaker bounds on its mass.
+ \item a $U(1)$ symmetry only interacting non trivially on the BSM fields has the advantage that all NP flavour-violating processes are loop suppressed. And
+ moreover the lightest NP state (LP) would be stable that should be uncolored and electrically neutral. 
+ \item the dimension of $SU(2)_L$ of the NP irreducibles is less then five.
+\end{enumerate}
+With these constraints they reject some representations of $\chi$ and $\Phi_l$ which could lead to unwanted renormalisable interactions, but they state 
+that their LP would not fit the relic density and/or the direct detection bounds through the Z-coupling although the anomalies are 
+well explained by the model. \\ \\
+\noindent \textit{Charge assignment}\\ \noindent
+The main feature of this thesis is the adding of a flavour group $\mathcal{G} = U(1)_\text{FN}\times A_4 \times Z_3$ (CITE VARZIELAS, FERUGLIO). 
+It shall prohibit these dangerous interactions by charging the respective fields so that the representations themselves are again enabled. Besides this,
+the flavour patterns and the correct DM phenomeology are obtained. 
+The downside herein is the surrender of renormalisability. Since we expect that NP couples chirally and that the fits say that the 4 fermion operator 
+$\bar b_L \gamma^\nu s_L \mu_L \gamma_\nu \mu_L$ is prefered, we consider $SU(2)_L$ representations of $\chi$ that yield invariance and wherein the lightest
+state has a small or vanishing $T_3$ in order to reduce its coupling to the $Z$. This can be achieved in many ways depending on what you want to get in the end. Besides the focus on heavy quarks,
+our interest is a special role for the muon in order to explain its anomalous magnetic moment and the discrepancy in $B_s\rightarrow \mu\mu$. 
+To do so, we want $\Phi_l$ to only couple to muons which can be ensured by representing it suitably under $A_4$. \input{../input/modeloutline.tex} 
+The accidental symmetries in the last column in table \ref{tab_models}
+enforce stability of the proton and prevents contributions to other baryon and/or lepton number violating
+processes. Additionally, the $U(1)_\chi$ stabilises the LP which is a crucial premise for a DM candidate. Its hypercharge for model B is chosen to be $+1$ 
+so that the particle masses within the triplet have the right order which leaves the lightest particle electrically neutral. The case for $-1$ and applicable
+hypercharges for the scalars would have similar implications. So the interaction lagrangian for both models reads
+\begin{align}
+ \mathcal{L} = g_i^q \bar \chi Q_L^i \Phi_q + g_i^l \bar \chi L_L^i \Phi_l + \text{h.c.}.
+\end{align}
+
+
+
 
 \section{Phenomenological Analysis}
 \subsection{Anomalous Magnetic Moment of the Muon}
+
 \subsection{$B_s\rightarrow \mu\mu$}
+
+
 \subsection{$B_s$-Mixing}
+
 \subsection{DM Annihilation}
+
 \subsection{Direct Detection}
+
+\section{Results}
+\subsection{Model A}
+\subsection{Model B}
 \section{Conclusion and Prospects}
 
 % dfasdölkj\\d\\d\\d\\d\\d\\d\\d\\d\\d\\d\\d
@@ -315,5 +369,11 @@ symmetry breaking
 % \addcontentsline{toc}{section}{List of tables}
 % \listoftables\newpage
 \end{spacing}
+\newpage
 
+\begin{thebibliography}{xxx}
+ \bibitem[1]{Grip}B. Gripaios et al. \textit{Linear flavour violation and anomalies in $B$ physics}\\ \href{http://arxiv.org/abs/1509.05020v1}{arxiv.org/abs/1509.05020v1}
+ \bibitem[2]{Peskin}M. Peskin et al. \textit{An Introduction To Quantum Field Theory}\\ ISBN: 0-201-50397-2
+ \bibitem[3]{Fierz}J.F. Nieves et al. \textit{Generalized Fierz identities}\\ \href{http://http://arxiv.org/abs/hep-ph/0306087v1}{arxiv.org/abs/hep-ph/0306087v1}
+\end{thebibliography}
 \end{document}
