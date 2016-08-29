@@ -4,6 +4,7 @@
 \usepackage{xcolor}
 \usepackage{setspace}\usepackage{threeparttable}
 \usepackage{fancyhdr}
+\newcommand{\ti}{\text{i}}
 \fancyfoot{}
 \fancyhead[RO,LE]{\thepage}
 \fancyhead[LO]{\leftmark}
@@ -32,7 +33,7 @@
 
 % >>> Titelseite <<<
 
-\newcommand{\thetitle}{Flavour Portal to Dark Matter}
+\newcommand{\thetitle}{Fermionic Dark Matter and its Role in B-anomalies}
 
 \thispagestyle{empty}
 \begin{center}
@@ -114,33 +115,63 @@ Datum des Einreichens der Arbeit: 31. Oktober, 2016
 \pagestyle{fancy}
 
 \section{Introduction}
-After the prediction (1964) and the experimental verification (2012) of the
+After the prediction (1964) (CITE) and the experimental verification (2012) (CITE) of the
 now called Higgs-boson, the Standard Model (SM) could be considered self-
 contained. The forecasts it makes for processes described therein are proven
 remarkably well by various experiments. At least at the energy scales they
-are currently operating. That said it already contains associations that the
-contributions to this magnificent theory made by our scientific forefathers might not be
-the end of the story. It still lacks for example a quantum field theoretical
-description for gravity or does not contain the experimentally shown masses
-of the neutrinos. Besides, its dynamics depend on 19 parameters, including
-the masses of the fermions, which are quite a lot and are wanted to decrease
-in number by finding relations among one another. Furthermore cosmology
-tells us that the SM is only covering about twenty per cent of the mass content
-of the universe where the rest is made of the nowadays called dark matter
-(DM). Since this thesis is about flavour and dark matter, we
-should have a closer look on the way things stand at the moment.
+are currently operating. That said, it already contains associations that the
+contributions to this magnificent theory, made by our scientific forefathers, might not be
+the end of the story. We might know the Higgs mechanism being source of mass of visible particles,
+but the reason for their absolute values is still notional. The fermions thereof can be put into
+small groups and are considered to be interacting equally with the gauge bosons but it appears
+that some break ranks. Not only in the elementary particle physics sphere but also in cosmology
+strange things happen. From observation it seems that there has to be a mass distribution of
+invisible particles, say dark matter, that lead to the actual orbits of the stars in the galaxy.
+There is of course even more, but the resolution of these three issues in one combined theory is
+the task of this thesis.
+
+\noindent To resolve a problem, one has to understand it first. So we start with some notes on 
+related topics in the SM and cosmology.
+
+
+% It still lacks for example a quantum field theoretical
+% description for gravity or does not contain the experimentally shown masses
+% of the neutrinos. Besides, its dynamics depend on 19 parameters, including
+% the masses of the fermions, which are quite a lot and are wanted to decrease
+% in number by finding relations among one another. Furthermore cosmology
+% tells us that the SM is only covering about twenty per cent of the mass content
+% of the universe where the rest is made of the nowadays called dark matter
+% (DM). Since this thesis is about flavour and dark matter, we
+% should have a closer look on the way things stand at the moment.
+
+
+\section{The Guide to present physics}
+
 
 \subsection{Flavour in the SM}
+% The Standard Model is a theory that contains particle fields, ordinary matter is composed of and messenger fields mediating interactions between them. 
+% These fields can be separated by their quantum numbers indicating their couplings to each other. At first we have the twelve gauge vector boson fields, 
+% eight gluon fields $G_a$ for strong interactions with coloured ($C$) particles and four electroweak boson fields $W_1$, $W_2$, $W_3$ and $B$ which couple
+% to particles with weak isospin $T$ and hypercharge $Y_W$ respectively. Now we have 24 fermion fields, six leptons and six quarks each carrying one of three colours.
+% The leptons can be subdivided into three electrically ($Q=T+Y_W$) charged and three uncharged ones and the quarks into three up-type ($T=\sfrac12$) and
+% three down-type ($T=-\sfrac12$). Last but not least, the already mentioned scalar Higgs-field $\phi$ which develops a non vanishing vacuum expectation value
+% (vev) $v$. This is the source for the spontanious breaking of the electroweak symmetry into the electromagnetic 
+(NOT)
+
 The Standard Model is a gauge quantum field theory whose internal symmetry is the unitary product group $SU(3)_C\times SU(2)_L\times U(1)_{Y_W}$ representing
 the quantum chromodynamics (QCD) whose charge is called color $C$ and the electroweak theory (GSW-Theory) whose charges are the weak isospin $T$ 
-(hold by left handed particles) and the 
-weak hypercharge $Y_W$. These interactions are mediated by a total of twelve gauge vector boson fields, eight gluon fields $G_a$ for strong interactions and four 
-electroweak boson fields from which $W_1$, $W_2$, $W_3$ couple to the weak isospin and $B$ to the weak hypercharge. The field $\phi$ of the already mentioned scalar
+(hold by left handed particles) and the weak hypercharge $Y_W$. These quantum numbers (QN) are carried by a set of particle fields, ordinary matter is composed
+of and messenger fields mediating these interactions between them. In particular twelve gauge vector boson fields, eight gluon fields $G_a$ for strong 
+interactions and four electroweak boson fields from which $W_1$, $W_2$, $W_3$ couple to the weak isospin and $B$ to the weak hypercharge. Now we have 12
+fermion fields, six leptons $e$, $\mu$, $\tau$ as well as their respective neutrinos $\nu$ and six quarks $u$, $d$, $s$, $c$, $b$, and $t$. Actually there
+are even more since they are defined by their QN. So for each fermion there is a distinction drawn between left handed $f_L$ ($T=\sfrac12$) and right 
+handed $f_R$ ($T=0$), although $\nu_R$ are not considered in the SM. Furthermore there are three different colours for each quark. Well finally the field 
+$\phi$ of the already mentioned scalar
 Higgs-boson holds a special role in the SM. It is known that the boson fields $W^\pm$ and $Z$, responsible for weak processes, have nonzero masses. But their
 mass terms would break the gauge invariance of the lagrangian. So the Higgs-mechanism was considered wherein $\phi$ develops a non vanishing vacuum expectation
 value $v$ (vev) which breaks the electroweak symmetry spontaniously down to the electromagnetic symmetry $U(1)_Q$ resulting in a still massless photon field 
 $A$ and the three just named massive ones.
-\subsubsection*{Yukawa interaction}
+\subsubsection{Yukawa interaction}
 Not only the bosons get their masses from this mechanism but the fermions as well - at least the electrically charged ($Q$) ones - which is represented by the
 Yukawa (scalar-fermion interaction) term in the SM-lagrangian
 \begin{equation}
@@ -149,11 +180,11 @@ Yukawa (scalar-fermion interaction) term in the SM-lagrangian
 \end{equation}
 \noindent
 $y^u$, $y^d$ and $y^e$ are $3\times 3$ (three generations) real, so called yukawa matrices and represent the 
-coupling of the fermions to the Higgs. ``h.c.'' stands for hermetian conjugate so that it holds for the antiparticles as well. 
-$Q_L$, $L_L$ and $\phi$ are doublets of the $SU(2)_L$, since they are build out of two fermion fields each holding a 
+coupling of the fermions to the Higgs. $\phi^c = \ti\sigma_2\phi^*$ is the charged conjugate Higgs. ``h.c.'' stands for hermetian conjugate so that it holds for the antiparticles as well. 
+$Q_L$, $L_L$ and $\phi$ are doublets of the $SU(2)_L$, since they are built out of two fermion fields each holding a 
 weak isospin of $T=\sfrac12$ with the 3rd component $T_3 = \pm\sfrac12$, e.g. $L^2_L = (\nu_{\mu\, L}, \mu_L)^T_{\textbf{2}}$ with the left handed muon-neutrino and the muon. 
-Their counterparts $u_R$, $d_R$ and $e_R$ are singlets of the $SU(2)_L$ because they have no weak isospin, e.g. $e^2_R = (\mu_R)_{\textbf{1}}$, and hence don't take part
-in the weak interaction. After 
+Their counterparts $u_R$, $d_R$ and $e_R$ are singlets under the $SU(2)_L$ because they have no weak isospin, e.g. $e^2_R = (\mu_R)_{\textbf{1}}$, and hence don't take part
+in the weak interaction mediated by the $W$-bosons. After 
 the symmetry breaking and rotating the fermion fields in a basis where the yukawa matrices become diagonal, we can write down their mass terms 
 \begin{equation}
  \mathcal{L}_m = -m^u_i \bar u'^i_L u'^i_R -m^d_i \bar d'^i_L d'^i_R -m^e_i \bar e'^i_L e'^i_R 
@@ -164,14 +195,16 @@ where $m^\alpha_i \sim y^\alpha_i \cdot v$ ($\alpha = u,d,e$). Here you can see 
 It treats a left handed up quark the same way it treats a left handed charm or a left handed top. So if the eigenvalues of $m^\alpha$ would be degenerate, i.e. the masses would
 be all the same, one would not have a method to differentiate them. 
 
-\vspace{-0.3cm}
+% \vspace{-0.3cm}
 You could ask
 what happened with a term like $\nu_R$ in \eqref{eq_yukawaSM}. This would imply a particle which has neither a color charge, nor electrical charge, nor 
-weak isospin and hence ($Q = T_3 + \sfrac12 Y_W$) no hypercharge which means that the SM is totally blind to it. Furthermore it seemed obvious not to be
+weak isospin and hence ($Q = T_3 + Y_W$) no hypercharge which means that the SM is totally blind to it. Furthermore it seemed obvious not to be
 able to construct a neutrino mass since they were considered massless. But to answer the question we could add 
 such a term somehow when it can be shown for example that righthanded neutrinos exist, which is likely due to the measurements of neutrino oscillations.
 \vspace{1cm}
-\subsubsection*{Weak interaction}
+\subsubsection{Weak interaction}
+
+
 Neutrino oscillation is a process where a neutrino of one generation changes its \textit{flavour} while propagating through space. This suggest that 
 flavour is not a conserved quantum number in nature unlike the electrical charge for example. As this phenomenon is still rather young (2001) and not implemented in the 
 SM we already have flavour violation (FV) therein, in the quark sector. There is a huge list of Mesons and Baryons (composites of one quark and one anti-quark,
@@ -205,64 +238,82 @@ their moduli.
 Now comes one of the basic questions motivating this thesis: Are these patterns random or is there rather an underlying broken family-symmetry which
 could serve as a blindman's stick for the SM? We go with our guts and prefer the latter suggestion.
 
-\subsection{DM in cosmology}
+\subsection{DM in the $\Lambda$-CDM}
+\subsubsection{WIMP Relic Density}
+\subsubsection{Detection methods}
+\section{Group Theory and Flavour Symmetries}
+\subsection{Group Invariance}
+symmetry breaking
+\subsection{$U(1)_\text{FN}$ and Continuous Groups}
+\subsection{$A4$ and Discrete Groups}
+
+\section{Model Outline}
+
+\section{Phenomenological Analysis}
+\subsection{Anomalous Magnetic Moment of the Muon}
+\subsection{$B_s\rightarrow \mu\mu$}
+\subsection{$B_s$-Mixing}
+\subsection{DM Annihilation}
+\subsection{Direct Detection}
+\section{Conclusion and Prospects}
+
 % dfasdölkj\\d\\d\\d\\d\\d\\d\\d\\d\\d\\d\\d
 
-\section{DM candidate coupling to light quarks in T' framework}
-\subsection{Model construction}
-\subsubsection{Grouptheoretical properties}
-\begin{align}
- \sum m_n n^2 = N_G \quad groupelements\\
- \sum m_n = \#_{IRR} \quad C = Irred\,Reps\\
- \varphi:\, G\rightarrow \text{GL}(V)\\
- g\mapsto \varphi(g):\, V\rightarrow V\\
- \chi_D(g) = \text{tr}D(g)\\
- \sum_g \chi_\alpha(g)^*\chi_\beta(g) = N_G \delta_{\alpha\beta}\\
- \sum_\alpha \chi_\alpha(g)^*\chi_\alpha(h) = \frac{N_G}{n_g} \delta_{C_g C_h} \stackrel{\Lambda}{=} \langle \chi^\mu, \chi^\nu \rangle = \delta^{\mu\nu}\\
- \text{FS}(R) := \frac{1}{N_G} \sum_g \chi_R(g^2) =\begin{cases}
-                                                    1, & \text{real}\\
-                                                    0, & \text{complex}\\
-                                                    -1, & \text{pseudoreal}\\
-                                                   \end{cases}\\
- \mu(k) = \langle \chi_R \cdot \chi_{R'} , \chi_{R_k} \rangle \quad tensor product decomposation\\
-\end{align}
-
-\subsubsection{Assigning particles to multiplets}
-\begin{align}
- \langle \xi'' \rangle = \delta u''\approx \epsilon^4 \Lambda\\
- M_{\xi''} = k \delta u'' 
-\end{align}
-
-\subsection{Messenger $\xi''$ mediating SM and DM}
-\subsubsection{DM annihilation into light mesons}
-\subsubsection*{DM stability}
-page 24 - check on T, Z3 reps and spin
-\subsubsection*{cross section}
-\begin{align}
- \sigma(\chi\chi \rightarrow d \bar s) = \frac{\lambda_f^2\lambda_\chi^2}{8\pi(4m_\chi^2 - M_{\xi''}^2)^2}(4m_\chi^2 - (m_d+m_s)^2)\\
- \langle \sigma_{\text{Ann}} v \rangle = \sigma(1+\frac18
-\end{align}
-
-\subsubsection{Meson-Mixing}
-\begin{align}
- \Xi_{dd'} = \begin{pmatrix}
-              0 & 1 & 0\\
-              1 & 0 & 0 \\
-              0 & 0 & 0
-             \end{pmatrix} \xrightarrow{massbasis} \begin{pmatrix}
-						-\epsilon & 1 & -\epsilon^2\\
-						1 & \epsilon & -\epsilon^3\\
-						-\epsilon^2 & \-\epsilon^3 & \epsilon^5
-						\end{pmatrix}
-\end{align}
-
-\subsubsection{DM-nucleus scattering}
-
-
-\addcontentsline{toc}{section}{List of figures}
-\newpage\listoffigures\newpage
-\addcontentsline{toc}{section}{List of tables}
-\listoftables\newpage
+% \section{DM candidate coupling to light quarks in T' framework}
+% \subsection{Model construction}
+% % \subsubsection{Grouptheoretical properties}
+% \begin{align}
+%  \sum m_n n^2 = N_G \quad groupelements\\
+%  \sum m_n = \#_{IRR} \quad C = Irred\,Reps\\
+%  \varphi:\, G\rightarrow \text{GL}(V)\\
+%  g\mapsto \varphi(g):\, V\rightarrow V\\
+%  \chi_D(g) = \text{tr}D(g)\\
+%  \sum_g \chi_\alpha(g)^*\chi_\beta(g) = N_G \delta_{\alpha\beta}\\
+%  \sum_\alpha \chi_\alpha(g)^*\chi_\alpha(h) = \frac{N_G}{n_g} \delta_{C_g C_h} \stackrel{\Lambda}{=} \langle \chi^\mu, \chi^\nu \rangle = \delta^{\mu\nu}\\
+%  \text{FS}(R) := \frac{1}{N_G} \sum_g \chi_R(g^2) =\begin{cases}
+%                                                     1, & \text{real}\\
+%                                                     0, & \text{complex}\\
+%                                                     -1, & \text{pseudoreal}\\
+%                                                    \end{cases}\\
+%  \mu(k) = \langle \chi_R \cdot \chi_{R'} , \chi_{R_k} \rangle \quad tensor product decomposation\\
+% \end{align}
+% 
+% \subsubsection{Assigning particles to multiplets}
+% \begin{align}
+%  \langle \xi'' \rangle = \delta u''\approx \epsilon^4 \Lambda\\
+%  M_{\xi''} = k \delta u'' 
+% \end{align}
+% 
+% \subsection{Messenger $\xi''$ mediating SM and DM}
+% \subsubsection{DM annihilation into light mesons}
+% \subsubsection*{DM stability}
+% page 24 - check on T, Z3 reps and spin
+% \subsubsection*{cross section}
+% \begin{align}
+%  \sigma(\chi\chi \rightarrow d \bar s) = \frac{\lambda_f^2\lambda_\chi^2}{8\pi(4m_\chi^2 - M_{\xi''}^2)^2}(4m_\chi^2 - (m_d+m_s)^2)\\
+%  \langle \sigma_{\text{Ann}} v \rangle = \sigma(1+\frac18
+% \end{align}
+% 
+% \subsubsection{Meson-Mixing}
+% \begin{align}
+%  \Xi_{dd'} = \begin{pmatrix}
+%               0 & 1 & 0\\
+%               1 & 0 & 0 \\
+%               0 & 0 & 0
+%              \end{pmatrix} \xrightarrow{massbasis} \begin{pmatrix}
+% 						-\epsilon & 1 & -\epsilon^2\\
+% 						1 & \epsilon & -\epsilon^3\\
+% 						-\epsilon^2 & \-\epsilon^3 & \epsilon^5
+% 						\end{pmatrix}
+% \end{align}
+% 
+% \subsubsection{DM-nucleus scattering}
+% 
+% 
+% \addcontentsline{toc}{section}{List of figures}
+% \newpage\listoffigures\newpage
+% \addcontentsline{toc}{section}{List of tables}
+% \listoftables\newpage
 \end{spacing}
 
 \end{document}
