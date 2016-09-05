@@ -4,6 +4,9 @@
 \usepackage{xcolor}
 \usepackage{setspace}\usepackage{threeparttable}
 \usepackage{fancyhdr}
+\usepackage{graphicx}
+\numberwithin{equation}{section}
+%\usepackage{epstopdf}
 \newcommand{\ti}{\text{i}}
 \fancyfoot{}
 \fancyhead[RO,LE]{\thepage}
@@ -145,7 +148,7 @@ related topics in the SM and cosmology.
 % should have a closer look on the way things stand at the moment.
 
 
-\section{The Guide to present physics}
+\section{A Guide to today's Physics}
 
 
 \subsection{Flavour in the SM}
@@ -170,7 +173,7 @@ Higgs-boson holds a special role in the SM. It is known that the boson fields $W
 mass terms would break the gauge invariance of the lagrangian. So the Higgs-mechanism was considered wherein $\phi$ develops a non vanishing vacuum expectation
 value $v$ (vev) which breaks the electroweak symmetry spontaniously down to the electromagnetic symmetry $U(1)_Q$ resulting in a still massless photon field 
 $A$ and the three just named massive ones.
-\subsubsection{Yukawa interaction}
+\subsubsection{Yukawa Interaction}
 Not only the bosons get their masses from this mechanism but the fermions as well - at least the electrically charged ($Q$) ones - which is represented by the
 Yukawa (scalar-fermion interaction) term in the SM-lagrangian
 \begin{equation}
@@ -201,7 +204,7 @@ weak isospin and hence ($Q = T_3 + Y_W$) no hypercharge which means that the SM 
 able to construct a neutrino mass since they were considered massless. But to answer the question we could add 
 such a term somehow when it can be shown for example that righthanded neutrinos exist, which is likely due to the measurements of neutrino oscillations.
 
-\subsubsection{Weak interaction}
+\subsubsection{Weak Interaction}
 Neutrino oscillation is a process where a neutrino of one generation changes its flavour while propagating through space described by the PMNS matrix. 
 This suggests that 
 flavour is not a conserved quantum number in nature unlike the electrical charge for example. As this phenomenon is still rather young (2001) and not implemented in the 
@@ -236,7 +239,7 @@ same mixing, since $V_\text{CKM}$ is unitary. Looking at this matrix one can see
 means that the farther you leave the main diagonal the smaller become the magnitudes of the entries. It can be asked 
 
 \textit{Flavour Changing Neutral Currents}\\
-\noindent
+\noindent TO REVISE!
 One problem of Cabibbo's theory is that a process $d'\bar {d'} \rightarrow Z$ would lead to an FCNC at tree level but is in fact highly suppressed. This
 could be explained by the GIM-mechanism 
 
@@ -250,16 +253,46 @@ To get such a
 low energy theory, one uses the framework of the Operator Product Expansion (OPE)
 
 \subsection{DM in the $\Lambda$-CDM}
+
 \subsubsection{WIMP Relic Density}
-\subsubsection{Detection methods}
+
+
+\subsubsection{Detection Methods}
+\textit{Direct Detection} \\
+\\ \textit{Indirect Detection} \\
+\\ \textit{Collider Signatures}
+
 \section{Group Theory and Flavour Symmetries}
 \subsection{Group Invariance}
-symmetry breaking
+symmetry breaking,representations
 \subsection{$U(1)_\text{FN}$ and Continuous Groups}
 \label{sec_FNGT}
-clebsch-gordan
+ \textit{Lie-Groups}\\
+\\ \textit{Clebsch Gordan coefficients} \\
+\\ \textit{Froggat Nielsen-formalism}
+
 \subsection{$A4$ and Discrete Groups}
 \label{sec_A4GT}
+\textit{General Properties}\\
+finite amount of representations; characters; 
+ \begin{align}
+  \sum m_n n^2 = N_G \quad groupelements\\
+  \sum m_n = \#_{IRR} \quad C = Irred\,Reps\\
+  \varphi:\, G\rightarrow \text{GL}(V)\\
+  g\mapsto \varphi(g):\, V\rightarrow V\\
+  \chi_D(g) = \text{tr}D(g)\\
+  \sum_g \chi_\alpha(g)^*\chi_\beta(g) = N_G \delta_{\alpha\beta}\\
+  \sum_\alpha \chi_\alpha(g)^*\chi_\alpha(h) = \frac{N_G}{n_g} \delta_{C_g C_h} \stackrel{\Lambda}{=} \langle \chi^\mu, \chi^\nu \rangle = \delta^{\mu\nu}\\
+  \text{FS}(R) := \frac{1}{N_G} \sum_g \chi_R(g^2) =\begin{cases}
+                                                     1, & \text{real}\\
+                                                     0, & \text{complex}\\
+                                                     -1, & \text{pseudoreal}\\
+                                                    \end{cases}\\
+  \mu(k) = \langle \chi_R \cdot \chi_{R'} , \chi_{R_k} \rangle \quad tensor product decomposition\\
+ \end{align}
+ \\ \\ \textit{$A_4\times Z_3$}\\
+ tetrahedron; link to $T'$ just because its nice; smallest group with $\boldsymbol{3}$; PMNS matrix; $\theta_{13}$
+ seperation of leptons and neutrinos
 
 \section{Model Outline}
 \textit{The Underlying Model}\\
@@ -276,7 +309,7 @@ Their conditions to reduce the amount of possible charge assignments for them ar
  \item the dimension of $SU(2)_L$ of the NP irreducibles is less then five.
 \end{enumerate}
 With these constraints they reject some representations of $\chi$ and $\Phi_l$ which could lead to unwanted renormalisable interactions, but they state 
-that their LP would not fit the relic density and/or the direct detection bounds through the Z-coupling although the anomalies are 
+that their LP would not fit the relic density and/or the direct detection bounds through the Z-coupling, although the anomalies are 
 well explained by the model. \\ \\
 \noindent \textit{Charge assignment}\\ \noindent
 The main feature of this thesis is the adding of a flavour group $\mathcal{G} = U(1)_\text{FN}\times A_4 \times Z_3$ \cite{FerA4}\cite{VarzTotMod}. 
@@ -286,17 +319,17 @@ The downside herein is the surrender of renormalisability. Since we expect that 
 $\bar b_L \gamma^\nu s_L \mu_L \gamma_\nu \mu_L$ is prefered, we consider $SU(2)_L$ representations of $\chi$ that yield invariance and wherein the lightest
 state has a small or vanishing $T_3$ in order to reduce its coupling to the $Z$. This can be achieved in many ways depending on what you want to get in the end. Besides the focus on heavy quarks,
 our interest is a special role for the muon in order to explain its anomalous magnetic moment and the discrepancy in $B_s\rightarrow \mu\mu$. 
-To do so, we want $\Phi_l$ to only couple to muons which can be ensured by representing it suitably under $A_4$. \input{../input/modeloutline.tex} 
+To do so, we want $\Phi_l$ to only couple to muons which can be ensured by representing it suitably under $A_4$. 
+\input{../input/modeloutline.tex} 
 The accidental symmetries in the last column in table \ref{tab_models}
 enforce stability of the proton and prevents contributions to other baryon and/or lepton number violating
-processes. Additionally, the $U(1)_\chi$ stabilises the LP which is a crucial premise for a DM candidate. Its hypercharge for model B is chosen to be $+1$ 
-so that the particle masses within the triplet have the right order which leaves the lightest particle electrically neutral. The case for $-1$ and applicable
-hypercharges for the scalars would have similar implications. So the interaction lagrangian for both models reads
+processes. Additionally, the $U(1)_\chi$ stabilises the LP which is a crucial premise for a DM candidate. 
+When a fermionic multiplet only has $SU(2)_L\times U(1)_Y$ gauge interactions in the SM and its components have a common tree-level mass, the charged 
+ones become havier than the neutral one due to quantum loop corrections of $\mathcal{O}$(100 MeV) \cite{Hisano}\cite{minMatter}. This implies that we 
+can chose the hypercharge of $\chi$ to be 0 for both models. So eventually the interaction lagrangian for them reads
 \begin{align}
  \mathcal{L} = g_i^q \bar \chi_R Q_L^i \Phi_q + g_i^l \bar \chi_R L_L^i \Phi_l + \text{h.c.}.
 \end{align}
-
-
 
 
 \section{Phenomenological Analysis}
@@ -307,19 +340,59 @@ of the $\chi$ is just $m$ and the parameter of interest, the masses of the scala
 $x_l=\frac{M_l}{m}$ and $x_q = \frac{M_q}{m}$. 
 
 \subsection{Anomalous Magnetic Moment of the Muon}
+We start with the anomalous magnetic moment of the muon since its parameter set only consists of $m$, $M_l$ and $g_2^l$. In general, every charged particle
+may have a spin $\boldsymbol{s}$ with an associated magnetic moment \cite{anomMom}
 \begin{align}
- \Delta a_\mu^\text{NP} = \frac{{g_2^l}^2}{16\pi^2}\frac{m_\mu^2}{M_l^2}\left(Q^i_F \frac{1}{x_l}I(x_l^{-1}) + Q^i_B  I(x_l)\right)
+ \boldsymbol{\mu} = g \frac{e}{2m}\boldsymbol{s}.
 \end{align}
-\cite{Lavoura}
+The factor $g$ is called the gyromagnetic factor and is equal for all elementary particles of a kind. For fermions it is $g=2$. By saying, the magnetic 
+moment is anomalous, one states a deviation from this value which is expressed as $a= (g-2)/2$. There are many contributions to this already within the SM
+from QED or hadronic vacuum polarisation but all of them are quantum loop effects. Even when all of them are taken into account, there is still a discrepancy
+between theory and experiment 
+\begin{align}
+ \Delta a_\mu = a_\mu^\text{ex} - a_\mu^\text{SM} = 287(80)\cdot 10^{-11}.
+\end{align}
+Contributions to $a$ can be evaluated in the following way. An ingoing muon with momentum $p_1$ radiates a photon $A_\mu (q)$, leaving the muon in the final 
+state with $p_2$. To first order in the external field, the scattering amplitude is 
+\begin{align}
+ M = -\ti e \langle \mu_2|J^\mu(x=0)|\mu_1\rangle A_\mu(q),
+\end{align}
+with the electic current $J^\mu(x)$. The most general parametrisation one can write thanks to Ward identity and parity conservation in QED is for on-shell
+($p_i^2 = m_i^2$) external muons
+\begin{align}
+ \langle \mu_2|J^\mu(0)|\mu_1\rangle = \bar u_2 \left[F_D(q^2)\gamma^\mu + F_P(q^2)\frac{\ti \sigma^{\mu\nu}q_\nu}{2m}\right] u_1.
+\end{align}
+In the non-relativistic limit, the relation between the magnetic moment and these form factors $F_D$ and $F_P$ can be derived to be
+\begin{align}
+ \mu = \frac{e}{2m}\left(F_D(0) + F_P(0)\right)
+\end{align}
+\noindent
+with $F_D(0)=1$ but $F_P(0)\neq0$. \cite{Lavoura} provides handy formulae for general one loop electroweak decays as $f_1 \rightarrow f_2 \gamma$. Therein
+is $F_P(0) =m_\mu\left( \sigma_L P_L + \sigma_R P_R\right)$ with the $\sigma$s being sums of loop functions. The key process is depicted in figure \ref{pic_g-2}.
+\begin{figure}[t]
+ \includegraphics[width=0.6\textwidth]{../pics/g-2.eps}
+ \caption{One-loop contribution to $a_\mu$. Depending on the model, there are multiple possibilites to attach the photon.}
+ \label{pic_g-2}
+\end{figure}
+Since we have a Yukawa interaction coupling to left handed particles, there are only terms left with $\lambda=|g_2^l|^2$, so that we eventually have
+\begin{align}
+ \Delta a_\mu^\text{NP} = \frac{|{g_2^l}|^2}{16\pi^2}\frac{m_\mu^2}{M_l^2}\left(Q^i_F \frac{1}{x_l}I(x_l^{-1}) + Q^i_B  I(x_l)\right)
+\end{align}
+with
+\begin{align}
+ I(x) = \frac{1}{12(x-1)^4}\left(-5+5x-x^2+x^3+6x\log(x) \right).
+\end{align}
+The sum over $i$ is understood so that $Q_\mu = Q_F-Q_B$ is ensured.
+
 
 \subsection{$B_s\rightarrow \mu\mu$}
 \begin{figure}[t]
- \includegraphics[width=0.7\textwidth]{../pics/boxBs-mumu.png}
+ \includegraphics[width=0.6\textwidth]{../pics/bsmumu.eps}
  \caption{bs->mumu}
  \label{pic_Bsmumu}
 \end{figure}
-After we first focussed on a pure leptonic process, we add a quark pair. Box diagrams of the kind as in picture \ref{pic_Bsmumu} are usually calculated all
-the way down to cross sections but rather one uses the formalism of effective field theory since the typical hadronic energy scale is of
+After we first focussed on a pure leptonic process, we add a quark pair. Box diagrams of the kind as in picture \ref{pic_Bsmumu} are usually not calculated 
+all the way down to cross sections but one rather uses the formalism of effective field theory since the typical hadronic energy scale is of
 $\mathcal{O}$(1 GeV) which is much lower than the weak scale $\mathcal{O}$(100 GeV) that is also the expected mass scale of our NP states. 
 \\ \\ \noindent \textit{Matrix Element}\\
 \noindent So we can use 
@@ -354,28 +427,39 @@ so that we have the same structure. This will be done by the Fierz identities.
 \end{align}
 gives only a factor 1.
 \\ \\ \noindent \textit{Additional $SU(2)_L$-invariant term}\\
-\noindent The operator $\left(\bar Q_L^i \gamma_\rho Q_L^j\right)\left(\bar L_L^m \gamma^\rho L_L^n\right)$ is not the only operator which is a singlet
-in the isospin space but $\left(\bar Q_L^i\vec \tau \gamma_\rho Q_L^j\right)\left(\bar L_L^m\vec \tau \gamma^\rho L_L^n\right)$ as well which enables
-charged currents. The eventual operator is a superposition of these two. There might be several ways of computing the relative prefactor of the 
-second but one possibility is to regard the particles at each vertex as isospin multiplets. Since we want the vertices be $SU(2)_L$-invariant, we 
-decompose the product and focus on the singlet. This will be done for all four vertices per diagram which are multiplied and added up for every diagram
-one can write down with the operators. 
+\noindent The operator $O_\delta=\left(\bar Q_L^i \gamma_\rho Q_L^j\right)\left(\bar L_L^m \gamma^\rho L_L^n\right)$ is not the only one which is a singlet
+in the isospin space but $O_\tau=\left(\bar Q_L^i\vec \tau \gamma_\rho Q_L^j\right)\left(\bar L_L^m\vec \tau \gamma^\rho L_L^n\right)$ as well which enables
+charged currents. The eventual operator is a superposition of these two. There might be several ways of computing the model dependent, relative 
+prefactor $X$ of $O_\tau$  but one possibility is to regard the particles at each vertex as isospin multiplets. Since we want the vertices be 
+$SU(2)_L$-invariant, we 
+decompose the product and focus on the singlet. This will be done for all four vertices per diagram which are multiplied and then added up for every diagram,
+one can write down using these operators. For the singlet case, this calculus can be done equivalently but can be skipped, because no charged currents as 
+$b \bar u \rightarrow \mu \bar \nu$ are not induced, thus the prefactor of $O_\tau$ has to be zero and therefore 
+\begin{align}
+  \mathcal{L}_\text{eff} \supset \frac{K(x_q,x_l)}{m^2}\frac{\alpha_i^{q*} \alpha_j^{q*} \alpha_m^l \alpha_n^l}{64\pi^2} \times O_\delta.
+ \label{eq_LagBSmumuModA}
+\end{align}
+In the case of higher isospin multiplets, processes of the just mentioned kind occur and thus we have three distinct types, with respect to their prefactor
+that can be checked by expanding $O_\delta + X O_\tau$, namely $\bar d d\rightarrow \bar l l$, $\bar d d \rightarrow \bar\nu \nu$ and 
+$d \bar u\rightarrow l\bar\nu$. 
+
+
 TODO: CG-coefficients
 \begin{align}
- \nonumber
- \mathcal{L}_\text{eff} \supset \frac{K(x_q,x_l)}{m^2}\frac{\alpha_i^{q*} \alpha_j^{q*} \alpha_m^l \alpha_n^l}{64\pi^2}&\left[\left(\bar Q^i_L\gamma^\mu Q^j_L\right)\left(L^m_L\gamma_\mu L^n_L\right)\right.\\
- +&\left.\frac23\left(\bar Q^i_L\gamma^\mu \vec \tau Q^j_L\right)\left(L^m_L\gamma_\mu \vec \tau L^n_L\right)\right].
+ \mathcal{L}_\text{eff} \supset \frac{K(x_q,x_l)}{m^2}\frac{\alpha_i^{q*} \alpha_j^{q*} \alpha_m^l \alpha_n^l}{64\pi^2}\times\left(O_\delta + \frac23 O_\tau\right).
  \label{eq_LagBSmumuModB}
-\end{align}
-\begin{align}
-  \mathcal{L}_\text{eff} \supset \frac{K(x_q,x_l)}{m^2}\frac{\alpha_i^{q*} \alpha_j^{q*} \alpha_m^l \alpha_n^l}{64\pi^2}&\left[\left(\bar Q^i_L\gamma^\mu Q^j_L\right)\left(L^m_L\gamma_\mu L^n_L\right)\right]
- \label{eq_LagBSmumuModA}
 \end{align}
 
 
 
 
 \subsection{$B_s$-Mixing}
+
+\begin{align}
+ \mathcal{L}_\text{eff} \supset \frac{K'(x_q)}{m^2}\frac{\alpha_i^{q*} \alpha_j^{q*} \alpha_m^l \alpha_n^l}{128\pi^2}\times\left(O_\delta + \frac23 O_\tau\right).
+ \label{eq_LagBSmixModB}
+\end{align}
+
 
 \subsection{DM Annihilation}
 
@@ -447,12 +531,15 @@ TODO: CG-coefficients
 \newpage
 
 \begin{thebibliography}{xxx}
- \bibitem[1]{Grip}B. Gripaios et al. \textit{Linear flavour violation and anomalies in $B$ physics}\\ \href{http://arxiv.org/abs/1509.05020v1}{arxiv.org/abs/1509.05020v1}
- \bibitem[2]{Peskin}M. Peskin et al. \textit{An Introduction To Quantum Field Theory}\\ ISBN: 0-201-50397-2
- \bibitem[3]{Fierz}J.F. Nieves et al. \textit{Generalized Fierz identities}\\ \href{http://http://arxiv.org/abs/hep-ph/0306087v1}{arxiv.org/abs/hep-ph/0306087v1}
- \bibitem[4]{FerA4}G. Altarelli et al. \textit{Tri-Bimaximal Neutrino Mixing and Discrete Flavour Symmetries}\\ \href{https://arxiv.org/abs/1205.5133}{arxiv.org/abs/1205.5133}
- \bibitem[5]{VarzTotMod}I.d.M. Varzielas et al. \textit{Clues for flavour from rare lepton and quark decays}\\ \href{https://arxiv.org/abs/1503.01084}{arxiv.org/abs/1503.01084}
- \bibitem[6]{Lavoura}L. Lavoura \textit{General formulae for $f_1\rightarrow f_2 \gamma$}\\ \href{http://arxiv.org/abs/hep-ph/0302221}{arxiv.org/abs/hep-ph/0302221}
- \bibitem[7]{BurasEFT}A.J. Buras \textit{Weak Hamiltonian, CP Violation and Rare Decays}\\ \href{http://arxiv.org/abs/hep-ph/9806471}{arxiv.org/abs/hep-ph/9806471}
+ \bibitem[1]{Grip}B. Gripaios et al. \textit{Linear flavour violation and anomalies in $B$ physics} \href{http://arxiv.org/abs/1509.05020v1}{arxiv.org/abs/1509.05020v1}
+ \bibitem[2]{Peskin}M. Peskin et al. \textit{An Introduction To Quantum Field Theory} ISBN: 0-201-50397-2
+ \bibitem[3]{Fierz}J.F. Nieves et al. \textit{Generalized Fierz identities} \href{http://http://arxiv.org/abs/hep-ph/0306087v1}{arxiv.org/abs/hep-ph/0306087v1}
+ \bibitem[4]{FerA4}G. Altarelli et al. \textit{Tri-Bimaximal Neutrino Mixing and Discrete Flavour Symmetries} \href{https://arxiv.org/abs/1205.5133}{arxiv.org/abs/1205.5133}
+ \bibitem[5]{VarzTotMod}I.d.M. Varzielas et al. \textit{Clues for flavour from rare lepton and quark decays} \href{https://arxiv.org/abs/1503.01084}{arxiv.org/abs/1503.01084}
+ \bibitem[6]{Hisano}J. Hisano et al. \textit{Direct Detection of Electroweak-Interacting Dark Matter} \href{https://arxiv.org/abs/1104.0228v2}{arxiv.org/abs/1104.0228v2}
+ \bibitem[7]{minMatter}E.D. Nobile et al. \textit{Minimal Matter at the Large Hadron Collider} \href{http://arxiv.org/abs/0908.1567}{arxiv.org/abs/0908.1567}
+ \bibitem[8]{anomMom}K. Melnikov et al. \textit{Theory of the Muon Anomalous Magnetic Moment} ISBN-13 978-3-540-32806-3
+ \bibitem[9]{Lavoura}L. Lavoura \textit{General formulae for $f_1\rightarrow f_2 \gamma$} \href{http://arxiv.org/abs/hep-ph/0302221}{arxiv.org/abs/hep-ph/0302221}
+ \bibitem[10]{BurasEFT}A.J. Buras \textit{Weak Hamiltonian, CP Violation and Rare Decays} \href{http://arxiv.org/abs/hep-ph/9806471}{arxiv.org/abs/hep-ph/9806471}
 \end{thebibliography}
 \end{document}
