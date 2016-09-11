@@ -150,109 +150,18 @@ related topics in the SM and cosmology.
 
 \section{A Guide to today's Physics}
 
+\input{../input/yukSM.tex}
 
-\subsection{Flavour in the SM}
-% The Standard Model is a theory that contains particle fields, ordinary matter is composed of and messenger fields mediating interactions between them. 
-% These fields can be separated by their quantum numbers indicating their couplings to each other. At first we have the twelve gauge vector boson fields, 
-% eight gluon fields $G_a$ for strong interactions with coloured ($C$) particles and four electroweak boson fields $W_1$, $W_2$, $W_3$ and $B$ which couple
-% to particles with weak isospin $T$ and hypercharge $Y_W$ respectively. Now we have 24 fermion fields, six leptons and six quarks each carrying one of three colours.
-% The leptons can be subdivided into three electrically ($Q=T+Y_W$) charged and three uncharged ones and the quarks into three up-type ($T=\sfrac12$) and
-% three down-type ($T=-\sfrac12$). Last but not least, the already mentioned scalar Higgs-field $\phi$ which develops a non vanishing vacuum expectation value
-% (vev) $v$. This is the source for the spontanious breaking of the electroweak symmetry into the electromagnetic 
-% (NOT)
-The Standard Model is a gauge quantum field theory whose internal symmetry is the unitary product group $SU(3)_C\times SU(2)_L\times U(1)_{Y_W}$ representing
-the quantum chromodynamics (QCD) whose charge is called color $C$ and the electroweak theory (GSW-Theory) whose charges are the weak isospin $T$ 
-(hold by left handed particles) and the weak hypercharge $Y_W$. These quantum numbers (QN) are carried by a set of particle fields, ordinary matter is composed
-of and messenger fields mediating these interactions between them. In particular twelve gauge vector boson fields, eight gluon fields $G_a$ for strong 
-interactions and four electroweak boson fields from which $W_1$, $W_2$, $W_3$ couple to the weak isospin and $B$ to the weak hypercharge. Now we have 12
-fermion fields, six leptons $e$, $\mu$, $\tau$ as well as their respective neutrinos $\nu$ and six quarks $u$, $d$, $s$, $c$, $b$, and $t$. Actually there
-are even more since they are defined by their QN. So for each fermion there is a distinction drawn between left handed $f_L$ ($T=\sfrac12$) and right 
-handed $f_R$ ($T=0$), although $\nu_R$ are not considered in the SM. Furthermore there are three different colours for each quark. Well finally the field 
-$\phi$ of the already mentioned scalar
-Higgs-boson holds a special role in the SM. It is known that the boson fields $W^\pm$ and $Z$, responsible for weak processes, have nonzero masses. But their
-mass terms would break the gauge invariance of the lagrangian. So the Higgs-mechanism was considered wherein $\phi$ develops a non vanishing vacuum expectation
-value $v$ (vev) which breaks the electroweak symmetry spontaniously down to the electromagnetic symmetry $U(1)_Q$ resulting in a still massless photon field 
-$A$ and the three just named massive ones.
-\subsubsection{Yukawa Interaction}
-Not only the bosons get their masses from this mechanism but the fermions as well - at least the electrically charged ($Q$) ones - which is represented by the
-Yukawa (scalar-fermion interaction) term in the SM-lagrangian
-\begin{equation}
- \mathcal{L}_{Y} = - y^u_{ij}\, \bar Q^i_L \, \phi^c\, u^j_R - y^d_{ij}\, \bar Q^i_L\, \phi\, d^j_R - y^e_{ij}\, \bar L^i_L\, \phi\, e^j_R + \text{h.c.}.
- \label{eq_yukawaSM}
-\end{equation}
-\noindent
-$y^u$, $y^d$ and $y^e$ are $3\times 3$ (three generations) real, so called yukawa matrices and represent the 
-coupling of the fermions to the Higgs. $\phi^c = \ti\sigma_2\phi^*$ is the charged conjugate Higgs. ``h.c.'' stands for hermetian conjugate so that it holds for the antiparticles as well. 
-$Q_L$, $L_L$ and $\phi$ are doublets of the $SU(2)_L$, since they are built out of two fermion fields each holding a 
-weak isospin of $T=\sfrac12$ with the 3rd component $T_3 = \pm\sfrac12$, e.g. $L^2_L = (\nu_{\mu\, L}, \mu_L)^T_{\textbf{2}}$ with the left handed muon-neutrino and the muon. 
-Their counterparts $u_R$, $d_R$ and $e_R$ are singlets under the $SU(2)_L$ because they have no weak isospin, e.g. $e^2_R = (\mu_R)_{\textbf{1}}$, and hence don't take part
-in the weak interaction mediated by the $W$-bosons. After 
-the symmetry breaking and rotating the fermion fields in a basis where the yukawa matrices become diagonal, we can write down their mass terms 
-\begin{equation}
- \mathcal{L}_m = -m^u_i \bar u'^i_L u'^i_R -m^d_i \bar d'^i_L d'^i_R -m^e_i \bar e'^i_L e'^i_R 
- \label{eq_massSM}
-\end{equation}
-\noindent
-where $m^\alpha_i \sim y^\alpha_i \cdot v$ ($\alpha = u,d,e$). Here you can see that the SM does not distinguish between generations. 
-It treats a left handed up quark the same way it treats a left handed charm or a left handed top. So if the eigenvalues of $m^\alpha$ would be degenerate, i.e. the masses would
-be all the same, one would not have a method to differentiate them. 
+\input{../input/weak.tex}
 
-% \vspace{-0.3cm}
-You could ask
-what happened with a term like $\nu_R$ in \eqref{eq_yukawaSM}. This would imply a particle which has neither a color charge, nor electrical charge, nor 
-weak isospin and hence ($Q = T_3 + Y_W$) no hypercharge which means that the SM is totally blind to it. Furthermore it seemed obvious not to be
-able to construct a neutrino mass since they were considered massless. But to answer the question we could add 
-such a term somehow when it can be shown for example that righthanded neutrinos exist, which is likely due to the measurements of neutrino oscillations.
+\input{../input/flanom.tex}
 
-\subsubsection{Weak Interaction}
-Neutrino oscillation is a process where a neutrino of one generation changes its flavour while propagating through space described by the PMNS matrix. 
-This suggests that 
-flavour is not a conserved quantum number in nature unlike the electrical charge for example. As this phenomenon is still rather young (2001) and not implemented in the 
-SM, we already have flavour violation (FV) therein, in the quark sector. There is a huge list of Mesons and Baryons (composites of one quark and one anti-quark,
-or three quarks, respectively) decaying into others with different quark content enabled by the $W$-bosons via charged currents. 
-
-\textit{Flavour Changing Charged Currents}\\
-\noindent So it was thought, that the down-type quark mass
-eigenstates $d'^i$ are superpositions of their interaction eigenstates $d^i$. Formerly started by Cabibbo and pursued by 
-Kobayashi and Maskawa (1973) for CP-violation reasons (charge conjugation C, parity P), the CKM-matrix as an unitary $3\times 3$ matrix was invented,
-which can be thought of as a rotation
-matrix, rotating the weak eigenstates of the down-type quarks in the mass eigenstates by three Euler angles, $\theta_{12} = \theta_C$ called Cabibbo angle 
-as well as $\theta_{23}$ and $\theta_{13}$.
-\begin{equation}
- \begin{pmatrix}
-  d' \\ s' \\ b'
- \end{pmatrix} = V_\text{CKM}  \begin{pmatrix}
-  d \\ s \\ b
- \end{pmatrix},
-\end{equation}
-\noindent
-where $V_\text{CKM}$ can be parameterised by $\lambda = \sin(\theta_C) \approx 0.2$ at leading order (LO) as
-\begin{equation}
- V_\text{CKM} \approx \begin{pmatrix}
-  1 & \lambda & \lambda^3\\
-  -\lambda & 1 & \lambda^2\\
-  -\lambda^3 & -\lambda^2 & 1
- \end{pmatrix}.
-\end{equation}
-The up-type quarks have no differences between their weak and mass eigenstates, but we could have played the same game with them leading to the 
-same mixing, since $V_\text{CKM}$ is unitary. Looking at this matrix one can see that it is almost diagonal and hierachical which
-means that the farther you leave the main diagonal the smaller become the magnitudes of the entries. It can be asked 
-
-\textit{Flavour Changing Neutral Currents}\\
-\noindent TO REVISE!
-One problem of Cabibbo's theory is that a process $d'\bar {d'} \rightarrow Z$ would lead to an FCNC at tree level but is in fact highly suppressed. This
-could be explained by the GIM-mechanism 
-
-
-Now comes one of the basic questions motivating this thesis: Are these patterns random or is there rather an underlying broken family-symmetry which
-could serve as a blindman's stick for the SM? We go with our guts and prefer the latter suggestion.
-
-\subsubsection{Effective Field Theory}
-\cite{BurasEFT} simple derivation of EFT in SM as 4-fermi. Extraction of Wilson coefficients.
-To get such a
-low energy theory, one uses the framework of the Operator Product Expansion (OPE)
+\input{../input/eft.tex}
 
 \subsection{DM in the $\Lambda$-CDM}
+
+\input{../input/dmCDM.tex}
+
 
 \subsubsection{WIMP Relic Density}
 
@@ -294,43 +203,7 @@ finite amount of representations; characters;
  tetrahedron; link to $T'$ just because its nice; smallest group with $\boldsymbol{3}$; PMNS matrix; $\theta_{13}$
  seperation of leptons and neutrinos
 
-\section{Model Outline}
-\textit{The Underlying Model}\\
-\noindent Now that we know the actors on the stage, we can build a model trying to reveal their behaviour altogether. We will follow basically the model constructed
-in \cite{Grip}. They build a renormalisable theory which generates the anomalies associated with the $b$ and the $\mu$ at loop level. To do so, they 
-introduce two new scalar fields $\Phi_l$ and $\Phi_q$ and a single fermion field $\chi$ which couple to SM-fermions via Yukawa interactions. 
-Their conditions to reduce the amount of possible charge assignments for them are 
-\begin{enumerate}
- \item the preservation of the accidental symmetries as baryon and lepton number and the prevention of other sources of flavour violation.
- \item scalar couplings with the Higgs as $\Phi H H$ or $\Phi H H H$ which could modify the observed Higgs phenomenology should be prevented.
- \item the coloured particle, required by quark interaction, should be a scalar since it will have weaker bounds on its mass.
- \item a $U(1)$ symmetry only interacting non trivially on the BSM fields has the advantage that all NP flavour-violating processes are loop suppressed. And
- moreover the lightest NP state (LP) would be stable that should be uncolored and electrically neutral. 
- \item the dimension of $SU(2)_L$ of the NP irreducibles is less then five.
-\end{enumerate}
-With these constraints they reject some representations of $\chi$ and $\Phi_l$ which could lead to unwanted renormalisable interactions, but they state 
-that their LP would not fit the relic density and/or the direct detection bounds through the Z-coupling, although the anomalies are 
-well explained by the model. \\ \\
-\noindent \textit{Charge assignment}\\ \noindent
-The main feature of this thesis is the adding of a flavour group $\mathcal{G} = U(1)_\text{FN}\times A_4 \times Z_3$ \cite{FerA4}\cite{VarzTotMod}. 
-It shall prohibit these dangerous interactions by charging the respective fields so that the representations themselves are again enabled. Besides this,
-the flavour patterns and the correct DM phenomeology are obtained. 
-The downside herein is the surrender of renormalisability. Since we expect that NP couples chirally and that the fits say that the 4 fermion operator 
-$\bar b_L \gamma^\nu s_L \mu_L \gamma_\nu \mu_L$ is prefered, we consider $SU(2)_L$ representations of $\chi$ that yield invariance and wherein the lightest
-state has a small or vanishing $T_3$ in order to reduce its coupling to the $Z$. This can be achieved in many ways depending on what you want to get in the end. Besides the focus on heavy quarks,
-our interest is a special role for the muon in order to explain its anomalous magnetic moment and the discrepancy in $B_s\rightarrow \mu\mu$. 
-To do so, we want $\Phi_l$ to only couple to muons which can be ensured by representing it suitably under $A_4$. 
-\input{../input/modeloutline.tex} 
-The accidental symmetries in the last column in table \ref{tab_models}
-enforce stability of the proton and prevents contributions to other baryon and/or lepton number violating
-processes. Additionally, the $U(1)_\chi$ stabilises the LP which is a crucial premise for a DM candidate. 
-When a fermionic multiplet only has $SU(2)_L\times U(1)_Y$ gauge interactions in the SM and its components have a common tree-level mass, the charged 
-ones become havier than the neutral one due to quantum loop corrections of $\mathcal{O}$(100 MeV) \cite{Hisano}\cite{minMatter}. This implies that we 
-can chose the hypercharge of $\chi$ to be 0 for both models. So eventually the interaction lagrangian for them reads
-\begin{align}
- \mathcal{L} = g_i^q \bar \chi_R Q_L^i \Phi_q + g_i^l \bar \chi_R L_L^i \Phi_l + \text{h.c.}.
-\end{align}
-
+\input{../input/modeloutline.tex}
 
 \section{Phenomenological Analysis}
 Now we want to check the two models of our DM field $\chi$ being a singlet or a triplet under the $SU(2)_L$, respectively, on five processes. Three of them
@@ -340,7 +213,11 @@ of the $\chi$ is just $m$ and the parameter of interest, the masses of the scala
 $x_l=\frac{M_l}{m}$ and $x_q = \frac{M_q}{m}$. 
 
 \subsection{Anomalous Magnetic Moment of the Muon}
-We start with the anomalous magnetic moment of the muon since its parameter set only consists of $m$, $M_l$ and $g_2^l$. In general, every charged particle
+We start with the anomalous magnetic moment of the muon since its parameter set only consists of 
+\begin{align}
+ \left(m, M_l, g_2^l\right).
+\end{align}
+In general, every charged particle
 may have a spin $\boldsymbol{s}$ with an associated magnetic moment \cite{anomMom}
 \begin{align}
  \boldsymbol{\mu} = g \frac{e}{2m}\boldsymbol{s}.
@@ -371,7 +248,7 @@ with $F_D(0)=1$ but $F_P(0)\neq0$. \cite{Lavoura} provides handy formulae for ge
 is $F_P(0) =m_\mu\left( \sigma_L P_L + \sigma_R P_R\right)$ with the $\sigma$s being sums of loop functions. The key process is depicted in figure \ref{pic_g-2}.
 \begin{figure}[t]
  \includegraphics[width=0.6\textwidth]{../pics/g-2.eps}
- \caption{One-loop contribution to $a_\mu$. Depending on the model, there are multiple possibilites to attach the photon.}
+ \caption{One-loop contribution to $a_\mu$. Depending on the representations, there are multiple possibilites to attach the photon.}
  \label{pic_g-2}
 \end{figure}
 Since we have a Yukawa interaction coupling to left handed particles, there are only terms left with $\lambda=|g_2^l|^2$, so that we eventually have
@@ -380,9 +257,11 @@ Since we have a Yukawa interaction coupling to left handed particles, there are 
 \end{align}
 with
 \begin{align}
- I(x) = \frac{1}{12(x-1)^4}\left(-5+5x-x^2+x^3+6x\log(x) \right).
+ I(x) = \frac{1}{12(x-1)^4}\left(2+3x-6x^2+x^3+6x\log(x) \right).
 \end{align}
 The sum over $i$ is understood so that $Q_\mu = Q_F-Q_B$ is ensured.
+
+there is an i in the electric current and an i in lavoura -> -1
 
 
 \subsection{$B_s\rightarrow \mu\mu$}
@@ -425,15 +304,15 @@ so that we have the same structure. This will be done by the Fierz identities.
 \begin{align}
  e_S(1234) = 1\cdot e_V(3214)
 \end{align}
-gives only a factor 1.
+gives only a factor 1 (chiral).
 \\ \\ \noindent \textit{Additional $SU(2)_L$-invariant term}\\
 \noindent The operator $O_\delta=\left(\bar Q_L^i \gamma_\rho Q_L^j\right)\left(\bar L_L^m \gamma^\rho L_L^n\right)$ is not the only one which is a singlet
 in the isospin space but $O_\tau=\left(\bar Q_L^i\vec \tau \gamma_\rho Q_L^j\right)\left(\bar L_L^m\vec \tau \gamma^\rho L_L^n\right)$ as well which enables
 charged currents. The eventual operator is a superposition of these two. There might be several ways of computing the model dependent, relative 
-prefactor $X$ of $O_\tau$  but one possibility is to regard the particles at each vertex as isospin multiplets. Since we want the vertices be 
+prefactor $X$ of $O_\tau$  but one possibility is to regard the particles at each vertex as isospin multiplets. Since we want the vertices to be 
 $SU(2)_L$-invariant, we 
 decompose the product and focus on the singlet. This will be done for all four vertices per diagram which are multiplied and then added up for every diagram,
-one can write down using these operators. For the singlet case, this calculus can be done equivalently but can be skipped, because no charged currents as 
+one can write down using these operators. For model A, this calculus can be done equivalently but can be skipped, because no charged currents as 
 $b \bar u \rightarrow \mu \bar \nu$ are not induced, thus the prefactor of $O_\tau$ has to be zero and therefore 
 \begin{align}
   \mathcal{L}_\text{eff} \supset \frac{K(x_q,x_l)}{m^2}\frac{\alpha_i^{q*} \alpha_j^{q*} \alpha_m^l \alpha_n^l}{64\pi^2} \times O_\delta.
@@ -462,12 +341,22 @@ TODO: CG-coefficients
 
 
 \subsection{DM Annihilation}
+\begin{align}
+ \langle \sigma v \rangle^\text{D} \left(\bar \chi \chi \rightarrow \bar f f\right) = \frac{N_c g_f^4 m^2}{32\pi^2\left(M_l^2 + m^2\right)^2}
+\end{align}
+\begin{align}
+ \langle \sigma v \rangle^\text{M} \left(\bar \chi \chi \rightarrow \bar f f\right) = \frac{N_c g_f^4 m^2 \left(M^4+m^4 \right)}{48\pi^2\left(M_l^2 + m^2\right)^4}
+\end{align}
+
 
 \subsection{Direct Detection}
 
 \section{Results}
-\subsection{Model A}
-\subsection{Model B}
+supersymmetry
+\subsection{A - $T(\chi)=\boldsymbol{1}$}
+binolike
+\subsection{B - $T(\chi)=\boldsymbol{3}$}
+winolike
 \section{Conclusion and Prospects}
 
 % dfasdölkj\\d\\d\\d\\d\\d\\d\\d\\d\\d\\d\\d

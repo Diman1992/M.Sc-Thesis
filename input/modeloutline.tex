@@ -1,3 +1,32 @@
+
+
+
+\section{Model Outline}
+\textit{The Underlying Model}\\
+\noindent Now that we know the actors on the stage, we can build a model trying to reveal their behaviour altogether. We will follow basically the model constructed
+in \cite{Grip}. They build a renormalisable theory which generates the anomalies associated with the $b$ and the $\mu$ at loop level. To do so, they 
+introduce two new scalar fields $\Phi_l$ and $\Phi_q$ and a single fermion field $\chi$ which couple to SM-fermions via Yukawa interactions. 
+Their conditions to reduce the amount of possible charge assignments for them are 
+\begin{enumerate}
+ \item the preservation of the accidental symmetries as baryon and lepton number and the prevention of other sources of flavour violation.
+ \item scalar couplings with the Higgs as $\Phi H H$ or $\Phi H H H$ which could modify the observed Higgs phenomenology should be prevented.
+ \item the coloured particle, required by quark interaction, should be a scalar since it will have weaker bounds on its mass.
+ \item a $U(1)$ symmetry only interacting non trivially on the BSM fields has the advantage that all NP flavour-violating processes are loop suppressed. And
+ moreover the lightest NP state (LP) would be stable that should be uncolored and electrically neutral. 
+ \item the dimension of $SU(2)_L$ of the NP irreducibles is less then five.
+\end{enumerate}
+With these constraints they reject some representations of $\chi$ and $\Phi_l$ which could lead to unwanted renormalisable interactions, but they state 
+that their LP would not fit the relic density and/or the direct detection bounds through the Z-coupling, although the anomalies are 
+well explained by the model. \\ \\
+\noindent \textit{Charge assignment}\\ \noindent
+The main feature of this thesis is the adding of a flavour group $\mathcal{G} = U(1)_\text{FN}\times A_4 \times Z_3$ \cite{FerA4}\cite{VarzTotMod}. 
+It shall prohibit these dangerous interactions by charging the respective fields so that the representations themselves are again enabled. Besides this,
+the flavour patterns and the correct DM phenomeology are obtained. 
+The downside herein is the surrender of renormalisability. Since we expect that NP couples chirally and that the fits say that the 4 fermion operator 
+$\bar b_L \gamma^\nu s_L \mu_L \gamma_\nu \mu_L$ is prefered, we consider $SU(2)_L$ representations of $\chi$ that yield invariance and wherein the lightest
+state has a small or vanishing $T_3$ in order to reduce its coupling to the $Z$. This can be achieved in many ways depending on what you want to get in the end. Besides the focus on heavy quarks,
+our interest is a special role for the muon in order to explain its anomalous magnetic moment and the discrepancy in $B_s\rightarrow \mu\mu$. 
+To do so, we want $\Phi_l$ to only couple to muons which can be ensured by representing it suitably under $A_4$. 
 \begin{table}[t]
  \begin{tabular}{c|c|c|c}
 %$SU(3)_C\times SU(2)_L\times U(1)_{Y_W}$
@@ -16,9 +45,17 @@
   $\Phi_q$ & (3,2,-$\frac16$) & ($1$,0,1)& ($-\frac13$,0,1)\\
   \hline
   $\Phi_T$ & (1,1,0) & ($3$,0,1)& (0,0,0)\\
-
  \end{tabular}
 \caption{Transformation rules for the SM and BSM fields. The two rows for $\chi$ denote "model A" and "model B", respectively. For the charges under $U(1)_\text{FN}$ and the representations for $E_R$ under $A_4$ 
 see sections \ref{sec_FNGT} and \ref{sec_A4GT}.}
 \label{tab_models}
 \end{table}
+The accidental symmetries in the last column in table \ref{tab_models}
+enforce stability of the proton and prevents contributions to other baryon and/or lepton number violating
+processes. Additionally, the $U(1)_\chi$ stabilises the LP which is a crucial premise for a DM candidate. 
+When a fermionic multiplet only has $SU(2)_L\times U(1)_Y$ gauge interactions in the SM and its components have a common tree-level mass, the charged 
+ones become havier than the neutral one due to quantum loop corrections of $\mathcal{O}$(100 MeV) \cite{Hisano}\cite{minMatter}. This implies that we 
+can chose the hypercharge of $\chi$ to be 0 for both models. So eventually the interaction lagrangian for them reads
+\begin{align}
+ \mathcal{L} = g_i^q \bar \chi_R Q_L^i \Phi_q + g_i^l \bar \chi_R L_L^i \Phi_l + \text{h.c.}.
+\end{align}

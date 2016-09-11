@@ -1,0 +1,53 @@
+\subsection{Flavour in the SM}
+% The Standard Model is a theory that contains particle fields, ordinary matter is composed of and messenger fields mediating interactions between them. 
+% These fields can be separated by their quantum numbers indicating their couplings to each other. At first we have the twelve gauge vector boson fields, 
+% eight gluon fields $G_a$ for strong interactions with coloured ($C$) particles and four electroweak boson fields $W_1$, $W_2$, $W_3$ and $B$ which couple
+% to particles with weak isospin $T$ and hypercharge $Y_W$ respectively. Now we have 24 fermion fields, six leptons and six quarks each carrying one of three colours.
+% The leptons can be subdivided into three electrically ($Q=T+Y_W$) charged and three uncharged ones and the quarks into three up-type ($T=\sfrac12$) and
+% three down-type ($T=-\sfrac12$). Last but not least, the already mentioned scalar Higgs-field $\phi$ which develops a non vanishing vacuum expectation value
+% (vev) $v$. This is the source for the spontanious breaking of the electroweak symmetry into the electromagnetic 
+% (NOT)
+The Standard Model is a gauge quantum field theory whose internal symmetry is the unitary product group $SU(3)_C\times SU(2)_L\times U(1)_{Y_W}$ representing
+the quantum chromodynamics (QCD) whose charge is called color $C$ and the electroweak theory (GSW-Theory) whose charges are the weak isospin $T$ 
+(hold by left handed particles) and the weak hypercharge $Y_W$. These quantum numbers (QN) are carried by a set of particle fields, ordinary matter is composed
+of and messenger fields mediating these interactions between them. In particular twelve gauge vector boson fields, eight gluon fields $G_a$ for strong 
+interactions and four electroweak boson fields from which $W_1$, $W_2$, $W_3$ couple to the weak isospin and $B$ to the weak hypercharge. Now we have 12
+fermion fields, six leptons $e$, $\mu$, $\tau$ as well as their respective neutrinos $\nu$ and six quarks $u$, $d$, $s$, $c$, $b$, and $t$. Actually there
+are even more since they are defined by their QN. So for each fermion there is a distinction drawn between left handed $f_L$ ($T=\sfrac12$) and right 
+handed $f_R$ ($T=0$), although $\nu_R$ are not considered in the SM. Furthermore there are three different colours for each quark. Well finally the field 
+$\phi$ of the already mentioned scalar
+Higgs-boson holds a special role in the SM. It is known that the boson fields $W^\pm$ and $Z$, responsible for weak processes, have nonzero masses. But their
+mass terms would break the gauge invariance of the lagrangian. So the Higgs-mechanism was considered wherein $\phi$ develops a non vanishing vacuum expectation
+value $v$ (vev) which breaks the electroweak symmetry spontaniously down to the electromagnetic symmetry $U(1)_Q$ resulting in a still massless photon field 
+$A$ and the three just named massive ones.
+\subsubsection{Yukawa Interaction}
+Not only the bosons get their masses from this mechanism but the fermions as well - at least the electrically charged ($Q$) ones - which is represented by the
+Yukawa (scalar-fermion interaction) term in the SM-lagrangian
+\begin{equation}
+ \mathcal{L}_{Y} = - y^u_{ij}\, \bar Q^i_L \, \phi^c\, u^j_R - y^d_{ij}\, \bar Q^i_L\, \phi\, d^j_R - y^e_{ij}\, \bar L^i_L\, \phi\, e^j_R + \text{h.c.}.
+ \label{eq_yukawaSM}
+\end{equation}
+\noindent
+$y^u$, $y^d$ and $y^e$ are $3\times 3$ (three generations) real, so called yukawa matrices and represent the 
+coupling of the fermions to the Higgs. $\phi^c = \ti\sigma_2\phi^*$ is the charged conjugate Higgs. ``h.c.'' stands for hermetian conjugate so that it holds for the antiparticles as well. 
+$Q_L$, $L_L$ and $\phi$ are doublets of the $SU(2)_L$, since they are built out of two fermion fields each holding a 
+weak isospin of $T=\sfrac12$ with the 3rd component $T_3 = \pm\sfrac12$, e.g. $L^2_L = (\nu_{\mu\, L}, \mu_L)^T_{\textbf{2}}$ with the left handed muon-neutrino and the muon. 
+Their counterparts $u_R$, $d_R$ and $e_R$ are singlets under the $SU(2)_L$ because they have no weak isospin, e.g. $e^2_R = (\mu_R)_{\textbf{1}}$, and hence don't take part
+in the weak interaction mediated by the $W$-bosons. After 
+the symmetry breaking and rotating the fermion fields in a basis where the yukawa matrices become diagonal, we can write down their mass terms 
+\begin{equation}
+ \mathcal{L}_m = -m^u_i \bar u'^i_L u'^i_R -m^d_i \bar d'^i_L d'^i_R -m^e_i \bar e'^i_L e'^i_R 
+ \label{eq_massSM}
+\end{equation}
+\noindent
+where $m^\alpha_i \sim y^\alpha_i \cdot v$ ($\alpha = u,d,e$). Here you can see that the SM does not distinguish between generations. 
+It treats a left handed up quark the same way it treats a left handed charm or a left handed top. So if the eigenvalues of $m^\alpha$ would be degenerate, i.e. the masses would
+be all the same, one would not have a method to differentiate them. 
+
+% \vspace{-0.3cm}
+You could ask
+what happened with a term like $\nu_R$ in \eqref{eq_yukawaSM}. This would imply a particle which has neither a color charge, nor electrical charge, nor 
+weak isospin and hence ($Q = T_3 + Y_W$) no hypercharge which means that the SM is totally blind to it. Furthermore it seemed obvious not to be
+able to construct a neutrino mass since they were considered massless. But to answer the question we could add 
+such a term somehow when it can be shown for example that righthanded neutrinos exist, which is likely due to the measurements of neutrino oscillations.
+
