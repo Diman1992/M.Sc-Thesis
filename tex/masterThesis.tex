@@ -307,13 +307,28 @@ with
 In the SM, the fermion currents do not combine quarks and leptons. To compare the NP contribution to this process, we have to rearrange the fermion currents,
 so that we have the same structure. This will be done by the Fierz identities.
 \\ \\ \noindent \textit{Fierz Identities}\\
-They are relations usually between a product of two Dirac bilinears being a 
-
-\cite{Fierz}
+They usually relate a Dirac quadrilinear, containing four spinors, with a sum of rearranged Dirac quadrilinears \cite{Fierz}
 \begin{align}
- e_S(1234) = 1\cdot e_V(3214)
+  \left[\bar w_1\Gamma_I w_2\right] \left[\bar w_3 \Gamma^I w_4 \right] =: e_I(1234) = \sum\limits_J F_{IJ} e_J(1432)
 \end{align}
-gives only a factor 1 (chiral).
+with an (anti)spinor $w$ and $\Gamma_I$ as a set of Dirac matrices whereby $I=S,V,T,A,P$ representing $I,\gamma^\mu,\sigma^{\mu\nu},\gamma^\mu\gamma_5,\gamma_5$, 
+respectively. The coefficients $F_{IJ}$ are real numbers
+\begin{align}
+ F_{IJ}=\frac14\begin{pmatrix}
+    1&1&\frac12&-1&1\\
+    4&-2&0&-2&-4\\
+    12&0&-2&0&12\\
+    -4&-2&0&-2&4\\
+    1&-1&\frac12&1&1\\
+ \end{pmatrix}_{IJ}.
+\end{align}
+\noindent For our purpose we want to transform the quadrilinear in \eqref{eq_matElemBSmumu}. By expanding there are four terms
+\begin{align}
+ e_V(1234)+e_A(1234)-\left(e'_V(1234) + e'_A(1234)\right).
+ \label{eq_fierz}
+\end{align}
+The primed quadrilinears represent a pseudoscalar combination of two parity partners, e.g. $e'_V = \left[\bar w\gamma^\mu w\right]\left[w\gamma_\mu\gamma_5w\right]$
+which are transformed with $F^\text{T}$. We can see that \eqref{eq_fierz} is an invariant and so we can simply rearrange the quadrilinear.
 \\ \\ \noindent \textit{Additional $SU(2)_L$-invariant term}\\
 \noindent The operator $O_\delta=\left(\bar Q_L^i \gamma_\rho Q_L^j\right)\left(\bar L_L^m \gamma^\rho L_L^n\right)$ is not the only one which is a singlet
 in the isospin space but $O_\tau=\left(\bar Q_L^i\vec \tau \gamma_\rho Q_L^j\right)\left(\bar L_L^m\vec \tau \gamma^\rho L_L^n\right)$ as well which enables
@@ -327,9 +342,28 @@ $b \bar u \rightarrow \mu \bar \nu$ are not induced, thus the prefactor of $O_\t
   \mathcal{L}_\text{eff} \supset \frac{K(x_q,x_l)}{m^2}\frac{\alpha_i^{q*} \alpha_j^{q*} \alpha_m^l \alpha_n^l}{64\pi^2} \times O_\delta.
  \label{eq_LagBSmumuModA}
 \end{align}
-In the case of higher isospin multiplets, processes of the just mentioned kind occur and thus we have three distinct types, with respect to their prefactor
-that can be checked by expanding $O_\delta + X O_\tau$, namely $\bar d d\rightarrow \bar l l$, $\bar d d \rightarrow \bar\nu \nu$ and 
-$d \bar u\rightarrow l\bar\nu$. 
+In the case of higher dimensional isospin multiplets, processes of the just mentioned kind occur and thus we have three distinct types, with respect to 
+their prefactor that can be checked by expanding $O_\delta + X O_\tau$, namely $\bar d d\rightarrow \bar l l$, $\bar d d \rightarrow \bar\nu \nu$ and 
+$d \bar u\rightarrow l\bar\nu$. \\
+\noindent To get the singlet expression we can make use of the Clebsch-Gordan coefficients, known from spin arithmetics which also obey an $SU(2)$-Group.
+They can be read off the tables from (PDG). For a triplet ($\chi$) and two doublets ($\Phi$ and $D=Q,L$) we get
+\begin{align}
+ \frac{1}{\sqrt{3}}\left(\chi_3\Phi_1D_1 - \frac{1}{\sqrt{2}}\chi_2\left(\Phi_2D_1+\Phi_1 D_2\right) + \chi_1\Phi_2D_2 \right).
+ \label{eq_CG}
+\end{align}
+The indices represent the components of the respective multiplets. One has to be careful which vertex one is looking at while using \eqref{eq_CG} in reference
+to the lagrangian \eqref{eq_modelLagrangian}. An incoming $u$-quark occupies the first isospin component in the quark doublet $Q$ but an outgoing one the 
+second of $\bar Q$. Keeping this in mind we can look at each vertex of figure \ref{pic_Bsmumu} and examine the applicable coefficient. This is examplarily
+depicted in figure \ref{pic_CG} for a generic $\bar d d\rightarrow \bar d d$ process that also represents $\bar b s \rightarrow \bar \mu \mu$.
+\begin{figure}[t]
+ \includegraphics[width=\textwidth]{../pics/CG.eps}
+ \caption{$SU(2)_L$ singlet representation at each vertex of figure \ref{pic_Bsmumu} with the respective Clebsch-Gordan coefficients from \eqref{eq_CG}. 
+ This is exemplary for $\bar d d\rightarrow \bar d d$ processes which get contributions from two different particle configurations.}
+ \label{pic_CG}
+\end{figure}
+This gives an overall factor of $\frac{5}{36}$. The computation for the remaining two types is similar and yields $\frac{4}{36}$ for 
+$\bar d d\rightarrow \bar u u$ and $\frac{1}{36}$ for $\bar u d \rightarrow \bar u d$. With these three fractions and the relations from $O_\delta + X O_\tau$
+we can extract the prefactor $X$
 
 
 TODO: CG-coefficients
@@ -342,6 +376,11 @@ TODO: CG-coefficients
 
 
 \subsection{$B_s$-Mixing}
+\begin{figure}[t]
+ \includegraphics[width=0.6\textwidth]{../pics/bsmumu.eps}
+ \caption{bs->mumu}
+ \label{pic_Bsmix}
+\end{figure}
 $KK$ and $DD$ also possible but higher suppressed due to couplings
 \begin{align}
  \left(m, M_q, g_3^{q*}g_2^q\right).
@@ -353,6 +392,9 @@ $KK$ and $DD$ also possible but higher suppressed due to couplings
 
 
 \subsection{DM Annihilation}
+\begin{figure}[t]
+ \includegraphics[width=0.5\textwidth]{../pics/phigluon.eps}
+\end{figure}
 $VV$ annihilation (9207234), wino RD from other su2-states (0913-main)
 \begin{align}
  \langle \sigma v \rangle^\text{D} \left(\bar \chi \chi \rightarrow \bar f f\right) = \frac{N_c g_f^4 m^2}{32\pi^2\left(M_l^2 + m^2\right)^2}
@@ -363,6 +405,10 @@ $VV$ annihilation (9207234), wino RD from other su2-states (0913-main)
 
 
 \subsection{Direct Detection}
+\begin{figure}[t]
+ \includegraphics[width=0.5\textwidth]{../pics/phigluon.eps}
+\end{figure}
+
 fierzing->vector current ->vanishes for Majorana
 
 \section{Results}
