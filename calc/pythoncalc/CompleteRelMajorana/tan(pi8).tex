@@ -1,0 +1,68 @@
+\documentclass[11pt,a4paper,twoside]{article}
+\input{longheader}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+%Fußzeile mittig (Seitennummer)
+\fancyfoot[C]{$\int_{K\{0\}} \dx r \, a_s$}
+%Linie unten
+
+
+\begin{document}
+
+\section*{Completeness Relation for Majorana Fermions}
+Unlike Dirac fermions, Majorana fermions are their own anti-particles and therefore obey different Feynman-rules, e.q. when computing cross sections.
+If two Dirac fermions meet, depicted by their spinors $v$ and $u$, they couple with a coupling constant $g$ to a mediator with a certain type of coupling
+$\Gamma$. The part of the amplitude $M$ which contains the vertex part reads
+\begin{equation}
+ M_\text{vertex} = g\left[\bar v_1 \Gamma u_2\right].
+\end{equation}
+% 
+% \begin{equation}
+%  -\text{i}M(e^+e^-\rightarrow e'^+e'^-) = \left[(\bar v_{e^+} (\text{i}e\gamma_\mu) u_{e^-}\right]\frac{-\text{i}g^{\mu\nu}}{k^2+\text{i}\epsilon} \left[\bar u_{e'^-} (\text{i}e\gamma_\nu) v_{e'^+}\right].
+% \end{equation}
+During the following computation of the cross section one has to use Casimir's trick at one point in the unpolarised case, i.e. average of initial spins and
+sum over final spins. This translates the summation over the final spins to tracing operations of Dirac-matrices $\gamma$. Therefore one needs the completeness 
+relations which are
+\begin{align}
+ &\sum_{s=1,2} u_p^{(s)} \bar u_p^{(s)} = \slashed{p} + m \qquad \text{for particles} \\
+ &\sum_{s=1,2} v_p^{(s)} \bar v_p^{(s)} = \slashed{p} - m \qquad \text{for anti-particles},
+\end{align}
+where $\bar a = a^\dagger \gamma^0$ and with momentum $p$, feynman-slash notation $\slashed{a}=a_\mu\gamma^\mu$, mass $m$ and the spinors as
+\begin{align}
+ &u^{(s)}(p) = \frac{\slashed{p}+m}{\sqrt{2(E+m)}} \begin{pmatrix}
+                                             \xi_s \\ \xi_s
+                                            \end{pmatrix}\quad \text{and}\quad  v^{(s)}(p) = \frac{-\slashed{p}+m}{\sqrt{2(E+m)}} \begin{pmatrix}
+                                             \xi_s \\ -\xi_s
+                                            \end{pmatrix}\\
+ &\xi_1^T = (1\,\,\,0), \qquad \xi_2^T = (0\,\,\,1), \qquad 
+ \label{eq_spinors}
+\end{align}
+But if we have two Majorana fermions coupling to each other we have a different vertex expression
+\begin{equation}
+ M_\text{vertex} = g\left[\bar v_1 \Gamma u_2 - \bar u_1 \Gamma v_2\right],
+\end{equation}
+where the minus sign follows from Fermi-Dirac statistics. There will also arise terms like $u\bar u$ during the computation with identical completeness
+relations as for the Dirac case. But what is about terms as $v\bar u$ and $u\bar v$? Starting with the spinor representation in \eqref{eq_spinors} leads
+to 
+\begin{align}
+ &\sum_{s=1,2} u_p^{(s)} \bar v_p^{(s)} = U(-\slashed{p} + m) \\
+ &\sum_{s=1,2} v_p^{(s)} \bar u_p^{(s)} = U(+\slashed{p} + m), 
+\end{align}
+with a matrix $U$ which is build as
+\begin{align}
+ U = \gamma^0 \gamma_5 = \text{i} \gamma^1 \gamma^2 \gamma^3
+\end{align}
+% Some properties of $U$:
+% \begin{itemize}
+%  \item $U^2 = -I_4$
+%  \item $\{U,\gamma^0\} = \{U,\gamma_5\} = 0$
+%  \item $[U,\gamma^i] = 0$
+%  \item $U\gamma^\mu U = \left(\gamma^\mu\right)^\dagger$
+% \end{itemize}
+
+
+
+
+
+\end{document}

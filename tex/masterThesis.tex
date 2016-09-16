@@ -69,7 +69,7 @@ Technische Universität Dortmund \\ 2016
 \begin{tabbing}
 1. Gutachter : \=\kill
 1. Gutachter : \>Prof. Dr. Gudrun Hiller \\[11pt]
-2. Gutachter : \> \\[11pt]
+2. Gutachter : \>Prof. Dr. Jean Orloff \\[11pt]
 \end{tabbing}
 \vspace{11pt}
 Datum des Einreichens der Arbeit: 31. Oktober, 2016
@@ -339,7 +339,7 @@ decompose the product and focus on the singlet. This will be done for all four v
 one can write down using these operators. For model A, this calculus can be done equivalently but can be skipped, because no charged currents as 
 $b \bar u \rightarrow \mu \bar \nu$ are not induced, thus the prefactor of $O_\tau$ has to be zero and therefore 
 \begin{align}
-  \mathcal{L}_\text{eff} \supset \frac{K(x_q,x_l)}{m^2}\frac{\alpha_i^{q*} \alpha_j^{q*} \alpha_m^l \alpha_n^l}{64\pi^2} \times O_\delta.
+  \mathcal{L}^A_\text{eff} \supset \frac{K(x_q,x_l)}{m^2}\frac{\alpha_i^{q*} \alpha_j^{q*} \alpha_m^l \alpha_n^l}{64\pi^2} \times O_\delta.
  \label{eq_LagBSmumuModA}
 \end{align}
 In the case of higher dimensional isospin multiplets, processes of the just mentioned kind occur and thus we have three distinct types, with respect to 
@@ -363,14 +363,21 @@ depicted in figure \ref{pic_CG} for a generic $\bar d d\rightarrow \bar d d$ pro
 \end{figure}
 This gives an overall factor of $\frac{5}{36}$. The computation for the remaining two types is similar and yields $\frac{4}{36}$ for 
 $\bar d d\rightarrow \bar u u$ and $\frac{1}{36}$ for $\bar u d \rightarrow \bar u d$. With these three fractions and the relations from $O_\delta + X O_\tau$
-we can extract the prefactor $X$
-
-
-TODO: CG-coefficients
+we can extract the prefactor $X=\frac23$. Finally, we can write down the effective lagrangian for the triplet case
 \begin{align}
- \mathcal{L}_\text{eff} \supset \frac{K(x_q,x_l)}{m^2}\frac{\alpha_i^{q*} \alpha_j^{q*} \alpha_m^l \alpha_n^l}{64\pi^2}\times\left(O_\delta + \frac23 O_\tau\right).
+ \mathcal{L}^B_\text{eff} \supset \frac{K(x_q,x_l)}{m^2}\frac{\alpha_i^{q*} \alpha_j^{q*} \alpha_m^l \alpha_n^l}{64\pi^2}\times\left(O_\delta + \frac23 O_\tau\right).
  \label{eq_LagBSmumuModB}
 \end{align}
+Prefactors for other representations are listed in table below.
+
+\begin{table}[h]
+\begin{tabular}{c|cccc}
+ $(\chi,\Phi)$& (1,2) & (3,2) & (4,3) & (5,4)\\
+ \hline
+ $X$ & 0 & $\sfrac23$ & $\sfrac59$ & $\sfrac12$ 
+ \end{tabular}
+ 
+\end{table}
 
 
 
@@ -410,6 +417,12 @@ $VV$ annihilation (9207234), wino RD from other su2-states (0913-main)
 \end{figure}
 
 fierzing->vector current ->vanishes for Majorana
+\begin{align}
+ \text{cm}^2 = 2.57e27 1/GeV^2\\
+ \text{cm}^3/\text{s} = 7.70e17 1/GeV^2\\
+ \text{pb} = 2.57e-8 1/GeV^2
+\end{align}
+
 
 \section{Results}
 supersymmetry
