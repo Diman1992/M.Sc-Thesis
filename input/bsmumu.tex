@@ -6,7 +6,7 @@
 \end{figure}
 After we first focussed on a pure leptonic process, we add a quark pair. Our parameter set for this semileptonic process is now extended to
 \begin{align}
- \left(m, M_l, M_q, g_2^l, g_2^q, g_3^q\right).
+ \left(m, M_l, M_q, |g_2^l|^2, g_2^{q*} g_3^q\right).
 \end{align}
 Box diagrams of the kind as in picture \ref{pic_Bsmumu} are usually not calculated 
 all the way down to cross sections but one rather uses the formalism of effective field theory since the typical hadronic energy scale is of
@@ -15,7 +15,7 @@ $\mathcal{O}$(1 GeV) which is much lower than the weak scale $\mathcal{O}$(100 G
 \noindent So we can use 
 the OPE framework where they are integrated out and the external masses and momenta are set to zero. The amplitude in the full theory is
 \begin{align}
- M =\alpha_i^{q*} \alpha_j^{q*} \alpha_m^l \alpha_n^l\int \frac{\dx^4 q}{(2\pi)^4} \frac{q^\rho}{q^2-m^2}\Delta_q \Delta_l \frac{q^\sigma}{q^2-m^2} \left(\bar L_L^n \gamma_\rho Q_L^j\right) \left(\bar Q_L^i \gamma_\sigma L_L^m\right)
+ M =\alpha_i^{q*} g_j^{q} g_m^{l*} g_n^l\int \frac{\dx^4 q}{(2\pi)^4} \frac{q^\rho}{q^2-m^2}\Delta_q \Delta_l \frac{q^\sigma}{q^2-m^2} \left(\bar L_L^n \gamma_\rho Q_L^j\right) \left(\bar Q_L^i \gamma_\sigma L_L^m\right)
  \label{eq_matElemBSmumu}
 \end{align}
 with $q$ as the internal momentum and the scalar propagators $\Delta = \frac{1}{q^2-M^2}$ and the $\ti\epsilon$ terms in the denominators are already omitted
@@ -126,8 +126,8 @@ each other out and hence may reduce the impact of constraints from observables.\
 transitions, $O_9$ and $O_{10}$ (sec. \ref{sec_EFT}). The expression for the Wilson coefficient $C_9 = -C_{10}$ (1408.1627) is obtained by comparing the coefficients from the 
 4-fermi operator in the effective Lagrangians and the effective Hamiltonian
 \begin{align}
- C_9^A &= N \frac{g_s^*g_b|g_\mu|^2}{m^2} \frac{1}{128\pi^2} \left(K(x_q,x_l) + G(x_q,x_l)\right)\\
- C_9^B &= N \frac{g_s^*g_b|g_\mu|^2}{m^2} \frac{5}{384\pi^2} \left(K(x_q,x_l) + \frac15 G(x_q,x_l)\right)
+ C_9^A &= N \frac{g_2^{q*}g_3^q|g_2^l|^2}{m^2} \frac{1}{128\pi^2} \left(K(x_q,x_l) + G(x_q,x_l)\right)\\
+ C_9^B &= N \frac{g_2^{q*}g_3^q|g_2^l|^2}{m^2} \frac{5}{384\pi^2} \left(K(x_q,x_l) + \frac15 G(x_q,x_l)\right)
 \end{align}
 with
 \begin{align}
