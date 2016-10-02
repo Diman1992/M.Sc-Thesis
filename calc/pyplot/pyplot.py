@@ -6,6 +6,9 @@
 import numpy as np
 import matplotlib.pylab as plt
 
+#processes = enumerate('bsprocess','g2mu','annihilation','directdetection')
+#print( processes[0], processes[1])
+
 weak = -4*1.16e-5/np.sqrt(2) * 0.22**2 * 1/137 / (4*np.pi)
 cmToGeV2 = 2.57e27 #cm**2 = cmToGeV2 1/GeV**2
 mmuon = 0.105
@@ -36,7 +39,7 @@ g2high = 3.57e-9
 eps = 0.2
 gqf = np.array([eps**3,eps**3,eps**2,eps**2,1,1])
 mldiff = 200
-mqdiff = 100
+mqdiff = 800
 gq2f = gqf[2]
 gq3f = gqf[4]
 gl2f = 2
@@ -131,27 +134,29 @@ def gB32(x,y):
 def gW(x,y):
 	return 2*gB1(x) + gB31(x,y) + cQ[4]*gB32(x,y)
 
+def dq(m):
+	return alphW**2/mW**2 * gAV(tHad(m,mW)) 
 def f1B(m):
 	return alphW**2/(4*mH**2*mW) * gH(tHad(m,mW)) * np.sum(fNuc)
 def f2B(m):
 	return 2/(9*mW)*alphW**2 * (1/mW**2 * gW(tHad(m,mW),tHad(m,qmass[5])) - 1/(12*mH**2) * gH(tHad(m,mW))) * fGlu
 def f3B(m):
 	return np.sum(q2nd+q2ndb) *alphW**2/mW**3 * (gT1(tHad(m,mW)) + gT2(tHad(m,mW)))
-def sigmaDDB(m,A):
+def sigmaDDsiB(m,A):
 	return 4/np.pi * mRed(m,A)**2 * (A * (f1B(m)+f2B(m)+f3B(m)))**2
-print(f1A,f2A,f3A)
-print(f1B(100),f2B(100), f3B(100))
+def sigmaDDsdB(m,A):
+	return 12/np.pi * mRed(m,A)**2 * (dq(m)*(0.77-0.49-0.15))**2
 
+print("sigmaDDsdB: ",sigmaDDsdB(1000,1))
+print("sigmaDDsiB: ",sigmaDDsiB(1000,1))
 
-print(g23mumu(preB,C9low1f,100,2,preGB))
 
 fig = plt.figure()
 ax = plt.gca()
-
+"""
 m = np.linspace(qmass[5]/2+10,500,1000)
 n = np.linspace(gq2f*gq3f,gq2f*gq3f,1000)
 #ax.scatter(m,g2func(gl2f,m,qfB,qbB))
-"""
 ax.plot(m,(g23mumu(preB,C9low1f,m,gl2f,preGB)))
 ax.plot(m,(g23mumu(preB,C9high1f,m,gl2f,preGB)))
 ax.plot(m,(g23mumu(preB,C9low2f,m,gl2f,preGB)))
@@ -160,6 +165,7 @@ ax.plot(m,(np.sqrt(g23mix(preB,m,preGB))))
 ax.plot(m,(np.sqrt(g23mix(preB,m,0))))
 ax.plot(m,n)
 #plt.plot(m,i(tHad(m,mldiff)))
-"""
 ax.plot(m,sigmaDDB(m,1)/cmToGeV2)
 plt.show()
+"""
+

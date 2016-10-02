@@ -60,10 +60,14 @@ respectively. The coefficients $F_{IJ}$ are real numbers and can differ for othe
 \end{align}
 The primed quadrilinears represent a pseudoscalar combination of two parity partners, e.g. $e'_V = \left[\bar w\gamma^\mu w\right]\left[w\gamma_\mu\gamma_5w\right]$
 which are transformed with $F^\text{T}$. We can see that \eqref{eq_fierz} is an invariant for every order and so we can simply rearrange the quadrilinear.
-\\ \noindent For later cases we also point out that 
+\\ \noindent For later cases \eqref{eq_crossedBox} we also point out that 
+\begin{subequations}
 \begin{align}
- \left[\bar w_1 P_R w_2\right]\left[\bar w_3 P_L w_4\right] = \frac12  \left[\bar w_1 \gamma_\mu P_L w_4\right]\left[\bar w_3 \gamma^\mu P_L w_2\right]
-\end{align}
+ \left[\bar w_1 P_R w_2\right]\left[\bar w_3 P_L w_4\right] =& \frac12  \left[\bar w_3 \gamma_\mu P_L w^c_1\right]\left[\bar w^c_4 \gamma^\mu P_L w_2\right]\\
+ =& \frac12  \left[\bar w_1 \gamma_\mu P_L w_4\right]\left[\bar w^c_3 \gamma^\mu P_L w_2\right].
+ \label{eq_fierzSPtoVA}
+\end{align} 
+\end{subequations}
 
  \noindent \textit{Additional $SU(2)_L$-invariant term}\\
 \noindent The operator $O_\delta=\left(\bar Q_L^i \gamma_\rho Q_L^j\right)\left(\bar L_L^m \gamma^\rho L_L^n\right)$ is not the only one which is a singlet
@@ -108,13 +112,14 @@ triplet case
 \\ \textit{Crossed Boxes}\\
 \noindent As we assume our DM candidate $\chi^0$ to be Majorana, there are also contributions from crossed boxes (fig. \ref{pic_crossed}) for uncharged
 currents like our process of interest $\bar d d\rightarrow \bar l l$. Compared to the former matrix element \eqref{eq_matElemBSmumu} we have some changes
-for the crossed box diagram. Using the Feynman rules for internal Majorana particles and the commutation rules for $C$ from section \ref{sec_flAnom}, 
+for the crossed box diagram. Using the Feynman rules for internal Majorana particles \eqref{eq_majoProp} and the action of $C$ \eqref{eq_ChargeConj}, 
 we see that now the masses in the fermion propagators remain. The fierzing of the four fermions gives a $\sfrac12$ since we do not have initial $\gamma$s
 between them. The momentum integral similarly to the pure Dirac case yields
 \begin{align}
  M_\text{box} \propto \frac{1}{64 \pi^2}\int\limits_0^\infty \dx k \frac{k^3 \cdot m^2}{(k^2-m^2)^2(k^2-M_l^2)(k^2-M_k^2)} = \frac{G(x_q,x_l)}{128\pi^2m^2}
+ \label{eq_crossedBox}
 \end{align}
-with similar loop functions
+with similar (but not identical) loop functions
 \begin{align}
  G(x,y) &= \frac{G(x)-G(y)}{x-y}\stackrel{x\rightarrow y}{=} -\frac16\\
  G(x)&=\frac{1-x+x\log(x)}{(x-1)^2} \stackrel{x\rightarrow 1}{=} \frac12.
@@ -124,8 +129,8 @@ which is one fifth of the bare Dirac contribution. The two terms with $K(x_q,x_l
 each other out and hence may reduce the impact of constraints from observables.\\
 \\ \textit{New Physics Contribution}\\
 \noindent Now we will gather up the information to get another bound for our model. There are two operators in the effective Hamiltonian for $B_s\rightarrow \mu\mu$
-transitions, $O_9$ and $O_{10}$ (sec. \ref{sec_EFT}). The expression for the Wilson coefficient $C_9 = -C_{10}$ (1408.1627) is obtained by comparing the coefficients from the 
-4-fermi operator in the effective Lagrangians and the effective Hamiltonian
+transitions, $O_9$ and $O_{10}$ (sec. \ref{sec_EFT}). The expression for the Wilson coefficient $C_9 = -C_{10}$ (1408.1627) is obtained by comparing the 
+coefficients from the 4-fermi operator in the effective Lagrangians and the effective Hamiltonian
 \begin{align}
  C_9^A &= N \frac{g_2^{q*}g_3^q|g_2^l|^2}{m^2} \frac{1}{128\pi^2} \left(K(x_q,x_l) + G(x_q,x_l)\right)\\
  C_9^B &= N \frac{g_2^{q*}g_3^q|g_2^l|^2}{m^2} \frac{5}{384\pi^2} \left(K(x_q,x_l) + \frac15 G(x_q,x_l)\right)
@@ -134,6 +139,14 @@ with
 \begin{align}
  N = \left(\frac{4G_F}{\sqrt{2}} V_{ts}^*V_{tb} \frac{\alpha_\text{EM}}{4\pi}\right)^{-1}.
 \end{align}
+With the formulae given here, one could also examine anomalies in other semileptonic decays, i.e. $B_s \rightarrow \nu\nu$ (CITE) or $B \rightarrow D\tau\nu$ (CITE). 
+It is difficult to explain the latter at least with this kind of model, where these processes emerge at loop level and have to compete with the 
+SM effect, which is at tree-level. The former can give bounds in general but since you cannot distinguish different neutrino flavours experimentally.
+and we are only coupling to muonic ones, the contribution is even lower. In the triplet case \eqref{eq_LagBSmumuModB} the prefactors just calculated 
+of the kind $\bar dd\rightarrow \bar\nu\nu$
+are also small compared to the other ones enabling an even larger parameter space. So we expect $B_s\rightarrow \bar \mu \mu$ to give the strongest 
+constraints.
+ 
 
 % Prefactors for other representations are listed in table below.
 
