@@ -24,6 +24,8 @@ q2ndb = np.array([0.034,0.036,0.026,0.019,0.012,0])
 qmass = np.array([2.3e-3, 4.8e-3, 95e-3, 1.275, 4.18, 173])
 cQ = np.array([1,1,1,1.32,1.19,1])
 
+print("fTG+q2 squared x 4/pi (xSec): ",((fGlu/9+(q2nd[4]+q2ndb[4])*3)/12)**2*4/np.pi)
+
 #Constraints
 C9low1f = -0.81
 C9high1f = -0.51

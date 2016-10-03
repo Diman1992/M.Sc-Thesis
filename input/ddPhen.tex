@@ -1,6 +1,6 @@
 \subsection{Direct Detection}
 After executing the flavour processes where the NP states had the role of mediators, we now turn towards the phenomenological aspects of DM itself.
-We begin with direct detection (DD) or nucleon scattering where a DM particle scatters off a parton (quark or gluon) of a nucleon. 
+We begin with direct detection (DD) or nucleon ($N$) scattering where a DM particle scatters off a parton (quark or gluon) of a nucleon. 
 \\ \\ \textit{Effective Lagrangian}\\
 This can happen
 due to a spin independent (SI) or spin dependent (SD) interaction \eqref{eq_th.sigma.dd} which are described by an effective Lagrangian (1104.0228)
@@ -30,7 +30,8 @@ The twist-2 operator for the quark is
 \begin{align}
  O_q^{\mu\nu} = \frac12 \bar q \ti \left(D^\mu \gamma^\nu + D^\nu \gamma^\mu - \frac12 g^{\mu\nu} \slashed{D}\right) q
 \end{align}
-and the three coefficients of mass dimension $-3$ $g_q^{(1)}$, $g_q^{(2)}$ and $f_G$ enter the form factor $f_N$ in \eqref{eq_th.sigma.dd} as
+with $D_\mu$ as the covariant derivative for $SU(3)_C$ and the three coefficients of mass dimension $-3$ $g_q^{(1)}$, $g_q^{(2)}$ and $f_G$ enter 
+the form factor $f_N$ in \eqref{eq_th.sigma.dd} as
 \begin{align}
  \frac{f_N}{m_N} = \sum\limits_{q,c,b} \frac34 \left(q(2)+\bar q(2)\right) \left(g_q^{(1)} + g_q^{(2)}\right) - \frac{8\pi}{9\alpha_s}f_{TG}f_G
  \label{eq_ddformfactorA}
@@ -44,7 +45,7 @@ where the matrix elements of the effective operators are expressed with the nucl
 \end{align}
 \end{subequations}
 The quantities $q(2)$ and $\bar q(2)$ are the second moments (0811.1779) of the parton distribution function (PDF) of quark $q(x)$ or antiquark 
-$\bar q(x)$, respectively, in the nucleon $q(2)+\bar q(2) = \int_0^1 \dx x^2 \left[q(x) + \bar q(x)\right]$. The values used for the numerical
+$\bar q(x)$, respectively, in the nucleon $q(2)+\bar q(2) = \int_0^1 \dx x\, x^2 \left[q(x) + \bar q(x)\right]$. The values used for the numerical
 calculation are listed in tabular \ref{tab_parton}.
 \begin{table}[b]
  \begin{tabular}{c|ccccc}
@@ -59,7 +60,7 @@ the light quarks for the
 proton each. For the neutron $u(2)$ and $d(2)$ just swap and $f_{Tu}$ and $f_{Td}$ differ slightly (CITE). All other quantities are the same. }
 \label{tab_parton}
 \end{table}
-\noindent The evaluation of $f_G$ is factorised in a ``short distance'' (SD, not to confuse with spin dependent) and a ``long distance'' (LD) 
+\noindent The evaluation of $f_G$ is factorised in a ``short distance'' (SD, not to confuse with spin dependency) and a ``long distance'' (LD) 
 contribution
 \begin{align}
  f_G|_q = f_G|^\text{SD}_q + f_G|^\text{LD}_q. 
@@ -74,14 +75,63 @@ with $c_Q = 1+11\alpha_s(m_Q)/4\pi$ coming from large QCD corrections (CITE DjoU
 When considering the light quarks $q$ in the LD term, they have a vanishing contribution since the respective operator goes with the quark mass
 which is each smaller than $\Lambda_\text{QCD} = \mathcal{O}(100)$ MeV and their propagators are entirely determined by confinement dynamics. Thus,
 we do not have to take them into account. The explicit formula for the operator coefficients \eqref{eq_ddformfactorA} for the singlet case 
-will be given now
+will be given now.
 \\ \\ \textit{Singlet Dark Matter}\\
-bla
-
-
-
+The $\chi$-q interaction is visualised in figure \ref{pic_ddTreeA} and is easily computed in this s-channel process. After integrating out the 
+scalar and in the massless quark limit the coefficients are
+\begin{align}
+ g_q^{(1)} = \frac{|g_q|^2 }{4} \frac{m_\chi}{\left(m_\chi^2 - M_{\Phi_q}^2\right)^2},
+ g_q^{(2)} = 0.
+\end{align}
+For degenerate DM and messenger mass, there would also be a term with the decay width $\Gamma$ of the messenger in the denominator to avoid the 
+divergence, but we assume anyway the scalar to be way heavier than the fermion. (TODO why is g2q zero). The effective gluonic coupling in the 
+singlet case will be derived from one loop processes (fig. \ref{pic_ddGluonA} 
 \begin{figure}[t]
  \includegraphics[width=0.5\textwidth]{../pics/phigluon.eps}
+ \caption{One loop diagrams contributing to the effective gluonic coupling.}
+ \label{pic_ddGluonA}
 \end{figure}
+for which we take the Fock-Schwinger gauge (CITE maybe) for the gluon
+field $x^\mu G^a_\mu = 0$. Effectively we can express $f_G = \Gamma_\chi(p)/2|_{GG}$ as a two-point function... The SD and LD terms thereof are
+\begin{align}
+ f_G^\text{SD}|_q = \frac{\alpha_s}{32\pi} m_\chi f^s,\\
+ f_G^\text{LD}|_q = \frac{\alpha_s}{32\pi} m_\chi f^l.
+\end{align}
+with the loop functions $f$ in the zero quark mass limit
+\begin{align}
+ f^s \stackrel{m_q=0}{=} - \frac{1}{6M_{\Phi_q}^2\left(M_{\Phi_q}^2-m_\chi^2\right)} \stackrel{M_{\Phi_q}\gg m_\chi}{=} -\frac{1}{6M_{\Phi_q}^4},\\
+ f^l \stackrel{m_q=0}{=} - \frac{1}{6\left(M_{\Phi_q}^2-m_\chi^2\right)^2}  \stackrel{M_{\Phi_q}\gg m_\chi}{=} -\frac{1}{6M_{\Phi_q}^4}.
+\end{align}
+Gathering up the SD and LD terms, the scalar $\chi$-g interaction coefficient is
+\begin{align}
+ f_G = -\frac{\alpha_s}{96\pi} \frac{m_\chi}{M_{\Phi_q}^4} \sum\limits_{\text{all}} |g^q|^2
+\end{align}
+and the full form factor \eqref{eq_ddformfactorA} can be written in these limits as
+\begin{align}
+ \frac{f_N}{m_N} = \frac{m_\chi}{M_{\Phi_q}^4} \sum\limits_\text{all} \left|g^q\right|^2 \left[\frac{f_{TG}}{108} + \frac{3}{12}\left(q(2) + \bar q(2)\right)\right].
+\end{align}
+Even though every quark participates, we go on only with the bottom quark and the top which appears only in the gluon term because they deliver the
+largest part to the form factor. The SI cross section \eqref{eq_th.sigma.dd} can now be written as
+\begin{align}
+ \sigma_\text{SI} = \frac{4}{\pi}\mu_N^2 \left| f_N \right| ^2 \approx 2.33\cdot 10^{-4} \mu_N^2 \cdot |g^q_3|^4 \frac{m_\chi^2 m_N^2}{M_{\Phi_q}^8}
+ \label{eq_sigmaDDA}
+\end{align}
+For a 100 GeV'ish DM fermion and a 1 TeV'ish messenger, we would have an SI $\chi-N$ cross section of $\mathcal{O}(10^{-51})$ cm$^2$ which is far 
+below current bounds. Hence we do not expect exclusion from direct detection for our singlet case and so we look at the triplet case.
+\\ \\ \textit{Triplet Dark Matter}\\
+The main difference between the $SU(2)_L$ singlet and the triplet is the interaction with the weak boson $W$. While the singlet does not couple to
+it directly, the $W$ couples to two particle states within the triplet whose electric charges differ by one. Just to recall, in neither case the 
+DM particle carries hypercharge, so that the respective neutral component does not couple to the $Z$ boson. The interative Lagrangian for the $W$ 
+boson is 
+\begin{align}
+ \mathcal{L} = \frac{g_2}{\sqrt{2}} \left[\bar \chi^0 \gamma^\mu \chi^- W^+_\mu + \bar \chi^0 \gamma^\mu \chi^+W^-_\mu\right] +\, \text{h.c.}
+\end{align}
+Since the cross section in the singlet case \eqref{eq_sigmaDDA} was driven by the large scalar mass we can take advantage of the possible processes
+for direct detection which do not involve the scalar. In fact, the form factor is dominated by one loop processes with a $W$ for an interaction with
+quarks (see fig. \ref{fig_wloop} and two loop processes for gluonic scattering (see fig. \ref{fig_2loopgluon}). 
+
+
+
+
 
 
