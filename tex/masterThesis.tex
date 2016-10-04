@@ -179,7 +179,7 @@ related topics in the SM and cosmology.
 
 \section{Group Theory and Flavour Symmetries}
 \subsection{Group Invariance}
-symmetry breaking,representations
+% symmetry breaking,representations
 \subsection{$U(1)_\text{FN}$ and Continuous Groups}
 \label{sec_FNGT}
  \textit{Lie-Groups}\\
@@ -189,7 +189,7 @@ symmetry breaking,representations
 \subsection{$A4$ and Discrete Groups}
 \label{sec_A4GT}
 \textit{General Properties}\\
-finite amount of representations; characters; 
+% finite amount of representations; characters; 
  \begin{align}
   \sum m_n n^2 = N_G \quad groupelements\\
   \sum m_n = \#_{IRR} \quad C = Irred\,Reps\\
@@ -206,11 +206,11 @@ finite amount of representations; characters;
   \mu(k) = \langle \chi_R \cdot \chi_{R'} , \chi_{R_k} \rangle \quad tensor product decomposition\\
  \end{align}
  \\ \\ \textit{$A_4\times Z_3$}\\
- tetrahedron; link to $T'$ just because its nice; smallest group with $\boldsymbol{3}$; PMNS matrix; $\theta_{13}$
- seperation of leptons and neutrinos
+%  tetrahedron; link to $T'$ just because its nice; smallest group with $\boldsymbol{3}$; PMNS matrix; $\theta_{13}$
+%  seperation of leptons and neutrinos
 
 \input{../input/modeloutline.tex}
-b-anomalies with eft neads chiral coupling C9, C10; maybe already hints to susy? majorana and dirac particles in triplet. chiral dm has no higgs-int (0710.1668)
+% b-anomalies with eft neads chiral coupling C9, C10; maybe already hints to susy? majorana and dirac particles in triplet. chiral dm has no higgs-int (0710.1668)
 
 \section{Phenomenological Analysis}
 Now we want to check the two representations for our DM field $\chi$ being a singlet or a triplet under the $SU(2)_L$, respectively, on five processes. 
@@ -219,11 +219,10 @@ are indirect ones where the NP states are only virtually involved. To fit their 
 the dark matter mass and crosscheck the results with the two remaining ones, the annihilation and the nucleon scattering. In what follows the mass
 of the $\chi$ is $m_\chi$ and the parameter of interest, the masses of the scalars are $M_l$ or $M_q$, respectively. Furthermore we introduce the fractions
 $x_l=\frac{M^2_l}{m_\chi^2}$ and $x_q = \frac{M^2_q}{m_\chi^2}$. 
-(why especially these 5 processes? ID not compatible here; Collider? b->sgamma? )
+% (why especially these 5 processes? ID not compatible here; Collider? b->sgamma? )
 
 
 \input{../input/bsmumu.tex}
--> Bs-nunu? 
 
 \input{../input/bsmix.tex}
 
@@ -242,30 +241,86 @@ $x_l=\frac{M^2_l}{m_\chi^2}$ and $x_q = \frac{M^2_q}{m_\chi^2}$.
 
 \subsection{DM Annihilation}
 \begin{figure}[t]
- \includegraphics[width=0.5\textwidth]{../pics/phigluon.eps}
+ \includegraphics[width=0.3\textwidth]{../pics/ann.pdf}
+ \caption{Annihilation process.}
+ \label{pic_annihilation}
 \end{figure}
-$VV$ annihilation (9207234), wino RD from other su2-states (0913-main)
+% $VV$ annihilation (9207234), wino RD from other su2-states (0913-main)
+% \begin{align}
+%  \langle \sigma v \rangle^\text{D} \left(\bar \chi \chi \rightarrow \bar f f\right) = \frac{N_c g_f^4 m^2}{32\pi^2\left(M_l^2 + m^2\right)^2}
+% \end{align}
+The leading contribution for annihilation cross section for $\bar\chi^0 \chi^0 \rightarrow \bar f f$ (fig. \ref{pic_annihilation} is for both representations (1506.03116)
 \begin{align}
- \langle \sigma v \rangle^\text{D} \left(\bar \chi \chi \rightarrow \bar f f\right) = \frac{N_c g_f^4 m^2}{32\pi^2\left(M_l^2 + m^2\right)^2}
+ \langle \sigma v \rangle^\text{M} \left(\bar \chi \chi \rightarrow \bar f f\right) = \frac{N_c g_f^4 m^2 \left(M^4+m^4 \right)}{48\pi^2\left(M_l^2 + m^2\right)^4}v^2.
 \end{align}
-\begin{align}
- \langle \sigma v \rangle^\text{M} \left(\bar \chi \chi \rightarrow \bar f f\right) = \frac{N_c g_f^4 m^2 \left(M^4+m^4 \right)}{48\pi^2\left(M_l^2 + m^2\right)^4}
-\end{align}
-
-
-\begin{align}
- \text{cm}^2 = 2.57e27 1/GeV^2\\
- \text{cm}^3/\text{s} = 7.70e17 1/GeV^2\\
- \text{pb} = 2.57e-8 1/GeV^2
-\end{align}
+No co-annihilations are considered here for assumed non-degeneracy of the fermion and scalar masses. $v\approx 0.3$ during freeze-out. Nowadays 
+$2\rightarrow3$ processes as $\bar \chi \chi \rightarrow \bar f f V$ might dominate with lower velocities $v\approx 10^{-3}$, interesting for 
+indirect detection (1207.1431). 
+% 
+% \begin{align}
+%  \text{cm}^2 = 2.57e27 1/GeV^2\\
+%  \text{cm}^3/\text{s} = 7.70e17 1/GeV^2\\
+%  \text{pb} = 2.57e-8 1/GeV^2
+% \end{align}
 
 
 \section{Results}
-supersymmetry
+% supersymmetry
+The used parameters for the following plots are
+\begin{align}
+ |g^l_2| &= 2\\
+ |g^q_2| &= 0.04\\
+ |g^q_3| &= 1\\
+ M_{\Phi_l} &= m_\chi + 200 GeV\\
+ M_{\Phi_q} &= m_\chi + 800 GeV\\
+ \label{eq_resParams}
+\end{align}
+
 \subsection{A - $T(\chi)=\boldsymbol{1}$}
-binolike
+% binolike
+\textit{$B_s$ Processes}\\
+\noindent \ref{pic_BsResA}
+\begin{figure}[t]
+ \includegraphics[width=1\textwidth]{../pics/BsModA.pdf}
+ \caption{Paramter space plot for $B_s$ mixing and $B_s\rightarrow \mu\mu$.}
+ \label{pic_BsResA}
+\end{figure}
+\\ \textit{Anomalous Magnetic Moment of the Muon}\\
+\noindent \ref{pic_g-2A}
+\begin{figure}[t]
+ \includegraphics[width=1\textwidth]{../pics/g-2A.pdf}
+ \caption{Paramter space plot for anomalous magnetic moment of the muon. The area of the blue line crossing the higher and lower bound is valid.}
+ \label{pic_g-2A}
+\end{figure}
+
 \subsection{B - $T(\chi)=\boldsymbol{3}$}
-winolike
+%winolike
+\textit{$B_s$ Processes}\\
+\noindent \ref{pic_BsResB}
+\begin{figure}[t]
+ \includegraphics[width=1\textwidth]{../pics/BsModB.pdf}
+ \caption{Paramter space plot for $B_s$ mixing and $B_s\rightarrow \mu\mu$.}
+ \label{pic_BsResB}
+\end{figure}
+\\ \textit{Anomalous Magnetic Moment of the Muon}\\
+\noindent \ref{pic_g-2B}
+\begin{figure}[t]
+ \includegraphics[width=1\textwidth]{../pics/g-2B.pdf}
+ \caption{Paramter space plot for anomalous magnetic moment of the muon. The area of the blue line crossing the higher and lower bound is valid.}
+ \label{pic_g-2B}
+\end{figure}
+\\ \textit{Direct Detection} \\
+\noindent \ref{pic_ddB}
+\begin{figure}[t]
+ \includegraphics[width=1\textwidth]{../pics/ddB.pdf}
+ \caption{Paramter space plot for nucleon scattering. The cross section for the triplet is barely below current bounds and will be tested next year.}
+ \label{pic_ddB}
+\end{figure}
+\\ \textit{Annihilation}\\
+With \eqref{eq_resParams} there are two masses for which $m_\chi$ as a thermal relic makes up for all DM in universe. They are 80 and 350 GeV. In
+between the cross section is too high leaving the DM candidate over abundant. Its peak is around 120 GeV.
+
+
 \section{Conclusion and Prospects}
 
 % dfasdölkj\\d\\d\\d\\d\\d\\d\\d\\d\\d\\d\\d

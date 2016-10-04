@@ -66,7 +66,7 @@ contribution
  f_G|_q = f_G|^\text{SD}_q + f_G|^\text{LD}_q. 
 \end{align}
 The former (latter) represents a scale of heavy (light) particles as the colored scalar mediator (quarks). While we need to calculate the full
-loop process e.g. in figure \ref{fig_quarkgluon.eps} for the SD, the LD with $Q$ can be thought of a triangle diagram where $\Phi_q$ integrated 
+loop process e.g. in figure \ref{pic_ddsinglet} for the SD, the LD with $Q$ can be thought of a triangle diagram where $\Phi_q$ integrated 
 out i.e. there arises a four fermion operator $f_Q m_Q \bar \chi \bar Q Q$. The triangle loop calculation yields in the heavy scalar mass limit 
 \begin{align}
  f_G|_Q^\text{LD} = -\frac{\alpha_s}{12\pi} c_Q f_Q,
@@ -77,7 +77,12 @@ which is each smaller than $\Lambda_\text{QCD} = \mathcal{O}(100)$ MeV and their
 we do not have to take them into account. The explicit formula for the operator coefficients \eqref{eq_ddformfactorA} for the singlet case 
 will be given now.
 \\ \\ \textit{Singlet Dark Matter}\\
-The $\chi$-q interaction is visualised in figure \ref{pic_ddTreeA} and is easily computed in this s-channel process. After integrating out the 
+\begin{figure}[t]
+ \includegraphics[width=1\textwidth]{../pics/ddsinglet.pdf}
+ \caption{DM scatters off quarks at tree level and off gluons at one loop order.}
+ \label{pic_ddsinglet}
+\end{figure}
+The $\chi$-q interaction is visualised in figure \ref{pic_ddsinglet}(a) and is easily computed in this s-channel process. After integrating out the 
 scalar and in the massless quark limit the coefficients are
 \begin{align}
  g_q^{(1)} = \frac{|g_q|^2 }{4} \frac{m_\chi}{\left(m_\chi^2 - M_{\Phi_q}^2\right)^2},
@@ -85,12 +90,12 @@ scalar and in the massless quark limit the coefficients are
 \end{align}
 For degenerate DM and messenger mass, there would also be a term with the decay width $\Gamma$ of the messenger in the denominator to avoid the 
 divergence, but we assume anyway the scalar to be way heavier than the fermion. (TODO why is g2q zero). The effective gluonic coupling in the 
-singlet case will be derived from one loop processes (fig. \ref{pic_ddGluonA} 
-\begin{figure}[t]
- \includegraphics[width=0.5\textwidth]{../pics/phigluon.eps}
- \caption{One loop diagrams contributing to the effective gluonic coupling.}
- \label{pic_ddGluonA}
-\end{figure}
+singlet case will be derived from one loop processes (fig. \ref{pic_ddsinglet}b, c) 
+% \begin{figure}[t]
+%  \includegraphics[width=0.5\textwidth]{../pics/phigluon.eps}
+%  \caption{One loop diagrams contributing to the effective gluonic coupling.}
+%  \label{pic_ddGluonA}
+% \end{figure}
 for which we take the Fock-Schwinger gauge (CITE maybe) for the gluon
 field $x^\mu G^a_\mu = 0$. Effectively we can express $f_G = \Gamma_\chi(p)/2|_{GG}$ as a two-point function... The SD and LD terms thereof are
 \begin{align}
@@ -128,7 +133,39 @@ boson is
 \end{align}
 Since the cross section in the singlet case \eqref{eq_sigmaDDA} was driven by the large scalar mass we can take advantage of the possible processes
 for direct detection which do not involve the scalar. In fact, the form factor is dominated by one loop processes with a $W$ for an interaction with
-quarks (see fig. \ref{fig_wloop} and two loop processes for gluonic scattering (see fig. \ref{fig_2loopgluon}). 
+quarks (see fig. \ref{pic_wloop} and two loop processes for gluonic scattering (see fig. \ref{pic_2loopgluon})...
+\begin{figure}[t]
+ \includegraphics[width=0.7\textwidth]{../pics/wloops.pdf}
+ \caption{One loop processes for the effective $\chi^0-N$ coupling. Penguins with a photon or a $Z$-boson turn out to vanish(1104.0228).}
+ \label{pic_wloop}
+\end{figure}
+For the effective $\chi^0-q$-coupling
+\begin{align}
+ %f_q = \frac{\alpha_2^2}{4m_W m_{h^0}^2} g_H(w)
+ g^{(1)}_q = \frac{\alpha_2^2}{m_W^3}g_{T1}(w)\\
+ g^{(2)}_q =\frac{\alpha_2^2}{m_W^3}g_{T2}(w) 
+\end{align}
+and the effective $\chi^0-g$-coupling
+\begin{align}
+ f_G = \frac{\alpha_s\alpha_2^2}{4\pi m_W}\left(\frac{1}{m_W^2} g_{W}(w,t) - \frac{1}{4m_{h^0}^2} g_H(w)\right)
+\end{align}
+The loop functions can be looked up in (1004.4090). The SI cross section for the triplet is
+\begin{align}
+ \sigma_\text{SI} = \frac{4}{\pi}\mu_N^2 \left| f_N \right| ^2 \approx 4.57\cdot 10^{-18} \mu_N^2 \cdot \left(0.51 \left(g_{T1}+g_{T2}\right) + \frac29 g_W - 0.02 g_H\right)
+ \label{eq_sigmaDDB}
+\end{align}
+with the masses in GeV. Unlike \eqref{eq_sigmaDDA} the cross section for the triplet case only depends on the DM mass which makes it generally very
+interesting in constraining such models. 
+
+
+
+\begin{figure}[t]
+ \includegraphics[width=1\textwidth]{../pics/gluon2loopB.pdf}
+ \caption{Two loop diagrams contributing to the effective gluonic coupling.}
+ \label{pic_2loopgluon}
+\end{figure}
+
+
 
 
 

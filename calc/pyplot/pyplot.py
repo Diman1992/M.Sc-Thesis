@@ -4,7 +4,7 @@
 ###
 
 import numpy as np
-import matplotlib.pylab as plt
+import matplotlib.pyplot as plt
 
 #processes = enumerate('bsprocess','g2mu','annihilation','directdetection')
 #print( processes[0], processes[1])
@@ -44,7 +44,7 @@ mldiff = 200
 mqdiff = 800
 gq2f = gqf[2]
 gq3f = gqf[4]
-gl2f = 2
+gl2f = 2.5
 
 def tHad(m,M):
 	return M**2/m**2
@@ -55,14 +55,16 @@ def i(t):
 def ibar(t):
 	return 1/t*i(1/t)
 def preg2(g,m):
-	return g**2*mmuon**2/(16*np.pi**2) * 1/(m+mldiff)**2
+	return g**2*mmuon**2/(16*np.pi**2) * 1/(m+1)**2
 
 def g2func(g,m,qf,qb):
 	res = 0
-	if(len(qf) != len(qb)):
-		print("qf and qb have different lengths")
-	for j in range(0,len(qf)):
-		res += qf[j]*ibar(1/tHad(m,m+mldiff)) + qb[j]*i(1/tHad(m,m+mldiff))
+	#if(len(qf) != len(qb)):
+	#	print("qf and qb have different lengths")
+	print("qf: ",np.sum(qf), " qb: ",np.sum(qb))
+	
+#	res += np.sum(qf)*i(tHad(m,m+mldiff)) + np.sum(qb)* 1/tHad(m,m+mldiff) * i(1/tHad(m,m+mldiff))
+	res += np.sum(qf)*i(tHad(m,m+mldiff)) + np.sum(qb)* ibar(1/tHad(m,m+mldiff))
 	return -preg2(g,m) * res
 
 qfB = np.array([0,-1])
@@ -148,26 +150,50 @@ def sigmaDDsiB(m,A):
 	return 4/np.pi * mRed(m,A)**2 * (A * (f1B(m)+f2B(m)+f3B(m)))**2
 def sigmaDDsdB(m,A):
 	return 12/np.pi * mRed(m,A)**2 * (dq(m)*(0.77-0.49-0.15))**2
-
+print("f1B(fq): ",f1B(500), "; f2B(fG): ", f2B(500), "; f3B(g1+g2): ", f3B(500))
 print("sigmaDDsdB: ",sigmaDDsdB(1000,1))
 print("sigmaDDsiB: ",sigmaDDsiB(1000,1))
+print("a/mw3 2 x 4/pi: ", (alphW**2/mW**3)**2*4/np.pi, " 2ndmom: ", np.sum(q2nd+q2ndb), " mW/18mH 2: ", mW**2/(18*mH**2))
+
+
 
 
 fig = plt.figure()
 ax = plt.gca()
-"""
 m = np.linspace(qmass[5]/2+10,500,1000)
-n = np.linspace(gq2f*gq3f,gq2f*gq3f,1000)
-#ax.scatter(m,g2func(gl2f,m,qfB,qbB))
-ax.plot(m,(g23mumu(preB,C9low1f,m,gl2f,preGB)))
-ax.plot(m,(g23mumu(preB,C9high1f,m,gl2f,preGB)))
-ax.plot(m,(g23mumu(preB,C9low2f,m,gl2f,preGB)))
-ax.plot(m,(g23mumu(preB,C9high2f,m,gl2f,preGB)))
-ax.plot(m,(np.sqrt(g23mix(preB,m,preGB))))
-ax.plot(m,(np.sqrt(g23mix(preB,m,0))))
-ax.plot(m,n)
-#plt.plot(m,i(tHad(m,mldiff)))
-ax.plot(m,sigmaDDB(m,1)/cmToGeV2)
-plt.show()
+#m = np.linspace(50,500,1000)
+
+ax.plot(m,sigmaDDsiB(m,1)/cmToGeV2)
+ax.set_xlabel(r'$m_\chi$ / GeV')
+ax.set_ylabel(r'$\sigma_{SI}$ / cm$^2$')
+
+
 """
+g2b_a = np.linspace(g2best,g2best,1000)
+g2h_a = np.linspace(g2high,g2high,1000)
+g2l_a = np.linspace(g2low,g2low,1000)
+ax.plot(m,g2func(gl2f,m,qfA,qbA))
+ax.plot(m,g2h_a,label=r'1\sigma')
+ax.plot(m,g2b_a,label=r'best')
+ax.plot(m,g2l_a)
+ax.set_xlabel(r'$m_\chi$ / GeV')
+ax.set_ylabel(r'$\Delta a_\mu$')
+"""
+
+"""
+#n = np.linspace(gq2f*gq3f,gq2f*gq3f,1000)
+#ax.scatter(m,g2func(gl2f,m,qfB,qbB))
+#ax.plot(m,(g23mumu(preA,C9low1f,m,gl2f,preGA)),label=r'$C_9 1\sigma$')
+#ax.plot(m,(g23mumu(preA,C9high1f,m,gl2f,preGA)))
+#ax.plot(m,(g23mumu(preA,C9low2f,m,gl2f,preGA)),label=r'$C_9 2\sigma$')
+#ax.plot(m,(g23mumu(preA,C9high2f,m,gl2f,preGA)))
+#ax.plot(m,(np.sqrt(g23mix(preB,m,preGA))),label=r'$C_{BB}$')
+#ax.plot(m,n,label=r'\mathcal(G): $g^q_2 g^q_3$')
+#ax.set_xlabel(r'$m_\chi$ / GeV')
+#ax.set_ylabel(r'$g^q_2 g^q_3$')
+#ax.plot(m,sigmaDDB(m,1)/cmToGeV2)
+"""
+ax.legend(loc='best')
+plt.show()
+
 
