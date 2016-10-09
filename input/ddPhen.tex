@@ -8,15 +8,16 @@ due to a spin independent (SI) or spin dependent (SD) interaction \eqref{eq_th.s
  \mathcal{L}^\text{eff} = \sum\limits_{q} \mathcal{L}^\text{eff}_q + \mathcal{L}^\text{eff}_g.
 \end{align}
 We use $q$ for the light quarks $u$, $d$, $s$ and $Q$ for heavier $c$, $b$, $t$. From \eqref{eq_fierzSPtoVA} we see that from our chiral model, 
-we only get effective interactions with quarks like $\bar \chi\gamma\mu\chi \bar q\gamma_\mu q$ and $\bar \chi\gamma^\mu\gamma_5 \bar q\gamma_\mu \gamma_5 q$
+we only get effective interactions with quarks like $\bar \chi\gamma^\mu\chi \bar q\gamma_\mu q$ and $\bar \chi\gamma^\mu\gamma_5 \bar q\gamma_\mu \gamma_5 q$
 as six dimensional operators. The former vanishes for Majorana DM and the latter is SD which will not give stronger constraints than the following SI
 interactions but the resulting SD cross section can be evaluated with the expressions also given in (1104.0228) for the leading processes to be of
 order $\mathcal{O}(10^{-44})$ cm$^2$ while the upper limits obtained by IceCube (1301.6620 or direct source) yield $\mathcal{O}(10^{-40})$ cm$^2$ for 
 a 100 GeV'ish DM particle.
-So we neglect them. A possibly occuring scalar operator $\bar \chi \chi \bar q q$ also vanishes in our chiral model. Therefore the first contributing
+So we neglect them. A possibly occuring scalar operator $f_q m_q\bar \chi \chi \bar q q$ also vanishes for tree level processes in our chiral model
+but is enabled at loop level. Therefore the first contributing
 SI operators coming from quark interactions are eight dimensional, namely those depending on twist-2 operators. They are the traceless parts of the
 quark energy momentum tensor and arise from the matrix element of a quark current product expressed in local operators (MDSchwartz). The twist of 
-an operator is the difference of its mass dimension and its spin. So much for the quark interaction. Since our DM particle shall be an 
+an operator is definded as the difference between its mass dimension and its spin. So much for the quark interaction. Since our DM particle shall be an 
 $SU(3)_C$-singlet, it does not couple directly to gluons $g$ but scalarlike at one-loop level through the heavy quarks. There is also a twist-2 
 operator for the gluon but its coefficient will be suppressed by $\alpha_s$ so we will not consider it further. So at least for our $SU(2)_L$ singlet
 DM particle which does not interact with the $W$ bosons, the leading SI Lagrangian is
@@ -70,6 +71,7 @@ loop process e.g. in figure \ref{pic_ddsinglet} for the SD, the LD with $Q$ can 
 out i.e. there arises a four fermion operator $f_Q m_Q \bar \chi \bar Q Q$. The triangle loop calculation yields in the heavy scalar mass limit 
 \begin{align}
  f_G|_Q^\text{LD} = -\frac{\alpha_s}{12\pi} c_Q f_Q,
+ \label{eq_longdistance}
 \end{align}
 with $c_Q = 1+11\alpha_s(m_Q)/4\pi$ coming from large QCD corrections (CITE DjoUadi Drees), $c_c=1.32$, $c_b = 1.19$, $c_t = 1$.
 When considering the light quarks $q$ in the LD term, they have a vanishing contribution since the respective operator goes with the quark mass
@@ -124,6 +126,11 @@ largest part to the form factor. The SI cross section \eqref{eq_th.sigma.dd} can
 For a 100 GeV'ish DM fermion and a 1 TeV'ish messenger, we would have an SI $\chi-N$ cross section of $\mathcal{O}(10^{-51})$ cm$^2$ which is far 
 below current bounds. Hence we do not expect exclusion from direct detection for our singlet case and so we look at the triplet case.
 \\ \\ \textit{Triplet Dark Matter}\\
+\begin{figure}[t]
+ \includegraphics[width=0.7\textwidth]{../pics/wloops.pdf}
+ \caption{One loop processes for the effective $\chi^0-N$ coupling. Penguins with a photon or a $Z$-boson turn out to vanish(1104.0228).}
+ \label{pic_wloop}
+\end{figure}
 The main difference between the $SU(2)_L$ singlet and the triplet is the interaction with the weak boson $W$. While the singlet does not couple to
 it directly, the $W$ couples to two particle states within the triplet whose electric charges differ by one. Just to recall, in neither case the 
 DM particle carries hypercharge, so that the respective neutral component does not couple to the $Z$ boson. The interative Lagrangian for the $W$ 
@@ -133,37 +140,49 @@ boson is
 \end{align}
 Since the cross section in the singlet case \eqref{eq_sigmaDDA} was driven by the large scalar mass we can take advantage of the possible processes
 for direct detection which do not involve the scalar. In fact, the form factor is dominated by one loop processes with a $W$ for an interaction with
-quarks (see fig. \ref{pic_wloop} and two loop processes for gluonic scattering (see fig. \ref{pic_2loopgluon})...
-\begin{figure}[t]
- \includegraphics[width=0.7\textwidth]{../pics/wloops.pdf}
- \caption{One loop processes for the effective $\chi^0-N$ coupling. Penguins with a photon or a $Z$-boson turn out to vanish(1104.0228).}
- \label{pic_wloop}
-\end{figure}
-For the effective $\chi^0-q$-coupling
-\begin{align}
- %f_q = \frac{\alpha_2^2}{4m_W m_{h^0}^2} g_H(w)
- g^{(1)}_q = \frac{\alpha_2^2}{m_W^3}g_{T1}(w)\\
- g^{(2)}_q =\frac{\alpha_2^2}{m_W^3}g_{T2}(w) 
-\end{align}
-and the effective $\chi^0-g$-coupling
-\begin{align}
- f_G = \frac{\alpha_s\alpha_2^2}{4\pi m_W}\left(\frac{1}{m_W^2} g_{W}(w,t) - \frac{1}{4m_{h^0}^2} g_H(w)\right)
-\end{align}
-The loop functions can be looked up in (1004.4090). The SI cross section for the triplet is
-\begin{align}
- \sigma_\text{SI} = \frac{4}{\pi}\mu_N^2 \left| f_N \right| ^2 \approx 4.57\cdot 10^{-18} \mu_N^2 \cdot \left(0.51 \left(g_{T1}+g_{T2}\right) + \frac29 g_W - 0.02 g_H\right)
- \label{eq_sigmaDDB}
-\end{align}
-with the masses in GeV. Unlike \eqref{eq_sigmaDDA} the cross section for the triplet case only depends on the DM mass which makes it generally very
-interesting in constraining such models. 
-
-
-
+quarks (see fig. \ref{pic_wloop}) and two loop processes for gluonic scattering (see fig. \ref{pic_2loopgluon}).
 \begin{figure}[t]
  \includegraphics[width=1\textwidth]{../pics/gluon2loopB.pdf}
  \caption{Two loop diagrams contributing to the effective gluonic coupling.}
  \label{pic_2loopgluon}
 \end{figure}
+For the effective $\chi^0-q$-coupling we get
+\begin{align}
+ f_q =& \frac{\alpha_2^2}{4m_W m_{h}^2} g_H(w)\\
+ g^{(1)}_q =& \frac{\alpha_2^2}{m_W^3}g_{T1}(w)\\
+ g^{(2)}_q =&\frac{\alpha_2^2}{m_W^3}g_{T2}(w) 
+\end{align}
+where $f_q$ gets its contributions from $h^0$ exchange and the $W$-box leads to $g^{(i)}_q$. Also $m_W$ and $m_h$ stand for the $W$-mass and the 
+$h^0$-mass, respectively.\\
+\noindent Concerning the gluonic coupling, we have three dominating two loop processes, one via Higgs exchange (fig. \ref{pic_2loopgluon}a) and two
+$W$-boxes (fig. \ref{pic_2loopgluon}b, c). The first one is evaluated easily by comparing it to the effective quark coupling from figure \ref{pic_wloop}a
+by exchanging the light scattered quarks with heavy quarks and contributes hence to the LD interaction \eqref{eq_longdistance}. The calculation of 
+the other two diagrams is a little cumbersome since the loops have to be calculated explicitly with the additional treatment of the vacuum polarisation
+tensor of the $W$ (1007.2601). In the end we have for the effective $\chi^0-g$-coupling
+\begin{align}
+ f_G = \frac{\alpha_s\alpha_2^2}{4\pi m_W}\left(-\sum\limits_Q c_Q \frac{1}{3m_{h^0}^2} g_H(w) + \frac{1}{m_W^2} g_{W}(w,t) \right)
+\end{align}
+with $w=\sfrac{m_W^2}{m_\chi^2}$ and $t=\sfrac{m_t^2}{m_\chi^2}$ ($m_t$ is the top mass).
+So with the additional scalar $\chi^0$-$q$ coupling giving a contribution to the form factor as $\sum_qf_{Tq}f_q$, the result is
+\begin{align}
+ \frac{f_N}{m_N} =& \frac{\alpha_2^2}{m_W^3}\left(\sum\limits_{q,c,b} \frac34 \left(q(2)+\bar q(2)\right) \left(g_{T1}(w) + g_{T2}(w)\right) + \frac29g_W(w,t)\right) \\
+ \nonumber
+ &+ \frac{\alpha_2^2}{m_W m_h^2}g_H(w) \left(\frac14 \sum\limits_q f_{Tq} - \frac{2}{27}\sum\limits_Q c_Q \right)
+\end{align}
+The SI cross section for the triplet can now be calculated easily but the loop functions just mentioned have no common dependencies on the DM mass
+so that no compact expression for SI cross section can be presented. As stated in the beginning of this paragraph, the cross section only depends
+on $m_\chi$. The mass difference of the charged triplet components to the neutral one is assumed to be negligable compared to the mass scale itself,
+so they do not enter explicitly. 
+
+% \begin{align}
+%  \sigma_\text{SI} = \frac{4}{\pi}\mu_N^2 \left| f_N \right| ^2 \approx 4.57\cdot 10^{-18} \mu_N^2 \cdot \left(0.51 \left(g_{T1}+g_{T2}\right) + \frac29 g_W - 0.02 g_H\right)
+%  \label{eq_sigmaDDB}
+% \end{align}
+% with the masses in GeV. Unlike \eqref{eq_sigmaDDA} the cross section for the triplet case only depends on the DM mass which makes it generally very
+% interesting in constraining such models. 
+
+
+
 
 
 

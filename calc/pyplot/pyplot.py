@@ -67,6 +67,10 @@ def g2func(g,m,qf,qb):
 	res += np.sum(qf)*i(tHad(m,m+mldiff)) + np.sum(qb)* ibar(1/tHad(m,m+mldiff))
 	return -preg2(g,m) * res
 
+def gMutoMass(m,a,qf,qb):
+	return np.sqrt(-a*16*np.pi**2 * m**2/mmuon**2 * (np.sum(qf)*i(tHad(m,m+mldiff)) + np.sum(qb)* ibar(1/tHad(m,m+mldiff)))**(-1))
+
+
 qfB = np.array([0,-1])
 qbB = np.array([-1,0])
 qfA = np.array([0])
@@ -151,9 +155,18 @@ def sigmaDDsiB(m,A):
 def sigmaDDsdB(m,A):
 	return 12/np.pi * mRed(m,A)**2 * (dq(m)*(0.77-0.49-0.15))**2
 print("f1B(fq): ",f1B(500), "; f2B(fG): ", f2B(500), "; f3B(g1+g2): ", f3B(500))
-print("sigmaDDsdB: ",sigmaDDsdB(1000,1))
-print("sigmaDDsiB: ",sigmaDDsiB(1000,1))
+print("sigmaDDsdB: ",sigmaDDsdB(100,1))
+print("sigmaDDsiB: ",sigmaDDsiB(100,1))
 print("a/mw3 2 x 4/pi: ", (alphW**2/mW**3)**2*4/np.pi, " 2ndmom: ", np.sum(q2nd+q2ndb), " mW/18mH 2: ", mW**2/(18*mH**2))
+chinow = 100
+wnow = mW**2/chinow**2
+tnow = qmass[5]**2/chinow**2
+preG = 8*np.pi/9
+preInG = alphW**2/(4*np.pi*mW)
+pre = preG*preInG
+print("pre: ", pre)
+print("gW(mchi=100): ", gB1(wnow) + gB31(wnow,tnow), "gH(100): ",gH(wnow) )
+print("fN in GeV-3 for mchi=100; 1:gW: ", pre*fGlu/mW**2*(2*gB1(wnow) + gB31(wnow,tnow)), " 2:gH: ", pre*fGlu*np.sum(cQ)/(3*mH**2)*gH(wnow), " 3:gTi: ",3/4*np.sum(q2nd+q2ndb)*alphW**2/mW**3*(gT1(wnow)+gT2(wnow)) , "4:fq: ", np.sum(fNuc)*alphW**2/(4*mH**2*mW)*gH(wnow))
 
 
 
@@ -163,12 +176,31 @@ ax = plt.gca()
 m = np.linspace(qmass[5]/2+10,500,1000)
 #m = np.linspace(50,500,1000)
 
+"""
+with open("outputGood.txt") as f:
+	data = f.read()
+
+data = data.split('\n')
+
+x = [row.split(' ')[0] for row in data]
+y = [row.split(' ')[1] for row in data]
+ax.plot(x,y)
+"""
+"""
+print(gMutoMass(g2best,100,0,-1))
+ax.plot(m,gMutoMass(g2best,m,qfB,qbB))
+ax.set_xlabel(r'$\mathcal{G}$')
+"""
+
+"""
+#Direct Detection m-sigma
 ax.plot(m,sigmaDDsiB(m,1)/cmToGeV2)
 ax.set_xlabel(r'$m_\chi$ / GeV')
 ax.set_ylabel(r'$\sigma_{SI}$ / cm$^2$')
-
+"""
 
 """
+#g-2 m-a
 g2b_a = np.linspace(g2best,g2best,1000)
 g2h_a = np.linspace(g2high,g2high,1000)
 g2l_a = np.linspace(g2low,g2low,1000)
@@ -181,6 +213,7 @@ ax.set_ylabel(r'$\Delta a_\mu$')
 """
 
 """
+#BsPheno m-g2g3
 #n = np.linspace(gq2f*gq3f,gq2f*gq3f,1000)
 #ax.scatter(m,g2func(gl2f,m,qfB,qbB))
 #ax.plot(m,(g23mumu(preA,C9low1f,m,gl2f,preGA)),label=r'$C_9 1\sigma$')
@@ -191,7 +224,6 @@ ax.set_ylabel(r'$\Delta a_\mu$')
 #ax.plot(m,n,label=r'\mathcal(G): $g^q_2 g^q_3$')
 #ax.set_xlabel(r'$m_\chi$ / GeV')
 #ax.set_ylabel(r'$g^q_2 g^q_3$')
-#ax.plot(m,sigmaDDB(m,1)/cmToGeV2)
 """
 ax.legend(loc='best')
 plt.show()
