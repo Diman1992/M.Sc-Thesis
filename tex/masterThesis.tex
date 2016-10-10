@@ -246,6 +246,21 @@ $x_l=\frac{M^2_l}{m_\chi^2}$ and $x_q = \frac{M^2_q}{m_\chi^2}$.
 \input{../input/ddPhen.tex}
 
 \subsection{DM Annihilation}
+Our final issue is the cross section of DM annihilating into SM particles. So as for $B_s\rightarrow \mu\mu$, all model parameters are taken into
+account
+\begin{align}
+ \left(m_\chi, M_l, M_q, g^l_2\right)
+\end{align}
+We assume $\chi^0$ to be a Majorana fermion which already implies that its s-wave cross section into a fermion pair is helicity suppressed and 
+thus the leading contribution is p-wave \cite{1307.8120}. This can be explained as follows considering charge ($C$) and parity ($P$) symmetries.
+The respective transformations for a fermion/antifermion state is $C=(-1)^{L+S},\,P=(-1)^{L+1}$ with the total spin $S$ and the total orbital angular
+momentum $L$. 
+In the Majorana case $C=+1$. s-wave further means $S=0$ and hence $P=-1$. The $\bar f f$ state shall be able to reproduce the same $J=|L\pm S|$ 
+which only has $S=0$ when the fermion and the antifermion are different Weyl spinors, i.e. a left handed fermion and a left handed antifermion.
+In chiral models like ours, in the limit of zero quark mass, we have $S=1$ giving $C=(-1)^{L+1},\,P=(-1)^{L+1}$ and therefore $C$ and $P$ are not 
+conserved for any $L$. So for s-wave annihilation a helicity flip, as for the anomalous magnetic moment of the muon, proportional to $m_f$ is 
+required. Due to its anticipated large coupling, the muon is assumed to have to largest impact and there is also a contribution from top quarks
+for DM masses right above the threshold of the its mass. 
 \begin{figure}[t]
  \includegraphics[width=0.3\textwidth]{../pics/ann.pdf}
  \caption{Annihilation process.}
@@ -255,14 +270,21 @@ $x_l=\frac{M^2_l}{m_\chi^2}$ and $x_q = \frac{M^2_q}{m_\chi^2}$.
 % \begin{align}
 %  \langle \sigma v \rangle^\text{D} \left(\bar \chi \chi \rightarrow \bar f f\right) = \frac{N_c g_f^4 m^2}{32\pi^2\left(M_l^2 + m^2\right)^2}
 % \end{align}
-The leading contribution for annihilation cross section for $\bar\chi^0 \chi^0 \rightarrow \bar f f$ (fig. \ref{pic_annihilation} is for both representations \cite{1506.03116}
+The annihilation cross section into fermions (fig. \ref{pic_annihilation}) is for both representations \cite{1503.01500}
 \begin{align}
- \langle \sigma v \rangle^\text{M} \left(\bar \chi \chi \rightarrow \bar f f\right) = \frac{N_c g_f^4 m^2 \left(M^4+m^4 \right)}{48\pi^2\left(M_l^2 + m^2\right)^4}v^2.
+ \langle \sigma v \rangle \left(\bar \chi^0 \chi^0 \rightarrow \bar f f\right) = \frac{N_c g_f^4}{32\pi m_\chi^2\left(1+x_f\right)^2} \left(\frac{m_f^2}{m_\chi^2} + \frac{2\left(1+x_f\right)^2}{3\left(1+x\right)^2} v^2\right)  .
 \end{align}
-No co-annihilations are considered here for assumed non-degeneracy of the fermion and scalar masses. $v\approx 0.3$ during freeze-out. Nowadays 
-$2\rightarrow3$ processes as $\bar \chi \chi \rightarrow \bar f f V$ might dominate with lower velocities $v\approx 10^{-3}$, interesting for 
-indirect detection \cite{1207.1431}. 
-% 
+For the triplet there is an additional tree level decay into $W$-bosons which is roughly as dominant as the decay into muons. For bosons there is
+no helicity or velocity suppression at leading order. The cross section rreads\cite{1401.6212}
+\begin{align}
+ \langle \sigma v \rangle^\text{M} \left(\bar \chi^0 \chi^0 \rightarrow W^+W^-\right) = \frac{8\pi \alpha_2^2}{m_\chi} \frac{(1-w)^{\sfrac32}}{(2-w)^2}.
+\end{align}
+No co-annihilations are considered here for assumed non-degeneracy of $m_\chi$ and $M_{l,q}$. The velocity $v$ at the time when DM decoupled is
+estimated as $v\approx 0.3$. 
+%Nowadays $2\rightarrow3$ processes as $\bar \chi \chi \rightarrow \bar f f V$ might dominate with lower velocities 
+%$v\approx 10^{-3}$, interesting for indirect detection \cite{1207.1431}. 
+
+
 % \begin{align}
 %  \text{cm}^2 = 2.57e27 1/GeV^2\\
 %  \text{cm}^3/\text{s} = 7.70e17 1/GeV^2\\
@@ -271,88 +293,10 @@ indirect detection \cite{1207.1431}.
 
 
 \section{Results}
-We now want to gather up all the just calculated expressions for the anomalous quantities in the flavour sector and for the phenomenological ones 
-in the dark sector and compare them to the boundaries we showed in sections \ref{sec_flAnom}, \ref{sec_RD} and \ref{sec_DMDetection}.
-
-
-% supersymmetry
-The used parameters for the following plots are
-\begin{align}
- |g^l_2| &= 2\\
- |g^q_2| &= 0.04\\
- |g^q_3| &= 1\\
- M_{\Phi_l} &= m_\chi + 200 GeV\\
- M_{\Phi_q} &= m_\chi + 800 GeV\\
- \label{eq_resParams}
-\end{align}
-
-\subsection{A - $T(\chi)=\boldsymbol{1}$}
-% binolike
-\textit{$B_s$ Processes}\\
-\noindent \ref{pic_BsResA}
-\begin{figure}[t]
- \includegraphics[width=1\textwidth]{../pics/BsModA.pdf}
- \caption{Paramter space plot for $B_s$ mixing and $B_s\rightarrow \mu\mu$.}
- \label{pic_BsResA}
-\end{figure}
-\\ \textit{Anomalous Magnetic Moment of the Muon}\\
-\noindent \ref{pic_g-2A}
-\begin{figure}[t]
- \includegraphics[width=1\textwidth]{../pics/g-2A.pdf}
- \caption{Paramter space plot for anomalous magnetic moment of the muon. The area of the blue line crossing the higher and lower bound is valid.}
- \label{pic_g-2A}
-\end{figure}
-
-\subsection{B - $T(\chi)=\boldsymbol{3}$}
-%winolike
-\textit{$B_s$ Processes}\\
-\noindent \ref{pic_BsResB}
-\begin{figure}[t]
- \includegraphics[width=1\textwidth]{../pics/BsModB.pdf}
- \caption{Paramter space plot for $B_s$ mixing and $B_s\rightarrow \mu\mu$.}
- \label{pic_BsResB}
-\end{figure}
-\\ \textit{Anomalous Magnetic Moment of the Muon}\\
-\noindent \ref{pic_g-2B}
-\begin{figure}[t]
- \includegraphics[width=1\textwidth]{../pics/g-2B.pdf}
- \caption{Paramter space plot for anomalous magnetic moment of the muon. The area of the blue line crossing the higher and lower bound is valid.}
- \label{pic_g-2B}
-\end{figure}
-\\ \textit{Direct Detection} \\
-\noindent \ref{pic_ddB}
-\begin{figure}[t]
- \includegraphics[width=1\textwidth]{../pics/ddB.pdf}
- \caption{Paramter space plot for nucleon scattering. The cross section for the triplet is barely below current bounds and will be tested next year.}
- \label{pic_ddB}
-\end{figure}
-\\ \textit{Annihilation}\\
-With \eqref{eq_resParams} there are two masses for which $m_\chi$ as a thermal relic makes up for all DM in universe. They are 80 and 350 GeV. In
-between the cross section is too high leaving the DM candidate over abundant. Its peak is around 120 GeV.
+\input{../input/results.tex}
 
 
 \section{Conclusion and Prospects}
-
-% dfasdölkj\\d\\d\\d\\d\\d\\d\\d\\d\\d\\d\\d
-
-% \section{DM candidate coupling to light quarks in T' framework}
-% \subsection{Model construction}
-% % \subsubsection{Grouptheoretical properties}
-% \begin{align}
-%  \sum m_n n^2 = N_G \quad groupelements\\
-%  \sum m_n = \#_{IRR} \quad C = Irred\,Reps\\
-%  \varphi:\, G\rightarrow \text{GL}(V)\\
-%  g\mapsto \varphi(g):\, V\rightarrow V\\
-%  \chi_D(g) = \text{tr}D(g)\\
-%  \sum_g \chi_\alpha(g)^*\chi_\beta(g) = N_G \delta_{\alpha\beta}\\
-%  \sum_\alpha \chi_\alpha(g)^*\chi_\alpha(h) = \frac{N_G}{n_g} \delta_{C_g C_h} \stackrel{\Lambda}{=} \langle \chi^\mu, \chi^\nu \rangle = \delta^{\mu\nu}\\
-%  \text{FS}(R) := \frac{1}{N_G} \sum_g \chi_R(g^2) =\begin{cases}
-%                                                     1, & \text{real}\\
-%                                                     0, & \text{complex}\\
-%                                                     -1, & \text{pseudoreal}\\
-%                                                    \end{cases}\\
-%  \mu(k) = \langle \chi_R \cdot \chi_{R'} , \chi_{R_k} \rangle \quad tensor product decomposation\\
-% \end{align}
 % 
 % \subsubsection{Assigning particles to multiplets}
 % \begin{align}
@@ -382,14 +326,7 @@ between the cross section is too high leaving the DM candidate over abundant. It
 % 						-\epsilon^2 & \-\epsilon^3 & \epsilon^5
 % 						\end{pmatrix}
 % \end{align}
-% 
-% \subsubsection{DM-nucleus scattering}
-% 
-% 
-% \addcontentsline{toc}{section}{List of figures}
-% \newpage\listoffigures\newpage
-% \addcontentsline{toc}{section}{List of tables}
-% \listoftables\newpage
+
 \end{spacing}
 \newpage
 
@@ -426,6 +363,19 @@ between the cross section is too high leaving the DM candidate over abundant. It
  \bibitem[30]{1507.03233}M. Huschle et al. (Belle Collaboration) \textit{Measurement of the branching ratio of $B^-\rightarrow D^{(*)}\tau^-\bar \nu_\tau$ relative to $B^-\rightarrow D^{(*)}l^-\bar \nu_l$ decays with hadronic tagging at Belle} \href{https://arxiv.org/abs/1507.03233}{arXiv:1507.03233}
  \bibitem[31]{1506.03116}J. Abdallah \textit{Simplified Models for Dark Matter Searches at the LHC} \href{https://arxiv.org/abs/1506.03116}{arXiv:1506.03116}
  \bibitem[32]{1207.1431}M. Garny et al. \textit{Closing in on mass-degenerate dark matter scenarios with antiprotons and direct detection} \href{https://arxiv.org/abs/1207.1431}{arXiv:1207.1431}
- \bib
+ \bibitem[33]{1102.0009}E. Golowich et al. \textit{Relating $B_s$ Mixing and $B_s \rightarrow \mu^+ \mu^-$ with New Physics} \href{https://arxiv.org/abs/1102.0009}{arXiv:1102.0009}
+ \bibitem[34]{0612167}A. Lenz, U. Nierste \textit{Theoretical update of Bs-Bs-bar mixing} \href{https://arxiv.org/abs/hep-ph/0612167}{arXiv:hep-ph/0612167}
+ \bibitem[35]{1104.0228} J. Hisano et al. \textit{Direct Detection of Electroweak-Interacting Dark Matter} \href{https://arxiv.org/abs/1104.0228v2}{arXiv:1104.0228}
+ \bibitem[36]{1212.4097}M.G. Aartsen (IceCube Collaboration) \textit{Search for dark matter annihilations in the Sun with the 79-string IceCube detector} \href{https://arxiv.org/abs/1212.4097}{arXiv:1212.4097}
+ \bibitem[37]{MDSchwartz}M.D. Schwartz \textit{Quantum Field Theory and the Standard Model} ISBN: 978-1-107-03473-0
+ \bibitem[38]{0811.1779}M. Deka et al. \textit{Moments of Nucleon's Parton Distribution for the Sea and Valence Quarks from Lattice QCD} \href{https://arxiv.org/abs/0811.1779}{arXiv:0811.1779}
+ \bibitem[39]{0201195}J. Pumplin et al. \textit{New Generation of Parton Distributions with Uncertainties from Global QCD Analysis}\href{https://arxiv.org/abs/hep-ph/0201195}{arXiv:hep-ph/0201195}
+ \bibitem[40]{9506380}G. Jungman, M. Kamionkowski, K. Griest \textit{Supersymmetric Dark Matter} \href{https://arxiv.org/abs/hep-ph/9506380}{arXiv:hep-ph/9506380}
+ \bibitem[41]{Djouadi}A. Djouadi, M. Drees \textit{QCD corrections to neutralino–nucleon scattering} \href{http://www.sciencedirect.com/science/journal/03702693/484}{Phys. Lett. B 484 (2000) 183}
+ \bibitem[42]{1007.2601}J. Hisano, K. Ishiwata, N. Nagata \textit{Gluon contribution to the dark matter direct detection}  \href{https://arxiv.org/abs/1007.2601}{arXiv:1007.2601}
+ \bibitem[43]{1004.4090}J. Hisano, K. Ishiwata, N. Nagata \textit{A complete calculation for direct detection of Wino dark matter}  \href{https://arxiv.org/abs/1004.4090}{arXiv:1004.4090}
+ \bibitem[44]{1401.6212}A. Hryczuk et al. \textit{Indirect Detection Analysis: Wino Dark Matter Case Study} \href{https://arxiv.org/abs/1401.6212v2}{arXiv:1401.6212}
+ \bibitem[45]{1307.8120}S. Chang et al. \textit{Effective WIMPs}  \href{https://arxiv.org/abs/1307.8120}{arXiv:1307.8120}
+ \bibitem[46]{1503.01500}M. Garny, A. Ibarra, S. Vogl \textit{Signatures of Majorana dark matter with t-channel mediators} \href{https://arxiv.org/abs/1503.01500}{arXiv:1503.01500}
 \end{thebibliography}
 \end{document}
