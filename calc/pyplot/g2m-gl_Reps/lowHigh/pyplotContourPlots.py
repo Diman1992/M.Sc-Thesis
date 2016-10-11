@@ -68,6 +68,19 @@ with open('out6.txt','r') as csvfile:
 ax1.plot(g,h,label=r'3,2')
 
 
+if(x[0]>x[-1]):
+	np.fliplr(x)
+	np.fliplr(y)
+if(a[0]>a[-1]):
+	np.fliplr(a)
+	np.fliplr(b)
+
+
+superxNew = np.linspace(min(a[0],x[0]),max(a[-1],x[-1]),len(x)+len(a))
+superyNew = np.linspace(0,0,len(x)+len(a))
+
+
+
 anew = np.linspace(a[0],a[-1],len(x))
 xnew = np.linspace(x[0],x[-1],len(x))
 

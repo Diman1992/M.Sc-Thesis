@@ -5,6 +5,7 @@
 \usepackage{setspace}\usepackage{threeparttable}
 \usepackage{fancyhdr}
 \usepackage{graphicx}
+\usepackage[official]{eurosym}
 \numberwithin{equation}{section}
 %\usepackage{epstopdf}
 \newcommand{\ti}{\text{i}}
@@ -184,7 +185,6 @@ related topics in the SM and cosmology.
 \\ \textit{Collider Signatures}
 
 \section{Group Theory and Flavour Symmetries}
-\subsection{Group Invariance}
 % symmetry breaking,representations
 \subsection{$U(1)_\text{FN}$ and Continuous Groups}
 \label{sec_FNGT}
@@ -246,47 +246,11 @@ $x_l=\frac{M^2_l}{m_\chi^2}$ and $x_q = \frac{M^2_q}{m_\chi^2}$.
 \input{../input/ddPhen.tex}
 
 \subsection{DM Annihilation}
-Our final issue is the cross section of DM annihilating into SM particles. So as for $B_s\rightarrow \mu\mu$, all model parameters are taken into
-account
-\begin{align}
- \left(m_\chi, M_l, M_q, g^l_2\right)
-\end{align}
-We assume $\chi^0$ to be a Majorana fermion which already implies that its s-wave cross section into a fermion pair is helicity suppressed and 
-thus the leading contribution is p-wave \cite{1307.8120}. This can be explained as follows considering charge ($C$) and parity ($P$) symmetries.
-The respective transformations for a fermion/antifermion state is $C=(-1)^{L+S},\,P=(-1)^{L+1}$ with the total spin $S$ and the total orbital angular
-momentum $L$. 
-In the Majorana case $C=+1$. s-wave further means $S=0$ and hence $P=-1$. The $\bar f f$ state shall be able to reproduce the same $J=|L\pm S|$ 
-which only has $S=0$ when the fermion and the antifermion are different Weyl spinors, i.e. a left handed fermion and a left handed antifermion.
-In chiral models like ours, in the limit of zero quark mass, we have $S=1$ giving $C=(-1)^{L+1},\,P=(-1)^{L+1}$ and therefore $C$ and $P$ are not 
-conserved for any $L$. So for s-wave annihilation a helicity flip, as for the anomalous magnetic moment of the muon, proportional to $m_f$ is 
-required. Due to its anticipated large coupling, the muon is assumed to have to largest impact and there is also a contribution from top quarks
-for DM masses right above the threshold of the its mass. 
-\begin{figure}[t]
- \includegraphics[width=0.3\textwidth]{../pics/ann.pdf}
- \caption{Annihilation process.}
- \label{pic_annihilation}
-\end{figure}
-% $VV$ annihilation (9207234), wino RD from other su2-states (0913-main)
-% \begin{align}
-%  \langle \sigma v \rangle^\text{D} \left(\bar \chi \chi \rightarrow \bar f f\right) = \frac{N_c g_f^4 m^2}{32\pi^2\left(M_l^2 + m^2\right)^2}
-% \end{align}
-The annihilation cross section into fermions (fig. \ref{pic_annihilation}) is for both representations \cite{1503.01500}
-\begin{align}
- \langle \sigma v \rangle \left(\bar \chi^0 \chi^0 \rightarrow \bar f f\right) = \frac{N_c g_f^4}{32\pi m_\chi^2\left(1+x_f\right)^2} \left(\frac{m_f^2}{m_\chi^2} + \frac{2\left(1+x_f\right)^2}{3\left(1+x\right)^2} v^2\right)  .
-\end{align}
-For the triplet there is an additional tree level decay into $W$-bosons which is roughly as dominant as the decay into muons. For bosons there is
-no helicity or velocity suppression at leading order. The cross section rreads\cite{1401.6212}
-\begin{align}
- \langle \sigma v \rangle^\text{M} \left(\bar \chi^0 \chi^0 \rightarrow W^+W^-\right) = \frac{8\pi \alpha_2^2}{m_\chi} \frac{(1-w)^{\sfrac32}}{(2-w)^2}.
-\end{align}
-No co-annihilations are considered here for assumed non-degeneracy of $m_\chi$ and $M_{l,q}$. The velocity $v$ at the time when DM decoupled is
-estimated as $v\approx 0.3$. 
-%Nowadays $2\rightarrow3$ processes as $\bar \chi \chi \rightarrow \bar f f V$ might dominate with lower velocities 
-%$v\approx 10^{-3}$, interesting for indirect detection \cite{1207.1431}. 
+\input{../input/annihilation.tex}
 
-
+%#########################################################################################################################
 % \begin{align}
-%  \text{cm}^2 = 2.57e27 1/GeV^2\\
+%  \text{cm}^2 = 2.57e27 1/GeV^2\\ 
 %  \text{cm}^3/\text{s} = 7.70e17 1/GeV^2\\
 %  \text{pb} = 2.57e-8 1/GeV^2
 % \end{align}
@@ -297,6 +261,7 @@ estimated as $v\approx 0.3$.
 
 
 \section{Conclusion and Prospects}
+\input{../input/conclusion.tex}
 % 
 % \subsubsection{Assigning particles to multiplets}
 % \begin{align}
@@ -330,52 +295,12 @@ estimated as $v\approx 0.3$.
 \end{spacing}
 \newpage
 
-\begin{thebibliography}{xxx}
- \bibitem[1]{Grip}B. Gripaios et al. \textit{Linear flavour violation and anomalies in $B$ physics} \href{http://arxiv.org/abs/1509.05020v1}{arxiv.org/abs/1509.05020v1}
- \bibitem[2]{Peskin}M. Peskin et al. \textit{An Introduction To Quantum Field Theory} ISBN: 0-201-50397-2
- \bibitem[3]{Fierz}J.F. Nieves et al. \textit{Generalized Fierz identities} \href{http://arxiv.org/abs/hep-ph/0306087v1}{arxiv.org/abs/hep-ph/0306087v1}
- \bibitem[4]{FerA4}G. Altarelli et al. \textit{Tri-Bimaximal Neutrino Mixing and Discrete Flavour Symmetries} \href{https://arxiv.org/abs/1205.5133}{arxiv.org/abs/1205.5133}
- \bibitem[5]{VarzTotMod}I.d.M. Varzielas et al. \textit{Clues for flavour from rare lepton and quark decays} \href{https://arxiv.org/abs/1503.01084}{arxiv.org/abs/1503.01084}
- \bibitem[6]{Hisano}J. Hisano et al. \textit{Direct Detection of Electroweak-Interacting Dark Matter} \href{https://arxiv.org/abs/1104.0228v2}{arxiv.org/abs/1104.0228v2}
- \bibitem[7]{minMatter}E.D. Nobile et al. \textit{Minimal Matter at the Large Hadron Collider} \href{http://arxiv.org/abs/0908.1567}{arxiv.org/abs/0908.1567}
- \bibitem[8]{anomMom}K. Melnikov et al. \textit{Theory of the Muon Anomalous Magnetic Moment} ISBN-13 978-3-540-32806-3
- \bibitem[9]{Lavoura}L. Lavoura \textit{General formulae for $f_1\rightarrow f_2 \gamma$} \href{http://arxiv.org/abs/hep-ph/0302221}{arxiv.org/abs/hep-ph/0302221}
- \bibitem[10]{BurasEFT}A.J. Buras \textit{Weak Hamiltonian, CP Violation and Rare Decays} \href{http://arxiv.org/abs/hep-ph/9806471}{arxiv.org/abs/hep-ph/9806471}
- \bibitem[11]{LambdaCDM}P. Bull et al. \textit{Beyound $\Lambda$CDM: Problems, solutions, and the road ahead} \href{http://arxiv.org/abs/1512.05356}{arxiv.org/abs/1512.05356}
- \bibitem[12]{14041938}J.I. Read \textit{The Local Dark Matter Density} \href{http://arxiv.org/abs/1404.1938}{arxiv.org/abs/1404.1938}
- \bibitem[13]{LectDMLis}M. Lisanti \textit{Lectures on Dark Matter Physics} \href{https://arxiv.org/abs/1603.03797}{arxiv.org/abs/1603.03797}
- \bibitem[14]{160607790}A.D. Popolo et al.\textit{Small scale problems of the $\Lambda$CDM model: short review} \href{https://arxiv.org/abs/1606.07790}{1606.07790}
- \bibitem[15]{11015122}M. Milgrom \textit{MD or DM? Modified dynamics at low accelerations vs dark matter} \href{https://arxiv.org/abs/1101.5122}{1101.5122}
- \bibitem[16]{DM-EvCaDo}G. Bertone et al. \textit{Particle Dark Matter: Evidence, Candidates and Constraints} 
- \bibitem[17]{160606861}A. Crivellin \textit{B-anomalies related to leptons and lepton flavour universality violation} \href{https://arxiv.org/abs/1606.06861}{arxiv.org/abs/1606.06861}
- \bibitem[18]{150306199}W. Altmannshofer, D. Straub \textit{Implications of $b\rightarrow s$ measurements} \href{https://arxiv.org/abs/1503.06199}{arxiv.org/abs/1503.06199}
- \bibitem[19]{1607.00299}S. Aoki et al. (FLAG Working Group) \textit{Review of lattice results concerning low-energy particle physics} \href{https://arxiv.org/abs/1607.00299}{arxiv.org/abs/1607.00299}
- \bibitem[20]{1602.03560}A. Bazavov et al. (Fermilab Lattice and MILC Collaborations) \textit{$B^0_{(s)}$-mixing matrix elements from lattice QCD for the Standard Model and beyond} \href{https://arxiv.org/abs/1602.03560}{arxiv.org/abs/1602.03560}
- \bibitem[21]{1008.1593}A. Lenz, U. Nierste \textit{Anatomy of New Physics in $B-\bar B$ mixing} \href{https://arxiv.org/abs/1008.1593}{arxiv.org/abs/1008.1593}
- \bibitem[22]{1212.5226}G. Hinshaw et al. \textit{NINE-YEAR WILKINSON MICROWAVE ANISOTROPY PROBE (WMAP) OBSERVATIONS: COSMOLOGICAL PARAMETER RESULTS}  \href{https://arxiv.org/abs/1212.5226}{arxiv.org/abs/1212.5226}
- \bibitem[23]{0303515}M.C. Runyan et al. \textit{ACBAR: The Arcminute Cosmology Bolometer Array Receiver} \href{https://arxiv.org/abs/astro-ph/0303515}{arXiv:astro-ph/0303515}
- \bibitem[24]{0205388}T.J. Pearson \textit{The Anisotropy of the Microwave Background to l = 3500: Mosaic Observations with the Cosmic Background Imager}\href{https://arxiv.org/abs/astro-ph/0205388}{arXiv:astro-ph/0205388}
- \bibitem[25]{1303.5076}P.A.R Ade (Planck Collaboration) \href{https://arxiv.org/abs/1303.5076}{arXiv:1303.5076}
- \bibitem[26]{1607.02475}S.Bruggisser, F.Riva, A.Urbano \textit{The Last Gasp of Dark Matter Effective Theory} \href{https://arxiv.org/abs/1607.02475}{arXiv:1607.02475}
- \bibitem[27]{1411.6743}W. Altmannshofer et al. \textit{Dark Matter Signals in Dilepton Production at Hadron Colliders} \href{https://arxiv.org/abs/1411.6743}{arXiv:1411.6743 }
- \bibitem[28]{1408.1627}G. Hiller, M. Schmaltz \textit{$R_K$ and future $b\rightarrow sll$ BSM opportunities} \href{https://arxiv.org/abs/1408.1627}{arXiv:1408.1627 }
- \bibitem[29]{1409.4557}A.J. Buras et al. \textit{decays in the Standard Model and beyond} \href{https://arxiv.org/abs/1409.4557}{arXiv:1409.4557 }
- \bibitem[30]{1507.03233}M. Huschle et al. (Belle Collaboration) \textit{Measurement of the branching ratio of $B^-\rightarrow D^{(*)}\tau^-\bar \nu_\tau$ relative to $B^-\rightarrow D^{(*)}l^-\bar \nu_l$ decays with hadronic tagging at Belle} \href{https://arxiv.org/abs/1507.03233}{arXiv:1507.03233}
- \bibitem[31]{1506.03116}J. Abdallah \textit{Simplified Models for Dark Matter Searches at the LHC} \href{https://arxiv.org/abs/1506.03116}{arXiv:1506.03116}
- \bibitem[32]{1207.1431}M. Garny et al. \textit{Closing in on mass-degenerate dark matter scenarios with antiprotons and direct detection} \href{https://arxiv.org/abs/1207.1431}{arXiv:1207.1431}
- \bibitem[33]{1102.0009}E. Golowich et al. \textit{Relating $B_s$ Mixing and $B_s \rightarrow \mu^+ \mu^-$ with New Physics} \href{https://arxiv.org/abs/1102.0009}{arXiv:1102.0009}
- \bibitem[34]{0612167}A. Lenz, U. Nierste \textit{Theoretical update of Bs-Bs-bar mixing} \href{https://arxiv.org/abs/hep-ph/0612167}{arXiv:hep-ph/0612167}
- \bibitem[35]{1104.0228} J. Hisano et al. \textit{Direct Detection of Electroweak-Interacting Dark Matter} \href{https://arxiv.org/abs/1104.0228v2}{arXiv:1104.0228}
- \bibitem[36]{1212.4097}M.G. Aartsen (IceCube Collaboration) \textit{Search for dark matter annihilations in the Sun with the 79-string IceCube detector} \href{https://arxiv.org/abs/1212.4097}{arXiv:1212.4097}
- \bibitem[37]{MDSchwartz}M.D. Schwartz \textit{Quantum Field Theory and the Standard Model} ISBN: 978-1-107-03473-0
- \bibitem[38]{0811.1779}M. Deka et al. \textit{Moments of Nucleon's Parton Distribution for the Sea and Valence Quarks from Lattice QCD} \href{https://arxiv.org/abs/0811.1779}{arXiv:0811.1779}
- \bibitem[39]{0201195}J. Pumplin et al. \textit{New Generation of Parton Distributions with Uncertainties from Global QCD Analysis}\href{https://arxiv.org/abs/hep-ph/0201195}{arXiv:hep-ph/0201195}
- \bibitem[40]{9506380}G. Jungman, M. Kamionkowski, K. Griest \textit{Supersymmetric Dark Matter} \href{https://arxiv.org/abs/hep-ph/9506380}{arXiv:hep-ph/9506380}
- \bibitem[41]{Djouadi}A. Djouadi, M. Drees \textit{QCD corrections to neutralino–nucleon scattering} \href{http://www.sciencedirect.com/science/journal/03702693/484}{Phys. Lett. B 484 (2000) 183}
- \bibitem[42]{1007.2601}J. Hisano, K. Ishiwata, N. Nagata \textit{Gluon contribution to the dark matter direct detection}  \href{https://arxiv.org/abs/1007.2601}{arXiv:1007.2601}
- \bibitem[43]{1004.4090}J. Hisano, K. Ishiwata, N. Nagata \textit{A complete calculation for direct detection of Wino dark matter}  \href{https://arxiv.org/abs/1004.4090}{arXiv:1004.4090}
- \bibitem[44]{1401.6212}A. Hryczuk et al. \textit{Indirect Detection Analysis: Wino Dark Matter Case Study} \href{https://arxiv.org/abs/1401.6212v2}{arXiv:1401.6212}
- \bibitem[45]{1307.8120}S. Chang et al. \textit{Effective WIMPs}  \href{https://arxiv.org/abs/1307.8120}{arXiv:1307.8120}
- \bibitem[46]{1503.01500}M. Garny, A. Ibarra, S. Vogl \textit{Signatures of Majorana dark matter with t-channel mediators} \href{https://arxiv.org/abs/1503.01500}{arXiv:1503.01500}
-\end{thebibliography}
+\input{../input/appendix.tex}
+
+
+\renewcommand{\bibname}{References}
+\addcontentsline{toc}{chapter}{\bibname}
+\input{../input/biblio.tex}
+
+\input{../input/Erklaerung.tex}
 \end{document}
