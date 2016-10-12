@@ -27,11 +27,11 @@ cQ = np.array([1,1,1,1.32,1.19,1])
 print("fTG+q2 squared x 4/pi (xSec): ",((fGlu/9+(q2nd[4]+q2ndb[4])*3)/12)**2*4/np.pi)
 
 #Constraints
-C9low1f = -0.81
-C9high1f = -0.51
-C9low2f = -0.97
-C9high2f = -0.37
-bsmix = 2.5e-11
+C9low1f = -0.71
+C9high1f = -0.35
+C9low2f = -0.91
+C9high2f = -0.18
+bsmix = 0.35e-11
 annrate = 4e-9 #1607.02457: 4e-9; 1512.01991: 7.5e-10; 1601.06590: 2.1e-8 (most convicing)
 g2best = 2.87e-9
 g2low = 2.07e-9
@@ -40,11 +40,11 @@ g2high = 3.57e-9
 #model parameters
 eps = 0.2
 gqf = np.array([eps**3,eps**3,eps**2,eps**2,1,1])
-mldiff = 200
-mqdiff = 800
+Mlf = 300
+Mqf = 720
 gq2f = gqf[2]
 gq3f = gqf[4]
-gl2f = 2.5
+gl2f = 2.0
 
 def tHad(m,M):
 	return M**2/m**2
@@ -63,12 +63,12 @@ def g2func(g,m,qf,qb):
 	#	print("qf and qb have different lengths")
 	print("qf: ",np.sum(qf), " qb: ",np.sum(qb))
 	
-#	res += np.sum(qf)*i(tHad(m,m+mldiff)) + np.sum(qb)* 1/tHad(m,m+mldiff) * i(1/tHad(m,m+mldiff))
-	res += np.sum(qf)*i(tHad(m,m+mldiff)) + np.sum(qb)* ibar(1/tHad(m,m+mldiff))
+#	res += np.sum(qf)*i(tHad(m,Mlf)) + np.sum(qb)* 1/tHad(m,Mlf) * i(1/tHad(m,Mlf))
+	res += np.sum(qf)*i(tHad(m,Mlf)) + np.sum(qb)* ibar(1/tHad(m,Mlf))
 	return -preg2(g,m) * res
 
 def gMutoMass(m,a,qf,qb):
-	return np.sqrt(-a*16*np.pi**2 * m**2/mmuon**2 * (np.sum(qf)*i(tHad(m,m+mldiff)) + np.sum(qb)* ibar(1/tHad(m,m+mldiff)))**(-1))
+	return np.sqrt(-a*16*np.pi**2 * m**2/mmuon**2 * (np.sum(qf)*i(tHad(m,Mlf)) + np.sum(qb)* ibar(1/tHad(m,Mlf)))**(-1))
 
 
 qfB = np.array([0,-1])
@@ -91,9 +91,11 @@ def Kder(t):
 def Gder(t):
 	return (np.log(t))/(t-1)**2 - 2*(1-t+t*np.log(t))/(t-1)**3
 def MuMuAddMaj(m,relPreG): #preK = 1, what is the relative prefactor of preG? Crivellin
-	return Klong(tHad(m,m+mldiff),tHad(m,m+mqdiff)) + 1/2*relPreG*Glong(tHad(m,m+mldiff),tHad(m,m+mqdiff))
+	return Klong(tHad(m,Mlf),tHad(m,Mqf)) + relPreG*Glong(tHad(m,Mlf),tHad(m,Mqf))
 def MixAddMaj(m,relPreG): #preK = 1, what is the relative prefactor of preG? Crivellin
-	return Kder(tHad(m,m+mqdiff)) + 1/2*relPreG*Gder(tHad(m,m+mqdiff))
+	return Kder(tHad(m,Mqf)) + relPreG*Gder(tHad(m,Mqf))
+def MixAddPlot(t,relPreG):
+	return Kder(t) + relPreG*Gder(t)
 
 def g23mumu(pMod,C,m,gl2,preG):
 	return C*weak/pMod *m**2/gl2**2 * 1/MuMuAddMaj(m,preG)
@@ -104,8 +106,12 @@ def bla(m):
 
 preA = 1/(128*np.pi**2)
 preB = 5/(384*np.pi**2)
+preGr = 7/(576*np.pi**2)
+preQ = 3/(265*np.pi**2)
 preGA = 1
 preGB = 1/5
+preGG = 0
+preGQ = 6/20
 
 #direct detection A
 f1A = 1/16 * np.sum(fNuc * gqf**2) #tree channel to light quarks
@@ -114,7 +120,7 @@ f3A = 3/16 * np.sum((q2nd+q2ndb)*gqf**2) #twist operators
 def mRed(m,n):
 	return m*n/(m+n)
 def fdd(m,mqdiff):
-	return (f1A+f2A+f3A)*m /(m+mqdiff)**4
+	return (f1A+f2A+f3A)*m /(Mqf)**4
 def sigmaDDA(m,A):
 	return 4/np.pi * mRed(m,A)**2 * (A * fdd(m,mqdiff))**2
 
@@ -168,13 +174,13 @@ print("pre: ", pre)
 print("gW(mchi=100): ", gB1(wnow) + gB31(wnow,tnow), "gH(100): ",gH(wnow) )
 print("fN in GeV-3 for mchi=100; 1:gW: ", pre*fGlu/mW**2*(2*gB1(wnow) + gB31(wnow,tnow)), " 2:gH: ", pre*fGlu*np.sum(cQ)/(3*mH**2)*gH(wnow), " 3:gTi: ",3/4*np.sum(q2nd+q2ndb)*alphW**2/mW**3*(gT1(wnow)+gT2(wnow)) , "4:fq: ", np.sum(fNuc)*alphW**2/(4*mH**2*mW)*gH(wnow))
 
-
+print("g23: ",g23mumu(preA,C9low1f,100,2,preGA))
 
 
 fig = plt.figure()
 ax = plt.gca()
-m = np.linspace(qmass[5]/2+10,500,1000)
-#m = np.linspace(50,500,1000)
+m = np.linspace(1,200,1000)
+t = np.linspace(0.0001,3,1000)
 
 """
 with open("outputGood.txt") as f:
@@ -211,21 +217,33 @@ ax.plot(m,g2l_a)
 ax.set_xlabel(r'$m_\chi$ / GeV')
 ax.set_ylabel(r'$\Delta a_\mu$')
 """
-
-"""
 #BsPheno m-g2g3
-#n = np.linspace(gq2f*gq3f,gq2f*gq3f,1000)
-#ax.scatter(m,g2func(gl2f,m,qfB,qbB))
-#ax.plot(m,(g23mumu(preA,C9low1f,m,gl2f,preGA)),label=r'$C_9 1\sigma$')
-#ax.plot(m,(g23mumu(preA,C9high1f,m,gl2f,preGA)))
-#ax.plot(m,(g23mumu(preA,C9low2f,m,gl2f,preGA)),label=r'$C_9 2\sigma$')
-#ax.plot(m,(g23mumu(preA,C9high2f,m,gl2f,preGA)))
-#ax.plot(m,(np.sqrt(g23mix(preB,m,preGA))),label=r'$C_{BB}$')
-#ax.plot(m,n,label=r'\mathcal(G): $g^q_2 g^q_3$')
-#ax.set_xlabel(r'$m_\chi$ / GeV')
-#ax.set_ylabel(r'$g^q_2 g^q_3$')
+n = np.linspace(gq2f*gq3f,gq2f*gq3f,1000)
+#ax.plot(m,(g23mumu(preB,C9low1f,m,gl2f,preGA)),label=r'$C_9 1\sigma$')
+#ax.plot(m,(g23mumu(preB,C9high1f,m,gl2f,preGA)))
+#ax.plot(m,(g23mumu(preB,C9low2f,m,gl2f,preGA)),label=r'$C_9 2\sigma$')
+#ax.plot(m,(g23mumu(preB,C9high2f,m,gl2f,preGA)))
+
+ax.plot(m,(np.sqrt(g23mix(preA,m,preGA))),label=r'Singlet M')
+ax.plot(m,(np.sqrt(g23mix(preA,m,0))),label=r'Singlet D')
+ax.plot(m,(np.sqrt(g23mix(preB,m,preGB))),label=r'Triplet M')
+ax.plot(m,(np.sqrt(g23mix(preB,m,0))),label=r'Triplet D')
+ax.plot(m,(np.sqrt(g23mix(preQ,m,preGQ))),label=r'Quintuplet M')
+ax.plot(m,(np.sqrt(g23mix(preQ,m,0))),label=r'Quintuplet D')
+ax.plot(m,n,label=r'$\mathcal{G}: g^{q*}_2 g^q_3$')
+ax.set_xlabel(r'$m_\chi$ / GeV')
+ax.set_ylabel(r'$g^{q*}_2 g^q_3$')
 """
+
+ax.plot(t,MixAddPlot(t,preGA))
+ax.plot(t,MixAddPlot(t,preGB))
+ax.plot(t,MixAddPlot(t,preGQ))
+"""
+ax.grid('on')
+#ax.set_ylim(-0.2,0.2)
+
 ax.legend(loc='best')
+fig.savefig('fa23BBReps.pdf')
 plt.show()
 
 

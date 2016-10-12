@@ -1,7 +1,7 @@
 We now want to gather up all the just calculated expressions for the anomalous quantities in the flavour sector and for the phenomenological ones 
 in the dark sector and compare them to the boundaries we showed in sections \ref{sec_flAnom}, \ref{sec_RD} and \ref{sec_DMDetection}. The first
 parameters we will talk about are the scalar masses.
-\\ \\ \textit{Superpartner masses}\\
+\\ \\ \textit{Superpartners}\\
 Models like this can be seen as minimal supersymmetric (MSSM) or minimal dark matter (MDM) extensions to the SM. Each add a small bunch of new particles to 
 the Standard Model and usally charge them under also new global or local symmetry group so that they only interact pairwise with SM particles. 
 Supersymmetry is a theory that adds an additional particle for all SM ones (therefore ``superpartner'') with different statistics 
@@ -20,28 +20,59 @@ which fit the bino or the wino, respectively, and our scalar messengers $\Phi$ a
 QN, this model is not like the MSSM. The magnitude of the couplings is defined by the usual SM charges whereas the magnitude of our couplings is 
 defined by the charges of our additional flavour group. So the current bounds for the sfermion masses are also not necessarily viable for us.\\
 \noindent But nevertheless our scalars would have a similar decay signature as the slepton and the squark, respectively. The mass limits of $\Phi_q$
-and $\Phi_l$ are condensed in \cite{Grip} to be $M_q \geq 720$ GeV \cite{1506.08616} and $M_l \geq 300$ GeV \cite{1403.5294}. Within our framework,
-there would also be a possible arrangement for the muon coupling and $m_\chi$ but either the contribution to $\Delta a_\mu$ would be to small or
-the relic density would be too low
-to be conservative,
-we use the lower bounds from (PDG) which are set as
+and $\Phi_l$ are condensed in \cite{Grip} to be $M_q \geq 720$ GeV \cite{1506.08616} and $M_l \geq 300$ GeV \cite{1403.5294}. This hierarchy is
+actually favoured since a high $M_q$ lowers contributions to $B_s$-mixing and a low $M_l$ rises its to $g-2$ of the muon. We will not go 
+below them in our analysis. 
+\\ \\ \textit{$B_s$ anomalies}\\
+\noindent We will start with the $B_s$ processes. Even though we stated that the magnitude of the fermionic couplings results from their charges
+under the additional flavour group, the muonic one appears to be a bit peculiar. In figure \ref{pic_BsMumuReps} we can see the its dependency on
+the DM mass to fit the anomaly from $B_s\rightarrow \mu\mu$ within one standard deviation for different isospin representations of our DM
+candidate. 
+\begin{figure}[t]
+ \includegraphics[width=\textwidth]{../pics/BsmumuReps.pdf}
+ \caption{Contour plot of $B_s\rightarrow \mu\mu$ \eqref{eq_WilsonBsmumu} for several $SU(2)_L$ representations of $\chi$. The regions above each 
+ line is within the standard deviation \eqref{eq_mumuBound}.}
+ \label{pic_BsMumuReps}
+\end{figure}
+This includes our two treated ones, the singlet and the triplet, as well as the quadruplet from \cite{Grip} and another possible Majorana
+containing one, the quintuplet. With this set of lower bound on the scalar masses the muonic coupling for all of them is larger than one. We restrict
+ourselves to couplings lower than three, where non-perturbativity would occur. An advantage of the odd representations (sec. \ref{sec_bsmumu}) is
+that they give a destructive contribution due to their Majorana type leading to poles above the TeV-scale. Further, the singlet and the triplet
+are the extremal ones in the lower mass region. With these two properties one can react to upcoming updates for the Wilson coefficients depending
+on their direction so that there is at least no overproduction. It might also be interesting to try different representations for each scalar.
+For a new fermion transforming as an isospin triplet, the leptonic scalar could transform as a quadruplet and the colored one as a doublet giving
+a negative $\xi$ for $B_s\rightarrow \mu\mu$ loosening the bounds considerably, but leaving $\xi$ for the meson mixing unchanged.\\
+\noindent The situation for our four quark operator is a bit different. While the semileptonic needs a NP contribution, the Wilson coefficient 
+for $B_s$-mixing \eqref{eq_mixBound} suggests that NP should not be too influential at least not in an incremental way. That is where the Majorana
+behaviour of the DM candidate can come in handy due to its destructive additional term. 
+\begin{figure}[t]
+ \includegraphics[width=\textwidth]{../pics/fa23BBReps.pdf}
+ \caption{Parameter space plot for $B_s$-mixing \eqref{eq_WilsonMix} for three isospin representations of $\chi$ which each contain in principal a 
+ Majorana field with the upper limit from \eqref{eq_mixBound}. For all three, the impact of the destructive term is shown as the deviation between
+ an ``M'' and a ``D''. Regions below each line are allowed.}
+ \label{pic_BsMixRepsMajorana}
+\end{figure}
+In figure \ref{pic_BsMixRepsMajorana} constraints from $B_s$-mixing for different representations as well as the influence of this term are shown.
+We obviously do not have to worry about the singlet with our choice for $M_q$ and the quark couplings. In the triplet case, $m_\chi$ has to be at
+least above the point of intersection shown there, to match the quark couplings and not to overproduce meson mixing.
+\\ \\ \textit{Anomalous magnetic moment of the muon}\\
+\noindent the muonic $(g-2)$ is really striking for this kind of model as demonstrated in \cite{Grip}. Their isospin representation for $\chi$ is
+4 dimensional and has a maximum of hypercharge so that it still contains an electrically uncharged component. The scalars are triplets and 
+are hypercharged appropriately. With this setup the highest electric charges possible with their condiditions are obtained which increases the 
+contribution to $\Delta a_\mu$. For a 100 GeV'ish DM particle the muonic coupling would already be of order $\mathcal{O}(2)$ \footnote{Their 
+formula differs a bit from ours, concerning the prefactor and the bosonic charge, but the argument stays the same.}.\\
+\noindent For our DM candidate to be Majorana, it cannot have hypercharge which means that the overall electric charges are comparably small
+after summing over the participating components, viz
 \begin{align}
- M_l \geq 500 \, \text{GeV}
- M_q \geq 1100 \, \text{GeV}
+ Q_\chi &= \,0,\,\,\,\,Q_{\Phi_l} = \,1 \qquad \text{singlet}\\
+ Q_\chi &= \,1,\,\,\,\,Q_{\Phi_l} = \,1 \qquad \text{triplet}\\
+ Q_\chi &= 1.5,\,Q_{\Phi_l} = 1.5\,\,\, \quad \text{quintuplet}.
 \end{align}
+leaving neither the singlet nor the triplet to account for the anomalous magnetic moment of the muon with a perturbative coupling.
+\\ \\ \textit{DM phenomenology}\\
+\noindent bla
 
 
-
-% supersymmetry
-The used parameters for the following plots are
-\begin{align}
- |g^l_2| &= 2\\
- |g^q_2| &= 0.04\\
- |g^q_3| &= 1\\
- M_{\Phi_l} &= m_\chi + 200 GeV\\
- M_{\Phi_q} &= m_\chi + 800 GeV\\
- \label{eq_resParams}
-\end{align}
 
 \subsection{A - $T(\chi)=\boldsymbol{1}$}
 % binolike
