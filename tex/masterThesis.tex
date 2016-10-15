@@ -119,45 +119,17 @@ Datum des Einreichens der Arbeit: 31. Oktober, 2016
 \pagestyle{fancy}
 
 \section{Introduction}
-After the prediction (1964) and the experimental verification (2012) of the
-now called Higgs-boson, the Standard Model (SM) could be considered self-
-contained. The forecasts it makes for processes described therein are proven
-remarkably well by various experiments. At least at the energy scales they
-are currently operating. That said, it already contains associations that the
-contributions to this magnificent theory, made by our scientific forefathers, might not be
-the end of the story. We might know the Higgs mechanism being source of mass of visible particles,
-but the reason for their absolute values is still notional. The fermions thereof can be put into
-small groups and are considered to be interacting equally with the gauge bosons but it appears
-that some break ranks. Not only in the elementary particle physics sphere but also in cosmology
-strange things happen. From observation it seems that there has to be a mass distribution of
-invisible particles, say dark matter, that lead to the actual orbits of the stars in the galaxy.
-There is of course even more, but the resolution of these three issues in one combined theory is
-the task of this thesis.
-
-\noindent To resolve a problem, one has to understand it first. So we start with some notes on 
-related topics in the SM and cosmology.
-
-
-% It still lacks for example a quantum field theoretical
-% description for gravity or does not contain the experimentally shown masses
-% of the neutrinos. Besides, its dynamics depend on 19 parameters, including
-% the masses of the fermions, which are quite a lot and are wanted to decrease
-% in number by finding relations among one another. Furthermore cosmology
-% tells us that the SM is only covering about twenty per cent of the mass content
-% of the universe where the rest is made of the nowadays called dark matter
-% (DM). Since this thesis is about flavour and dark matter, we
-% should have a closer look on the way things stand at the moment.
-
+\input{../input/introduction.tex}
 
 \section{A Guide to today's Physics}
-
-\input{../input/yukSM.tex}
-
-\input{../input/weak.tex}
-
+\label{sec_guide}
+% \input{../input/yukSM.tex}
+% 
+% \input{../input/weak.tex}
+\input{../input/sm.tex}
 \input{../input/flanom.tex}
 
-\input{../input/eft.tex}
+% \input{../input/eft.tex}
 
 \subsection{DM in the $\Lambda$-CDM}
 
@@ -171,20 +143,10 @@ related topics in the SM and cosmology.
 
 \subsubsection{Detection Methods}
 \label{sec_DMDetection}
-\textit{Direct Detection} \\
-\begin{align}
- \sigma_\text{DD} = \sigma_\text{SI} + \sigma_\text{SD} = \frac{4}{\pi}\mu_N \left(|f_N|^2 + 3*|a_N|^2\right)
- \label{eq_th.sigma.dd}
-\end{align}
-\begin{figure}[t]
- \includegraphics[width=\textwidth]{../pics/ddLux.jpeg}
- \caption{Direct Detection bounds (\cite{1512.03506})}
- \label{pic_ddbounds}
-\end{figure}
-\\ \textit{Indirect Detection} \\
-\\ \textit{Collider Signatures}
+\input{../input/detTheo.tex}
 
 \section{Group Theory and Flavour Symmetries}
+\label{sec_GT}
 % symmetry breaking,representations
 \subsection{$U(1)_\text{FN}$ and Continuous Groups}
 \label{sec_FNGT}
@@ -216,9 +178,11 @@ related topics in the SM and cosmology.
 %  seperation of leptons and neutrinos
 
 \input{../input/modeloutline.tex}
+\label{sec_modeloutline}
 % b-anomalies with eft neads chiral coupling C9, C10; maybe already hints to susy? majorana and dirac particles in triplet. chiral dm has no higgs-int (0710.1668)
 
 \section{Phenomenological Analysis}
+\label{sec_pheno}
 Now we want to check the two representations for our DM field $\chi$ being a singlet or a triplet under the $SU(2)_L$, respectively, on five processes. 
 Three of them
 are indirect ones where the NP states are only virtually involved. To fit their respective constraints on the contribution from NP, we get bounds on 
@@ -233,15 +197,6 @@ $x_l=\frac{M^2_l}{m_\chi^2}$ and $x_q = \frac{M^2_q}{m_\chi^2}$.
 \input{../input/bsmix.tex}
 
 \input{../input/g2mu.tex}
-
-
-% \begin{align}
-%  \left(m, M_q, g_3^{q*}g_2^q\right).
-% \end{align}
-% \begin{align}
-%  \mathcal{L}_\text{eff} \supset \frac{K'(x_q)}{m^2}\frac{\alpha_i^{q*} \alpha_j^{q*} \alpha_m^l \alpha_n^l}{128\pi^2}\times\left(O_\delta + \frac23 O_\tau\right).
-%  \label{eq_LagBSmixModB}
-% \end{align}
 
 \input{../input/ddPhen.tex}
 
@@ -258,50 +213,21 @@ $x_l=\frac{M^2_l}{m_\chi^2}$ and $x_q = \frac{M^2_q}{m_\chi^2}$.
 
 
 \section{Results}
+\label{sec_results}
 \input{../input/results.tex}
 
 
 \section{Conclusion and Prospects}
-
+\label{sec_conclusion}
 \input{../input/conclusion.tex}
-% 
-% \subsubsection{Assigning particles to multiplets}
-% \begin{align}
-%  \langle \xi'' \rangle = \delta u''\approx \epsilon^4 \Lambda\\
-%  M_{\xi''} = k \delta u'' 
-% \end{align}
-% 
-% \subsection{Messenger $\xi''$ mediating SM and DM}
-% \subsubsection{DM annihilation into light mesons}
-% \subsubsection*{DM stability}
-% page 24 - check on T, Z3 reps and spin
-% \subsubsection*{cross section}
-% \begin{align}
-%  \sigma(\chi\chi \rightarrow d \bar s) = \frac{\lambda_f^2\lambda_\chi^2}{8\pi(4m_\chi^2 - M_{\xi''}^2)^2}(4m_\chi^2 - (m_d+m_s)^2)\\
-%  \langle \sigma_{\text{Ann}} v \rangle = \sigma(1+\frac18
-% \end{align}
-% 
-% \subsubsection{Meson-Mixing}
-% \begin{align}
-%  \Xi_{dd'} = \begin{pmatrix}
-%               0 & 1 & 0\\
-%               1 & 0 & 0 \\
-%               0 & 0 & 0
-%              \end{pmatrix} \xrightarrow{massbasis} \begin{pmatrix}
-% 						-\epsilon & 1 & -\epsilon^2\\
-% 						1 & \epsilon & -\epsilon^3\\
-% 						-\epsilon^2 & \-\epsilon^3 & \epsilon^5
-% 						\end{pmatrix}
-% \end{align}
 
 \end{spacing}
 \newpage
 
 \input{../input/appendix.tex}
 
-
 \renewcommand{\bibname}{References}
-\addcontentsline{toc}{chapter}{\bibname}
+\addcontentsline{toc}{section}{\bibname}
 \input{../input/biblio.tex}
 
 \input{../input/Erklaerung.tex}
