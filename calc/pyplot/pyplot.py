@@ -31,6 +31,12 @@ C9low1f = -0.71
 C9high1f = -0.35
 C9low2f = -0.91
 C9high2f = -0.18
+
+C9low1f = -0.81
+C9high1f = -0.51
+C9low2f = -0.97
+C9high2f = -0.37
+
 bsmix = 0.35e-11
 annrate = 4e-9 #1607.02457: 4e-9; 1512.01991: 7.5e-10; 1601.06590: 2.1e-8 (most convicing)
 g2best = 2.87e-9
@@ -138,6 +144,8 @@ def gAV(x):
 def gT1(x):
 	return 1/3*b(x) *(2+x**2)*ddatan(x) + 1/12 *np.sqrt(x) * (1-2*x-x*(2-x)*np.log(x)) #maybe its rather 1/b than b
 def gT2(x):
+	if(x<4):
+		return 0
 	return 1/(4*b(x)) *(2-4*x+x**2)*ddatan(x) + 1/4 *np.sqrt(x) * (1-2*x-x*(2-x)*np.log(x)) #maybe its rather 1/b than b
 def gB1(x):
 	return -1/24 *np.sqrt(x) * (x*np.log(x)-2)+(x**2-2*x+4)/(24*b(x))*ddatan(x)
@@ -153,9 +161,10 @@ def dq(m):
 def f1B(m):
 	return alphW**2/(4*mH**2*mW) * gH(tHad(m,mW)) * np.sum(fNuc)
 def f2B(m):
-	return 2/(9*mW)*alphW**2 * (1/mW**2 * gW(tHad(m,mW),tHad(m,qmass[5])) - 1/(12*mH**2) * gH(tHad(m,mW))) * fGlu
+	return 2/(9*mW)*alphW**2 * (1/mW**2 * gW(tHad(m,mW),tHad(m,qmass[5])) - np.sum(cQ)/(12*mH**2) * gH(tHad(m,mW))) * fGlu
 def f3B(m):
-	return np.sum(q2nd+q2ndb) *alphW**2/mW**3 * (gT1(tHad(m,mW)) + gT2(tHad(m,mW)))
+	return 3/4*np.sum(q2nd+q2ndb) *alphW**2/mW**3 * (gT1(tHad(m,mW)) + gT2(tHad(m,mW)))
+
 def sigmaDDsiB(m,A):
 	return 4/np.pi * mRed(m,A)**2 * (A * (f1B(m)+f2B(m)+f3B(m)))**2
 def sigmaDDsdB(m,A):
@@ -179,7 +188,7 @@ print("g23: ",g23mumu(preA,C9low1f,100,2,preGA))
 
 fig = plt.figure()
 ax = plt.gca()
-m = np.linspace(1,200,1000)
+m = np.linspace(1,500,1000)
 t = np.linspace(0.0001,3,1000)
 
 """
@@ -198,12 +207,17 @@ ax.plot(m,gMutoMass(g2best,m,qfB,qbB))
 ax.set_xlabel(r'$\mathcal{G}$')
 """
 
-"""
+
 #Direct Detection m-sigma
+
+
 ax.plot(m,sigmaDDsiB(m,1)/cmToGeV2)
+ax.set_xscale('log')
+ax.set_yscale('log')
 ax.set_xlabel(r'$m_\chi$ / GeV')
 ax.set_ylabel(r'$\sigma_{SI}$ / cm$^2$')
-"""
+ax.set_xlim(81,500)
+
 
 """
 #g-2 m-a
@@ -224,6 +238,7 @@ n = np.linspace(gq2f*gq3f,gq2f*gq3f,1000)
 #ax.plot(m,(g23mumu(preB,C9low2f,m,gl2f,preGA)),label=r'$C_9 2\sigma$')
 #ax.plot(m,(g23mumu(preB,C9high2f,m,gl2f,preGA)))
 
+"""
 ax.plot(m,(np.sqrt(g23mix(preA,m,preGA))),label=r'Singlet M')
 ax.plot(m,(np.sqrt(g23mix(preA,m,0))),label=r'Singlet D')
 ax.plot(m,(np.sqrt(g23mix(preB,m,preGB))),label=r'Triplet M')
@@ -235,10 +250,13 @@ ax.set_xlabel(r'$m_\chi$ / GeV')
 ax.set_ylabel(r'$g^{q*}_2 g^q_3$')
 """
 
+"""
 ax.plot(t,MixAddPlot(t,preGA))
 ax.plot(t,MixAddPlot(t,preGB))
 ax.plot(t,MixAddPlot(t,preGQ))
 """
+
+
 ax.grid('on')
 #ax.set_ylim(-0.2,0.2)
 

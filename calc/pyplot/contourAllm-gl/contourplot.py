@@ -6,8 +6,14 @@ C9low1f = -0.71
 C9high1f = -0.35
 C9low2f = -0.91
 C9high2f = -0.18
+
+C9low1f = -0.81
+C9high1f = -0.51
+C9low2f = -0.97
+C9high2f = -0.37
+
 bsmix = 2.5e-11
-annrate = 4e-9 #1607.02457: 4e-9; 1512.01991: 7.5e-10; 1601.06590: 2.1e-8 (most convicing)
+annrate = 7.7e-9 #1607.02457: 4e-9; 1512.01991: 7.5e-10; 1601.06590: 2.1e-8 (most convicing)
 g2best = 2.87e-9
 g2low = 2.07e-9
 g2high = 3.57e-9
@@ -54,8 +60,11 @@ def annTotalB(m,Ml,Mq,gl):
 	return annToFerm(m,Ml,gl,mmuon,Ncl) + annToFerm(m,Mq,1,qmass[5],Ncq) + annToWW(m) #+ 2*annToGG(m,Mq,1) + annToPhPh(m,Ml,gl,-1,Ncl)
 def annTotalA(m,Ml,Mq,gl):
 	return annToFerm(m,Ml,gl,mmuon,Ncl) + annToFerm(m,Mq,1,qmass[5],Ncq)
-def anngToM(m,Ml,Mq):
+def anngToMB(m,Ml,Mq):
 	return ((annrate-annToFerm(m,Mq,1,qmass[5],Ncq)-annToWW(m))/annToFerm(m,Ml,1,mmuon,Ncl))**(1/4)
+def anngToMA(m,Ml,Mq):
+	return ((annrate-annToFerm(m,Mq,1,qmass[5],Ncq))/annToFerm(m,Ml,1,mmuon,Ncl))**(1/4)
+
 
 ###########################
 #Bsmixing and semileptonic
@@ -69,7 +78,7 @@ def Klong(tl,tq):
 def Glong(tl,tq):
 	return (Gshort(tl)-Gshort(tq))/(tl-tq)
 def MuMuAddMaj(m,Ml,Mq,relPreG): #preK = 1, what is the relative prefactor of preG? Crivellin
-	return Klong(tHad(m,Ml),tHad(m,Mq)) + 2*relPreG*Glong(tHad(m,Ml),tHad(m,Mq))
+	return Klong(tHad(m,Ml),tHad(m,Mq)) + relPreG*Glong(tHad(m,Ml),tHad(m,Mq))
 
 def glmumu(pMod,C,m,Ml,Mq,preG):
 	return (C*weak/pMod *m**2/(0.04) * 1/MuMuAddMaj(m,Ml,Mq,preG))**(1/2)
@@ -91,12 +100,18 @@ print("preg2(1,100): ",preg2(1,100))
 print("glda(100,1,300,1,1): ",glda(100,1,300,1,1))
 fig = plt.figure()
 ax1 = plt.subplot(111)
-m = np.linspace(1,400,1000)
+m = np.linspace(1,250,1000)
 
 Mlf = 300
-Mqf = 720
+Mqf = 750
 
 plAnn = []
+plBsmumuAlow2 = []
+plBsmumuAhigh2 = []
+plBsmumuAlow = []
+plBsmumuBlow2 = []
+plBsmumuBhigh2 = []
+plBsmumuBlow = []
 plBsmumuA = []
 plBsmumuB = []
 plBsmumuG = []
@@ -105,7 +120,13 @@ plDaHigh = []
 plDaLow = []
 print("going to loop")
 for i in m:
-	plAnn.append(anngToM(i,Mlf,Mqf))
+	plAnn.append(anngToMA(i,Mlf,Mqf))
+	plBsmumuAhigh2.append(glmumu(preA,C9high2f,i,Mlf,Mqf,preGA))
+	plBsmumuAlow2.append(glmumu(preA,C9low2f,i,Mlf,Mqf,preGA))
+	plBsmumuAlow.append(glmumu(preA,C9low1f,i,Mlf,Mqf,preGA))
+	plBsmumuBhigh2.append(glmumu(preB,C9high2f,i,Mlf,Mqf,preGB))
+	plBsmumuBlow2.append(glmumu(preB,C9low2f,i,Mlf,Mqf,preGB))
+	plBsmumuBlow.append(glmumu(preB,C9low1f,i,Mlf,Mqf,preGB))
 	plBsmumuA.append(glmumu(preA,C9high1f,i,Mlf,Mqf,preGA))
 	plBsmumuB.append(glmumu(preB,C9high1f,i,Mlf,Mqf,preGB))
 	plBsmumuG.append(glmumu(preGrip,C9high1f,i,Mlf,Mqf,preGG))
@@ -117,11 +138,30 @@ for i in m:
 
 print("plot")
 
-#ax.plot(m,plAnn)
-ax1.plot(m,plBsmumuA,label=r'Singlet')
-ax1.plot(m,plBsmumuB,label=r'Triplet')
-ax1.plot(m,plBsmumuG,label=r'Quadruplet')
-ax1.plot(m,plBsmumuQ,label=r'Quintuplet')
+i = 1
+
+if(i == 0): #Bsmumu diff reps
+	ax1.plot(m,plBsmumuA,label=r'Singlet')
+	ax1.plot(m,plBsmumuB,label=r'Triplet')
+	ax1.plot(m,plBsmumuG,label=r'Quadruplet')
+	ax1.plot(m,plBsmumuQ,label=r'Quintuplet')
+
+if(i==1): #Annihilation m against sigma
+	#plt.subplot(211)
+	bsA = 0
+	bsB = 120.429
+	ax1.plot(m,plAnn,label=r'Relic density')
+	ax1.plot(m,plBsmumuA,label=r'$b\rightarrow s\bar\mu\mu(1\sigma)$')
+	ax1.plot(m,plBsmumuAlow)
+	ax1.plot(m,plBsmumuAhigh2,label=r'$b\rightarrow s\bar\mu\mu(2\sigma)$')
+	ax1.plot(m,plBsmumuAlow2)
+	plt.plot((bsA,bsA),(1,3),'k-',label=r'$\Delta m_s$')
+	#plt.subplot(212)
+	#ax1.plot(m,plAnn,label=r'Relic density')
+	#ax1.plot(m,plBsmumuB,label=r'$1\sigma$')
+	#ax1.plot(m,plBsmumuBlow)
+
+
 #ax.plot(m,plDaHigh)
 #ax.plot(m,plDaLow)
 matplotlib.rcParams.update({'font.size': 15})
@@ -135,7 +175,10 @@ ax1.set_ylim(1.0,3)
 
 
 ax1.legend(loc='best')
-fig.savefig('BsmumuReps.pdf')
+if (i==0):
+	fig.savefig('BsmumuReps.pdf')
+if (i==1):
+	fig.savefig('TrimumuOmega300720.pdf')
 plt.show()
 
 
