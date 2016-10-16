@@ -1,4 +1,5 @@
 \subsection{Direct Detection}
+\label{sec_ddphen}
 After executing the flavour processes where the NP states had the role of mediators, we now turn towards the phenomenological aspects of DM itself.
 We begin with direct detection (DD) or nucleon ($N$) scattering where a DM particle scatters off a parton (quark or gluon) of a nucleon. 
 \\ \\ \textit{Effective Lagrangian}\\
@@ -23,7 +24,7 @@ operator for the gluon but its coefficient will be suppressed by $\alpha_s$ so w
 DM particle which does not interact with the $W$ bosons, the leading SI Lagrangian is
 %For both DM $SU(2)_L$-representations, the singlet and the triplet, the leading SI operators are
 \begin{align}
- \mathcal{L}^\text{eff} =&\, \frac{g_q^{(1)}}{m_\chi} \bar \chi\ti \partial_\mu \gamma_\nu O_q^{\mu\nu} + \frac{g_q^{(2)}}{m^2_\chi} \bar \chi(\ti \partial_\mu) (\ti\partial_\nu) O_q^{\mu\nu} \\
+ \mathcal{L}^\text{eff} =&\, \frac{g_q^{(1)}}{m_\chi} \bar \chi\ti \partial_\mu \gamma_\nu\chi O_q^{\mu\nu} + \frac{g_q^{(2)}}{m^2_\chi} \bar \chi(\ti \partial_\mu) (\ti\partial_\nu)\chi O_q^{\mu\nu} \\
  \nonumber
  &+ f_G \bar \chi \chi G^a_{\mu\nu} G^{a\mu\mu}.
 \end{align}
@@ -104,12 +105,9 @@ field $x^\mu G^a_\mu = 0$. Effectively we can express $f_G = \Gamma_\chi(p)/2|_{
 \begin{align}
  f_G^\text{SD}|_q = \frac{\alpha_s}{32\pi} m_\chi f^s,\\
  f_G^\text{LD}|_q = \frac{\alpha_s}{32\pi} m_\chi f^l.
+ \label{eq_ldsdLoop}
 \end{align}
-with the loop functions $f$ in the zero quark mass limit
-\begin{align}
- f^s \stackrel{m_q=0}{=} - \frac{1}{6M_{\Phi_q}^2\left(M_{\Phi_q}^2-m_\chi^2\right)} \stackrel{M_{\Phi_q}\gg m_\chi}{=} -\frac{1}{6M_{\Phi_q}^4},\\
- f^l \stackrel{m_q=0}{=} - \frac{1}{6\left(M_{\Phi_q}^2-m_\chi^2\right)^2}  \stackrel{M_{\Phi_q}\gg m_\chi}{=} -\frac{1}{6M_{\Phi_q}^4}.
-\end{align}
+with the loop functions $f$ \eqref{eq_singletloop} used at zero quark mass and the scalar mass being way larger than the DM mass.
 Gathering up the SD and LD terms, the scalar $\chi$-g interaction coefficient is
 \begin{align}
  f_G = -\frac{\alpha_s}{96\pi} \frac{m_\chi}{M_{\Phi_q}^4} \sum\limits_{\text{all}} |g^q|^2
