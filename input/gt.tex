@@ -1,11 +1,73 @@
-In anticipation of our model, we will now have a look on group theory. Groups are mathematical entities used to describe symmetries in nature.
-A sphere for example is rotationally symmetric around the origin i.e. a rotational transformation of any angle $\alpha$ would leave the sphere 
-invariant. 
+In anticipation of our model, we will now have a look on group theory. Groups are mathematical entities used to describe symmetries in nature
+(\cite{pierre}\cite{georgi} for reviews). Groups are (in)finite if their amount of elements is (in)finite. They are discrete if every open subset
+contains only one element, i.e. their elements are not arbitrarily close to each other. A continuous group does not have this property and therefore
+contains an infinte amount of elements. If the elements commute, the group is abelian. 
+Local group symmetries further depend on the point of spacetime to which they are applied and can be gauged if there are more degrees of freedom
+than necessary to completely describe the phyical system and the redundant ones can be set freely. global ones,
+whereas, are coordinate-independent and cannot be gauged. 
+Some continuous groups also exhibit properties of differential geometry and are called Lie-groups. Even
+though the SM gauge group is composed of Lie-groups we focus on the group theoretical aspects here. A vivid example is the rotational transformation
+of an object in three dimensions. The continuous, non-abelian group associated with this symmetry is the speical orthogonal group 
+$SO(3)$ of dimension 3. Its infinite elements can be represented by $3\times3$ matrices whose inverse is its 
+transpose and whose determinant is 1.
+% 
+% A vivid example is the rotational transformation
+% of an object in three dimensions. Such a transformation is induced by a rotation of an angle around an axis. This angle can be infinitely small
+% (continuous) and the action of two non-trivial rotations is not equal to that of inversed order (non-abelian). 
+% 
+% 
+% A sphere in three dimensions for example is rotationally symmetric around the origin i.e. a rotational transformation of any angle $\alpha$ would 
+% leave the sphere invariant. The composition of two such rotations results in another rotation (closure) and two opposed transformations leave the 
+% system unchanged (inverse element). Lengths of and angles between vectors are preserved (orthogonal). The group associated with this symmetry is 
+% called $SO(3)$, the special orthogonal group of dimension 3. These infinite elements . 
+% \\ \\ \textit{Representations and Kronecker product}\\
+\noindent A representation $D$ of a group $G$ is a homomorphism which maps its elements $g\in G$ onto a vector space $V$, spanned by an orthonormal
+set of $N$ (dimension of vector space) state vectors. When we speak of the dimension of the representation $d$, it is the dimension of the vector 
+space. A fully reducible representation can be decomposed as a direct sum of irreducible ones if $V$ contains invariant subspaces while irreducible
+representations on the other hand can be put together into larger ones. For two different irreducible representations $D_\alpha$ and $D_\beta$ 
+we have two sets of Hilbert space vectors $|i\rangle_\alpha$ ($i,j=1,2,...,d_\alpha$) and $|s\rangle_\beta$ ($s,t=1,2,...,d_\beta$) with
+\begin{align}
+ |i\rangle_\alpha \rightarrow |i(g)\rangle_\alpha &= M^{(\alpha)}_{ij}(g)|j\rangle_\alpha\\
+ |s\rangle_\beta \rightarrow |s(g)\rangle_\beta &= M^{(\beta)}_{st}(g)|t\rangle_\beta.
+\end{align}
+The product space is spanned by $|A\rangle := |i\rangle_\alpha |s\rangle_\beta$ and hence 
+$|A\rangle \rightarrow M^{(\alpha)}_{ij}(g)M^{(\beta)}_{st}(g)|j\rangle_\alpha|t\rangle_\beta$. The new reducible representation $D_\alpha\times D_\beta$
+is called a Kronecker product and can be expressed as a sum of irreducibles of the group which is called the Clebsch-Gordan series
+\begin{align}
+ D_\alpha \times D_\beta = \sum\limits_\gamma c(\alpha,\beta|\gamma) D_\gamma
+ \label{eq_clebschseries}
+\end{align}
+with to be determined coefficients $c(\alpha,\beta|\gamma)$. After this brief survey on group and representation theory we will now introduce
+our flavour symmetries giving rise to the flavour patterns in the SM, starting with the continuous one.
 
 
+%into a4
+% Irreducible
+% representations have some interesting properties. Consider two inequivalent, finite dimensional, irreducible representations $D_1$ and $D_2$. 
+% Schur's lemma states
+% \begin{align}
+%  D_1(g)A&=AD_2(g)\,\forall g\in G, \qquad \text{then }A=0,\\
+%  D(g)A &= AD(g)\,\forall g\in G, \qquad \,\,\text{then }A\propto E,
+% \end{align}
+% with the idendity $E$. 
 
-
-% symmetry breaking,representations
-
-
-
+% 
+% The action of $g$ in $V$ is assumed to be represented by $N\times N$ invertable matrices $M$ acting
+% as 
+% \begin{align}
+%  |i\rangle \rightarrow |i(g)\rangle = M_{ij}|j\rangle.
+%  \label{eq_represent}
+% \end{align}
+% 
+% 
+% Irreducible representations have some interesting properties. Consider two vectors $|a\rangle, |i\rangle \in V$ from 
+% different representations $D^1$ and $D^2$, respectively, which are linearly related by a $d_\alpha\times d_\beta$ array $S$ as 
+% $|a\rangle=S_{ai}|i\rangle$. Now two equations can be set up for $|a\rangle$, relating it to $|i\rangle$ at first and using \eqref{eq_represent}
+% afterwards or vice versa. With the completeness $\sum_i  i\rangle\langle i = 1$
+% 
+% 
+% 
+% % symmetry breaking,representations
+% 
+% 
+% 
