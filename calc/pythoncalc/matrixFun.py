@@ -22,7 +22,60 @@ def howUnitaryIsMat(mat,dim):
 	print(one)
 	print(np.linalg.det(mat))
 
-i = 0
+i = 100
+if (i==100):
+	s  = np.zeros((3,3))
+	t  = np.zeros((3,3))
+	s[0][0] = 1
+	s[0][1] = 0
+	s[0][2] = 0
+	s[1][0] = 0
+	s[1][1] =-1
+	s[1][2] = 0
+	s[2][0] = 0
+	s[2][1] = 0
+	s[2][2] =-1
+	
+	t[0][0] = 0
+	t[0][1] = 0
+	t[0][2] = 1
+	t[1][0] = 1
+	t[1][1] = 0
+	t[1][2] = 0
+	t[2][0] = 0
+	t[2][1] = 1
+	t[2][2] = 0
+	a4=t.dot(t).dot(s).dot(t)
+	a3=t.dot(s).dot(t).dot(t)
+	b2=s.dot(t)
+	b3=t.dot(s)    
+	b4=s.dot(t).dot(s)
+	c1=t.dot(t)
+	c2=s.dot(t).dot(t)
+	c4=t.dot(t).dot(s)
+	c3=t.dot(s).dot(t)
+
+	listing = list()
+	listing.append(s)
+	listing.append(a4)
+	listing.append(a3)
+	listing.append(t)
+	listing.append(b2)
+	listing.append(b3)
+	listing.append(b4)
+	listing.append(c1)
+	listing.append(c2)
+	listing.append(c4)
+	listing.append(c3)
+	print("s,t2",s.dot(t).dot(t)-t.dot(t).dot(s))
+	print("s,t",s.dot(t)-t.dot(s))
+
+	for j in range(0,len(listing)):
+		for i in range(0,len(listing)):
+			print(j,i,listing[j].dot(listing[i]))
+
+
+
 if (i ==0): #S3
 	s1 = np.zeros((3,3),dtype=complex)
 	s2 = np.zeros((3,3),dtype=complex)

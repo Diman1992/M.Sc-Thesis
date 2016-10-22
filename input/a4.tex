@@ -5,11 +5,74 @@ The democratic pattern of the PMNS matrix \eqref{eq_pmns} shows that an addition
 were made to explain the lepton mixing with discrete groups but to cover both, the lepton and the quark sector, one has to try quite large groups
 \cite{1605.03581}. We will use the smallest group containing a triplet, namely $A_4$ for the leptons. The quarks are trivially charged.
 As a remark, its double cover $T'$ exhibits doublet representations which could be used for quark sector phenomenology \cite{Tprime}. 
-\\ \\ $A_4$\textit{ properties}\\
-\noindent The alternating group of order four can be visualised by a tetrahedron
-
-
-...
+\\ \\ \textit{Properties of discrete groups}\\
+\noindent  We will now derive the representations of a discrete group and how the tensor product with one another can be decomposed \cite{1003.3552}. 
+Consider the operator $A^{\alpha\beta}_{jl}$ \cite{georgi}
+\begin{align}
+ A^{\alpha\beta}_{ij} := \sum\limits_{g\in G} D_\alpha(g^{-1})|\alpha,i\rangle\langle \beta,j|D_\beta(g)
+ \label{eq_orthoOp}
+\end{align}
+where $D_{\alpha,\beta}$ are irreducible representations. Computation yields $D_\alpha(g_1)A^{\alpha\beta}_{ij} = A^{\alpha\beta}_{ij}D_\beta(g_1)$. Schur's lemma now implies that
+ $A^{\alpha\beta}_{ij}=\delta^{\alpha\beta} \lambda_{ij} I$ with the idendity matrix $I$. Taking the trace and applying its cyclic property to \eqref{eq_orthoOp}
+results in
+\begin{align}
+ \text{Tr}A^{\alpha\beta}_{ij} &= \delta^{\alpha\beta}\text{Tr}\left(\lambda_{ij} I\right) = \delta^{\alpha\beta}\lambda_{ij} \text{Tr}I = \delta^{\alpha\beta}\lambda_{ij}n_\alpha,\\
+ \text{Tr}A^{\alpha\beta}_{ij} &= \delta^{\alpha\beta}\sum\limits_{g\in G} \langle \alpha,i\left| D_\alpha(g)D_\alpha(g^{-1}) \right|\alpha,j\rangle = N_G \delta^{\alpha\beta}\delta_{ij}
+ \label{eq_orthoRelA}
+\end{align}
+with the dimension of the representation $n_\alpha$ and the number of elements (order) in the group $N_G$. We further define characters as the trace of
+representations $\chi^{(\alpha)}(g):= \text{Tr}D_\alpha(g)$ and introduce the term conjugacy class $C$ which is a set of group elements $g$ and $a$ which 
+fulfil $gag^{-1}=a$.  The number of irreducibles with a multiplicity $m$ is equal to the number of conjugacy classes $N_C$. From \eqref{eq_orthoRelA} the 
+orthonormality relations for characters can be written as
+\begin{align}
+ &\sum\limits_{g\in G} \chi^{(\alpha)}(g^{-1})\chi^{(\beta)}(g) = N_G \delta^{\alpha\beta},\label{eq_orthoRelChi1}\\
+ &\sum\limits_\alpha \chi^{(\alpha)}(g^{-1}_i)\chi^{(\alpha)}(g_j) = \frac{N_G}{N_i} \delta_{C_iC_j}.
+ \label{eq_orthoRelChi2}
+\end{align}
+The number of elements in conjugacy class $C_i$ is denoted by $N_i$. One conjugacy class $C_1$ only consists of the idendity $e$ and its character 
+is hence always the dimension of the respective representation. Using this fact and \eqref{eq_orthoRelChi2}, we can deduce the dimension and the
+multiplicity of representations with 
+\begin{align}
+ &\sum\limits_i m_i = N_C,\label{eq_multi1}\\
+ &\sum\limits_i m_i n_i ^2 = N_G.\label{eq_multi2}
+\end{align}
+There exists for each conjugacy class and each representation a character which can be put into a character table which is exemplarily shown
+for $A_4$ in table \ref{tab_charactertable}. The scalar product of two characters is defined as 
+$\langle \chi^{(\alpha)},\chi^{(\beta)}=\delta^{\alpha\beta}$ in resemblance to \eqref{eq_orthoRelChi1}. This can be used to determine 
+the multiplicity of a distinct representation $D_\gamma$ in a given tensor product $D_\alpha\times D_\beta$ \cite{1273369} 
+\begin{align}
+ m_\gamma = \langle \chi_\alpha \chi_\beta,\chi_\gamma\rangle.
+ \label{eq_multiplicity}
+\end{align}
+\\ \\ $A_4$ \textit{ example}\\
+\noindent We will now apply these considerations to our group of interest $A_4$. 
+The alternating group of order four, the group of even permutations of four elements, 
+can be visualised by a tetrahedron with three corners on a basis which can be rotated to each other
+along the central axis through the spire by an angle $\omega=\exp(2\pi\ti/3)$ denoted by a rotation matrix $t$. The swapping of a corner on the ground
+the spire can be expressed by a rotation along an axis crossing the edge connecting them and the opposite one. This transformation is denoted by 
+$s$. These two transformations build the subgroups $G_T$, isomorphic to $Z_3$, and $G_S$, isomorphic to $Z_2$\cite{0512103}. The conjugacy classes out of the $N_G=12$ elements can now be constructed as $C_1(e)$, $C_2(s,t^2st,tst^2)$, $C_3(t,st,ts,sts)$ and 
+$C_4(t^2,st^2,t^s,tst)=C_3^*$, thus $N_C=4$. With \eqref{eq_multi1} and \eqref{eq_multi2} three 1- and one 3-dimensional representation are derived.
+Our interest in a tensor product decomposition is again the trivial singlet. As for continuous groups \eqref{eq_singletadjoint} a trivial singlet 
+gets produced if a representation gets multiplied with its conjugate. The trivial singlet and the triplet are real representations and the two
+non-trivial singlets are each others conjugates. The full decomposation can be calculated with \eqref{eq_multiplicity} and the characters in table
+\ref{tab_charactertable}.
+\begin{table}[t]
+ \begin{tabular}{c|cccc}
+ $A_4$ & $\chi^1$ & $\chi^{1'}$ & $\chi^{1''}$ & $\chi^3$ \\
+ \hline
+ $^1C_1$ & 1 & 1 & 1 & 3\\
+ $^3C_2$ & 1 & 1 & 1& -1\\
+ $^4C_3$ & 1 & $\omega$& $\omega^2$ & 0\\
+ $^4C_4$ & 1 & $\omega^2$& $\omega$ & 0
+ \end{tabular}
+\caption{Character table for $A_4$. There are three singlet and one triplet irreducible representation. The figures in front of the conjugacy
+classes $C_i$ denote their element count $N_i$ and $\omega=\exp(2\pi\ti/3)$.}
+\label{tab_charactertable}
+\end{table}
+\\ \\ \textit{Flavour pattern}\\
+\noindent Following \cite{0512103}, the flavour symmetry associated to $A_4$ may be broken into its subgroups by a vev of a triplet 
+$\phi=(\phi_1,\phi_2,\phi_3)$ of scalar fields $\phi_i$. With a vacuum alignment as $\langle\phi_S\rangle = (1,1,1)v_S$ it breaks down to $G_S$
+and with $\langle\phi_T\rangle=(1,0,0)v_T$ to $G_T$. 
 %\textit{General Properties}\\
 
 
