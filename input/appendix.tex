@@ -67,5 +67,66 @@ They simplify if one expects negligable quark masses $m_q$ and assumes that $M_q
  f^l \stackrel{m_q=0}{=} - \frac{1}{6\left(M_{\Phi_q}^2-m_\chi^2\right)^2}  \stackrel{M_{\Phi_q}\gg m_\chi}{=} -\frac{1}{6M_{\Phi_q}^4}.
 \end{align}
 
+\section{$A_4$ Multiplication Rules}
+\label{sec_appendixA4}
+\begin{table}[t]
+ \begin{tabular}{c|cccc}
+ $A_4$ & $\chi^1$ & $\chi^{1'}$ & $\chi^{1''}$ & $\chi^3$ \\
+ \hline
+ $^1C_1$ & 1 & 1 & 1 & 3\\
+ $^3C_2$ & 1 & 1 & 1& -1\\
+ $^4C_3$ & 1 & $\omega$& $\omega^2$ & 0\\
+ $^4C_4$ & 1 & $\omega^2$& $\omega$ & 0
+ \end{tabular}
+\caption{Character table for $A_4$. There are three singlet and one triplet irreducible representation. The figures in front of the conjugacy
+classes $C_i$ denote their element count $N_i$ and $\omega=\exp(2\pi\ti/3)$.}
+\label{tab_charactertable}
+\end{table}
+The alternating group of order four, the group of even permutations of four elements, 
+can be visualised by a tetrahedron with three corners on a basis which can be rotated to each other
+along the central axis through the spire by an angle $\omega=\exp(2\pi\ti/3)$ denoted by a rotation matrix $t$. The swapping of a corner on the ground
+the spire can be expressed by a rotation along an axis crossing the edge connecting them and the opposite one. This transformation is denoted by 
+$s$. These two transformations build the subgroups $G_T$, isomorphic to $Z_3$, and $G_S$, isomorphic to $Z_2$\cite{0512103}. 
+The conjugacy classes out of the $N_G=12$ elements can now be constructed as $C_1(e)$, $C_2(s,t^2st,tst^2)$, $C_3(t,st,ts,sts)$ and 
+$C_4(t^2,st^2,t^s,tst)=C_3^*$, thus $N_C=4$. With \eqref{eq_multi1} and \eqref{eq_multi2} three 1- and one 3-dimensional representation are derived.
+Our interest in a tensor product decomposition is again the trivial singlet. As for continuous groups \eqref{eq_singletadjoint} a trivial singlet 
+gets produced if a representation gets multiplied with its conjugate. The trivial singlet and the triplet are real representations and the two
+non-trivial singlets are each others conjugates. The full decomposation can be calculated with \eqref{eq_multiplicity} and the characters in table
+\ref{tab_charactertable}
+\\ \\ \textit{Tensor product decomposations}\\
+A triplet is denoted by $(x_1,x_2,x_3)$ and a singlet by $x$, with $x=a$ for the first and $x=b$ for the second representation.
+\begin{align}
+ \textbf{3}\times\textbf{3} = \textbf{1} +\textbf{1}' +\textbf{1}'' +\textbf{3}_s +\textbf{3}_a
+\end{align}
+with a symmetric and antisymmetric triplet. Their components are composed as
+\begin{align}
+ \textbf{1} \sim a_1b_1 +& a_2b_3 + a_3b_2,\qquad  \textbf{1}' \sim a_1b_2 + a_2b_1 + a_3b_3,\qquad  \textbf{1}'' \sim a_1b_3 + a_2b_2 + a_3b_1,\\
+  &\textbf{3}_s \sim \frac13\begin{pmatrix}
+            2a_1b_1-a_2b_3-a_3b_2\\
+            2a_3b_3-a_1b_2-a_2b_1\\
+            2a_2b_2-a_3b_1-a_1b_3\\
+           \end{pmatrix}, \qquad  \textbf{3}_a\sim\frac12\begin{pmatrix}
+				a_2b_3-a_3b_2\\
+				a_1b_2-a_2b_1\\
+				a_3b_1-a_1b_3\\
+				\end{pmatrix}.
+\end{align}
+A singlet and a triplet always results in a triplet. The components are composed as
+\begin{align}
+  \textbf{1}\times \textbf{3} &=  \textbf{3} \sim (ab_1,ab_2,ab_3),\\
+  \textbf{1}'\times \textbf{3} &=  \textbf{3} \sim (ab_3,ab_1,ab_2),\\
+  \textbf{1}''\times \textbf{3} &=  \textbf{3} \sim (ab_2,ab_3,ab_1).
+\end{align}
+Two singlets always yield the component $ab$ and commute. The decomposed representations are
+\begin{align}
+ &\textbf{1}\times\textbf{1}=\textbf{1},\qquad \textbf{1}\times\textbf{1}'=\textbf{1}',\qquad \textbf{1}\times\textbf{1}''=\textbf{1}'',\\
+ &\textbf{1}'\times\textbf{1}' = \textbf{1}'', \qquad \textbf{1}'\times\textbf{1}'' = \textbf{1},\\
+ &\textbf{1}'' \times \textbf{1}'' = \textbf{1}'.
+\end{align}
+
+
+
+
+
  
 \end{appendix}

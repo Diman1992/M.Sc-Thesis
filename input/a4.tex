@@ -44,35 +44,55 @@ the multiplicity of a distinct representation $D_\gamma$ in a given tensor produ
  m_\gamma = \langle \chi_\alpha \chi_\beta,\chi_\gamma\rangle.
  \label{eq_multiplicity}
 \end{align}
-\\ \\ $A_4$ \textit{ example}\\
-\noindent We will now apply these considerations to our group of interest $A_4$. 
-The alternating group of order four, the group of even permutations of four elements, 
-can be visualised by a tetrahedron with three corners on a basis which can be rotated to each other
-along the central axis through the spire by an angle $\omega=\exp(2\pi\ti/3)$ denoted by a rotation matrix $t$. The swapping of a corner on the ground
-the spire can be expressed by a rotation along an axis crossing the edge connecting them and the opposite one. This transformation is denoted by 
-$s$. These two transformations build the subgroups $G_T$, isomorphic to $Z_3$, and $G_S$, isomorphic to $Z_2$\cite{0512103}. The conjugacy classes out of the $N_G=12$ elements can now be constructed as $C_1(e)$, $C_2(s,t^2st,tst^2)$, $C_3(t,st,ts,sts)$ and 
-$C_4(t^2,st^2,t^s,tst)=C_3^*$, thus $N_C=4$. With \eqref{eq_multi1} and \eqref{eq_multi2} three 1- and one 3-dimensional representation are derived.
-Our interest in a tensor product decomposition is again the trivial singlet. As for continuous groups \eqref{eq_singletadjoint} a trivial singlet 
-gets produced if a representation gets multiplied with its conjugate. The trivial singlet and the triplet are real representations and the two
-non-trivial singlets are each others conjugates. The full decomposation can be calculated with \eqref{eq_multiplicity} and the characters in table
-\ref{tab_charactertable}.
-\begin{table}[t]
- \begin{tabular}{c|cccc}
- $A_4$ & $\chi^1$ & $\chi^{1'}$ & $\chi^{1''}$ & $\chi^3$ \\
- \hline
- $^1C_1$ & 1 & 1 & 1 & 3\\
- $^3C_2$ & 1 & 1 & 1& -1\\
- $^4C_3$ & 1 & $\omega$& $\omega^2$ & 0\\
- $^4C_4$ & 1 & $\omega^2$& $\omega$ & 0
- \end{tabular}
-\caption{Character table for $A_4$. There are three singlet and one triplet irreducible representation. The figures in front of the conjugacy
-classes $C_i$ denote their element count $N_i$ and $\omega=\exp(2\pi\ti/3)$.}
-\label{tab_charactertable}
-\end{table}
 \\ \\ \textit{Flavour pattern}\\
-\noindent Following \cite{0512103}, the flavour symmetry associated to $A_4$ may be broken into its subgroups by a vev of a triplet 
+\noindent Following \cite{0512103}, the flavour symmetry associated to $A_4$ 
+(sec. \ref{sec_appendixA4}) may be broken into its subgroups by a vev of a triplet 
 $\phi=(\phi_1,\phi_2,\phi_3)$ of scalar fields $\phi_i$. With a vacuum alignment as $\langle\phi_S\rangle = (1,1,1)v_S$ it breaks down to $G_S$
-and with $\langle\phi_T\rangle=(1,0,0)v_T$ to $G_T$. 
+and with $\langle\phi_T\rangle=(1,0,0)v_T$ to $G_T$. Another scalar $\xi$ gets introduced also developing a vev $\langle\xi\rangle=u$. 
+A discrete $Z_3$ is further needed to seperate the neutrino from the charged lepton sector and to prevent unwanted couplings.
+With the charge assignment for the leptons and the scalars from table \ref{tab_a4charges} one can write down the following Lagrangian
+\begin{table}
+ \begin{tabular}{c|cccc|ccc}
+  &$L$&$e_R$&$\mu_R$&$\tau_R$&$\phi_T$&$\phi_S$&$\xi$\\
+  \hline
+  $A_4$ & 3&1&$1''$&$1'$&3&3&1\\
+  $Z_3$ & $\omega$&$\omega^2$&$\omega^2$&$\omega^2$&$1$&$\omega^2$&$\omega^2$\\
+  $\FN$ & 0&4&2&0&0&0&0
+ \end{tabular}
+\caption{Charges of leptons and new scalars under additional flavour groups.}
+\label{tab_a4charges}
+\end{table}
+\begin{align}
+ \mathcal{L}_l = y_e e_R(\phi_T l)_{\textbf{1}} + y_\mu \mu (\phi_T l)_{\textbf{1}'} + y_\tau (\phi_Tl)_{\textbf{1}''} + x_a\xi(ll)_{\textbf{1}} + x_b \phi_S (ll)_{\textbf{3}} + \text{h.c.}+...
+\end{align}
+Operators of higher dimension (...), as well as the vevs $v_{u,d}$ of the supersymmetric Higgs-fields $h_{u,d}$ are omitted for compactness. 
+For this leading order expression we already get a diagonal charged lepton mass matrix from which want to note the muonic entry
+\begin{align}
+ m_\mu = y_\mu v_d \frac{v_T}{\Lambda}
+ \label{eq_muonmass}
+\end{align}
+with a cut-off scale $\Lambda\approx v_T/\epsilon$. The Yukawa coupling $y_\mu$ is evaluated with the FN-mechanism as for quarks. As experiments
+stated back then when $A_4$ was initially considered, the neutrino mixing would have a tribimaximal (TBM) pattern 
+\begin{align}
+ U_\text{TBM} = \begin{pmatrix}
+                 \sqrt{2/3}&\sqrt{1/3}&0\\
+                 -\sqrt{1/6}&\sqrt{1/3}&-\sqrt{1/2}\\
+                 -\sqrt{1/6}&\sqrt{1/3}&+\sqrt{1/2}
+                \end{pmatrix}.
+\end{align}
+With this leading approximation the neutrino mass matrix gets diagonalised $\hat{m}_\nu=2v_u^2/\Lambda^2 \text{diag}(x_au+x_bv_S,x_au,-x_au+x_bv_S)$
+and the PMNS matrix can be expressed as \cite{1211.5370}
+\begin{align}
+ V_\text{PMNS} = U_\text{TBM}\begin{pmatrix}
+                              \cos(\varphi) & 0 &\sin(\varphi)\\
+                              0&1&0\\
+                              -\sin(\varphi) & 0 & \cos(\varphi)
+                             \end{pmatrix}
+\end{align}
+and $\varphi = 0^\circ$ for TBM mixing.
+As the non zero value of $\theta_{13}$ is nowadays well established \cite{1303.1289} one has to add higher order operators and new scalars and
+also rearrange the vacuum alignment in order to obtain the right pattern \cite{1211.5370}\cite{Tprime}. 
+
 %\textit{General Properties}\\
 
 
