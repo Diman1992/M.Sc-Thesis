@@ -7,96 +7,177 @@
 % three down-type ($T=-\sfrac12$). Last but not least, the already mentioned scalar Higgs-field $\phi$ which develops a non vanishing vacuum expectation value
 % (vev) $v$. This is the source for the spontanious breaking of the electroweak symmetry into the electromagnetic 
 % (NOT)
-The Standard Model is a gauge quantum field theory whose internal symmetry is the unitary product group $SU(3)_C\times SU(2)_L\times U(1)_{Y_W}$ representing
+The Standard Model is a gauge quantum field theory whose internal symmetry is the unitary product group $\mathcal{G}_\text{SM}=SU(3)_C\times SU(2)_L\times U(1)_{Y_W}$ representing
 the quantum chromodynamics (QCD) whose charge is called color $C$ and the electroweak theory (GSW-Theory) whose charges are the weak isospin $T$ 
-(hold by left handed particles) and the weak hypercharge $Y_W$. These quantum numbers (QN) are carried by a set of particle fields, ordinary matter is composed
-of and messenger fields mediating these interactions between them. In particular twelve gauge vector boson fields, eight gluon fields $G_a$ for strong 
-interactions and four electroweak boson fields from which $W_1$, $W_2$, $W_3$ couple to the weak isospin and $B$ to the weak hypercharge. Now we have 12
+(hold by left handed particles) and the weak hypercharge $Y_W$ (\cite{Peskin}\cite{MDSchwartz}\cite{Langacker} for reviews). 
+\\ \\ \textit{Particle content}\\
+\noindent These quantum numbers (QN) are carried by a set of particle fields, ordinary matter is composed
+of and messenger fields mediating these interactions between them. In particular twelve gauge vector boson fields, eight gluon fields $G^A_\mu$ ($A=1,2,...,8$)
+for strong 
+interactions and four electroweak boson fields from which $W^a_\mu$ ($a=1,2,3$) couple to the weak isospin and $B_\mu$ to the weak hypercharge. Now we have 12
 fermion fields, six leptons $e$, $\mu$, $\tau$ as well as their respective neutrinos $\nu$ and six quarks $u$, $d$, $s$, $c$, $b$, and $t$. Actually there
 are even more since they are defined by their QN. So for each fermion there is a distinction drawn between left handed $f_L$ ($T=\sfrac12$) and right 
-handed $f_R$ ($T=0$), although $\nu_R$ are not considered in the SM. Furthermore there are three different colours for each quark. Well finally the field 
-$\phi$ of the already mentioned scalar
-Higgs-boson holds a special role in the SM. It is known that the boson fields $W^\pm$ and $Z$, responsible for weak processes, have nonzero masses. But their
-mass terms would break the gauge invariance of the lagrangian. So the Higgs-mechanism was considered wherein $\phi$ develops a non vanishing vacuum expectation
-value $v$ (vev) which breaks the electroweak symmetry spontaniously down to the electromagnetic symmetry $U(1)_Q$ resulting in a still massless photon field 
-$A$ and the three just named massive ones.
+handed $f_R$ ($T=0$), $f=f_L+f_R$. The left handed fields form isospin doublets as $Q_L=(u_L,d_L)$
+and $L_L(e_L,\nu_L)$. Furthermore there are three different colours for each quark. 
+Finally, there is the complex scalar field $\phi$ of the already mentioned Higgs-boson which is required for conservation of gauge invariance 
+that would be broken by the mass terms of the other particles.
+% Finally the field 
+% $\phi$ of the already mentioned scalar
+% Higgs-boson holds a special role in the SM. 
+% It is known that the boson fields physical $W^\pm$ and $Z$, responsible for weak processes, have nonzero masses. But their
+% mass terms would break the gauge invariance of the Lagrangian. So the Higgs-mechanism was considered wherein $\phi$ develops a non vanishing vacuum expectation
+% value $\langle\phi\rangle$ (vev) which breaks the electroweak symmetry spontaniously (SSB) down to the electromagnetic symmetry $U(1)_Q$ resulting in a still massless photon field 
+% $A$ and the three just named massive ones as superpositions of the four massless ones.
 \subsubsection{Standard Model Interactions}
-\textit{Yukawa Interaction} \\
-\noindent Not only the bosons get their masses from this mechanism but the fermions as well - at least the electrically charged ($Q$) ones - which is represented by the
-Yukawa (scalar-fermion interaction) term in the SM-lagrangian
+The Lagrangian to $\mathcal{G}_\text{SM}$ without gauge fixing and ghosts reads as
+\begin{align}
+ \mathcal{L}_\text{SM} &= \bar \psi \ti \slashed{D}\psi -y\bar\psi_L\phi\psi_R \nonumber\\
+ &- \frac14\left[G^A_{\mu\nu}G^{A,\mu\nu} + W^a_{\mu\nu}W^{a,\mu\nu} + B_{\mu\nu}B^{\mu\nu}\right] - \left(D_\mu\phi\right)^*\left(D^\mu\phi\right) - V(\phi)    
+ \label{eq_smlagrange}
+\end{align}
+where the terms represent the gauge interaction, the Yukawa interaction, the messenger propagation, the Higgs gauge interaction and
+the Higgs potential, respectively. The covariant derivative $\slashed{D}=D^\mu\gamma_\mu$ is
+\begin{align}
+ D_\mu = \partial_\mu -\ti g_s G^A_\mu \lambda_A - \ti g W^a_\mu\sigma_a - \ti g'B_\mu
+\end{align}
+with the respective couplings $g_s$, $g$, $g'$ and group generators $\lambda$, $\sigma$. The field strength tensors are
+\begin{align}
+ G^A_{\mu\nu} = \partial_\mu G^A_\nu - \partial_\nu G^A_\mu + g_s f^{ABC}G^B_\mu G^C_\nu,\\
+ W^a_{\mu\nu} = \partial_\mu W^a_\nu - \partial_\nu W^a_\mu + g \epsilon^{abc}W^b_\mu W^c_\nu,\\
+ B_{\mu\nu} = \partial_\mu B_\nu - \partial_\nu B_\mu.
+\end{align}
+As messenger of an abelian $U(1)_Y$ there are no self-interactions for $B$, whereas, for messengers of the non-abelian ones $G$ and $W$ interact 
+with themselves whose amplitude is expressed with the connection $f$, $\epsilon$. Mass terms for fermions $\bar\psi_R m\psi_L + \bar\psi_L m\psi_R$ 
+break gauge invariance since $\psi_L$ and $\psi_R$ have different representations under the electroweak symmetry group. 
+\\ \\ \textit{Yukawa Interaction} \\
+\noindent In order to assign a 
+mass to them, the electroweak symmetry gets broken spontaneously (SSB) by the Higgs-mechanism. The Higgs field is a doublet under the $SU(2)_L$ which 
+develops 
+a real vacuum expectation value $\langle \phi\rangle \propto (0,v)$ minimising its potential $V(\phi)=-\mu^2|\phi|^2+\lambda|\phi|^4$, so that
+$v\propto\sqrt{\mu^2/\lambda}$. 
+SM gauge interactions do not differ between the fermion generations which is why we introduce the vectors
+$u=(u,c,t)$, $d=(d,s,b)$ and $e=(e,\mu,\tau)$ in family space. The origin of the experimentally observed neutrino masses is yet unknown since
+no right handed neutrinos are considered in the SM but could be added as well in a minimal extension and afterwards treated alike.
+The Yukawa interaction after SSB reads as
 \begin{equation}
- \mathcal{L}_{Y} = - y^u_{ij}\, \bar Q^i_L \, \phi^c\, u^j_R - y^d_{ij}\, \bar Q^i_L\, \phi\, d^j_R - y^e_{ij}\, \bar L^i_L\, \phi\, e^j_R + \text{h.c.}.
- \label{eq_yukawaSM}
-\end{equation}
-\noindent
-$y^u$, $y^d$ and $y^e$ are $3\times 3$ (three generations) real, so called yukawa matrices and represent the 
-coupling of the fermions to the Higgs. $\phi^c = \ti\sigma_2\phi^*$ is the charged conjugate Higgs. ``h.c.'' stands for hermetian conjugate so that it holds for the antiparticles as well. 
-$Q_L$, $L_L$ and $\phi$ are doublets of the $SU(2)_L$, since they are built out of two fermion fields each holding a 
-weak isospin of $T=\sfrac12$ with the 3rd component $T_3 = \pm\sfrac12$, e.g. $L^2_L = (\nu_{\mu\, L}, \mu_L)^T_{\textbf{2}}$ with the left handed muon-neutrino and the muon. 
-Their counterparts $u_R$, $d_R$ and $e_R$ are singlets under the $SU(2)_L$ because they have no weak isospin, e.g. $e^2_R = (\mu_R)_{\textbf{1}}$, and hence don't take part
-in the weak interaction mediated by the $W$-bosons. After 
-the symmetry breaking and rotating the fermion fields in a basis where the yukawa matrices become diagonal, we can write down their mass terms 
-\begin{equation}
- \mathcal{L}_m = -m^u_i \bar u'^i_L u'^i_R -m^d_i \bar d'^i_L d'^i_R -m^e_i \bar e'^i_L e'^i_R 
+ \mathcal{L}_m = -v \bar u^i_L y^u_{ij}u^i_R -v \bar d^i_Ly^d_{ij} d^i_R -v \bar e^i_Ly^e_{ij} e^i_R + \text{h.c.}
  \label{eq_massSM}
 \end{equation}
-\noindent
-where $m^\alpha_i \sim y^\alpha_i \cdot v$ ($\alpha = u,d,e$). Here you can see that the SM does not distinguish between generations. 
-It treats a left handed up quark the same way it treats a left handed charm or a left handed top. So if the eigenvalues of $m^\alpha$ would be degenerate, i.e. the masses would
-be all the same, one would not have a method to differentiate them. 
-
-% \vspace{-0.3cm}
-You could ask
-what happened with a term like $\nu_R$ in \eqref{eq_yukawaSM}. This would imply a particle which has neither a color charge, nor electrical charge, nor 
-weak isospin and hence ($Q = T_3 + Y_W$) no hypercharge which means that the SM is totally blind to it. Furthermore it seemed obvious not to be
-able to construct a neutrino mass since they were considered massless. But to answer the question we could add 
-such a term somehow when it can be shown for example that righthanded neutrinos exist, which is likely due to the measurements of neutrino oscillations.
-\\ \\ \textit{Weak Interaction}\\
-\noindent Neutrino oscillation is a process where a neutrino of one generation changes its flavour while propagating through space described by the PMNS matrix. 
-This suggests that 
-flavour is not a conserved quantum number in nature unlike the electrical charge for example. As this phenomenon is still rather young (2001) and not implemented in the 
-SM, we already have flavour violation (FV) therein, in the quark sector. There is a huge list of Mesons and Baryons (composites of one quark and one anti-quark,
-or three quarks, respectively) decaying into others with different quark content enabled by the $W$-bosons via charged currents. 
-\\ \\ \textit{Flavour Changing Charged Currents}\\
-\noindent So it was thought, that the down-type quark mass
-eigenstates $d'^i$ are superpositions of their interaction eigenstates $d^i$. Formerly started by Cabibbo and pursued by 
-Kobayashi and Maskawa (1973) for CP-violation reasons (charge conjugation C, parity P), the CKM-matrix as an unitary $3\times 3$ matrix was invented,
-which can be thought of as a rotation
-matrix, rotating the weak eigenstates of the down-type quarks in the mass eigenstates by three Euler angles, $\theta_{12} = \theta_C$ called Cabibbo angle 
-as well as $\theta_{23}$ and $\theta_{13}$.
-\begin{equation}
- \begin{pmatrix}
-  d' \\ s' \\ b'
- \end{pmatrix} = V_\text{CKM}  \begin{pmatrix}
-  d \\ s \\ b
- \end{pmatrix},
-\end{equation}
-\noindent
-where $V_\text{CKM}$ can be parameterised by $\lambda = \sin(\theta_C) \approx 0.2$ at leading order (LO) as
-\begin{equation}
- V_\text{CKM} \approx \begin{pmatrix}
-  1 & \lambda & \lambda^3\\
-  -\lambda & 1 & \lambda^2\\
-  -\lambda^3 & -\lambda^2 & 1
- \end{pmatrix}.
- \label{eq_ckm}
-\end{equation}
-The up-type quarks have no differences between their weak and mass eigenstates, but we could have played the same game with them leading to the 
-same mixing, since $V_\text{CKM}$ is unitary. Looking at this matrix one can see that it is almost diagonal and hierachical which
-means that the farther you leave the main diagonal the smaller become the magnitudes of the entries. It can be asked 
-\\ \\ \textit{Flavour Changing Neutral Currents}\\
-\noindent TO REVISE!
-One problem of Cabibbo's theory is that a process $d'\bar {d'} \rightarrow Z$ would lead to an FCNC at tree level but is in fact highly suppressed. This
-could be explained by the GIM-mechanism 
+with $y^u$, $y^d$ and $y^e$ being $3\times 3$ ($i,j=1,2,3$) real, Yukawa matrices. $\phi^c = \ti\sigma_2\phi^*$ is the charged conjugate 
+Higgs. 
+The $y^\alpha$, ($\alpha=u,d,e$) are in general not diagonal but particles are measured to have a distinct mass value. Therefore they are expressed
+in the mass basis due to bidiagonalisation with two unitary matrices $V_\alpha$, $U_\alpha$. Exemplarily for the first term in \eqref{eq_massSM}
+it becomes
 \begin{align}
- m_u\,:m_c\,m_t\,=\epsilon^8\,:\epsilon^4\,:1\\
- m_d\,:m_s\,m_b\,=\epsilon^4\,:\epsilon^2\,:1
- \label{eq_masshierarchy}
+ \mathcal{L}_m \supset -v u_L V_u^\dagger V_u y_u U^\dagger_u U_u u_R = -v u'_L \hat{y}_u u'_R.
+ \label{eq_diracmass}
 \end{align}
-$m_i = y_i v$
+The masses $m_\alpha$ enter through $m_\alpha = v\hat{y}_\alpha$ with the hierarchies
+\begin{equation}
+\begin{aligned}
+ m_u:m_c:m_t\,=\epsilon^8\,:\epsilon^4\,:1,\\
+ m_d:m_s:m_b\,=\epsilon^4\,:\epsilon^2\,:1,\\
+ m_e:m_\mu:m_\tau\, = \epsilon^4\,:\epsilon^2\,:1,
+\end{aligned}
+ \label{eq_masshierarchy}
+\end{equation}
+expressed by $\epsilon\approx0.2$. 
+\\ \\ \textit{Weak Interaction}\\
+\noindent We express the electroweak part of $\left(D_\mu\phi\right)\left(D^\mu\phi\right)$ in \eqref{eq_smlagrange} as
+\begin{align}
+ \left(D_\mu\phi\right)\left(D^\mu\phi\right) \supset \frac{v^2}{8} \left[g^2(W^1_\mu)^2 + g^2(W^2_\mu)^2 + (-gW^3_\mu+g'B_\mu)^2\right].
+\end{align}
+Spontaneous breaking of the electroweak symmetry $SU(2)_L\times U(1)_Y\rightarrow U(1)_Q$ (electric charge $Q$) leads to three massive
+and one massless vector boson. They are
+\begin{align}
+ A_\mu & := \frac{1}{\sqrt{g^2+g'^2}}\left(gA^3_\mu + g'B_\mu\right)\hspace{2cm}\text{with }m_A = 0,\\
+ Z^0_\mu & := \frac{1}{\sqrt{g^2+g'^2}}\left(gA^3_\mu - g'B_\mu\right)\hspace{2cm}\text{with }m_Z = \sqrt{g^2+g'^2}\frac{v}{2},\\
+ W^\pm_\mu &:= \frac{1}{\sqrt{2}}\left(A^1_\mu \pm \ti A^2_\mu\right)\hspace{3cm}\text{with }m_W=\frac{vg}{2},
+\end{align}
+where $A_\mu$, the photon, and $Z^0$ are their own antiparticles. The transition from $(W^3,B)$ to $(Z^0,A)$ can be described by a rotation around an angle $\theta_w$. Weak interactions
+between fermions and $Z^0$ are hence described by the Lagrangian for neutral currents
+\begin{align}
+ \mathcal{L}_\text{NC} = \bar \psi \ti\frac{g}{\cos\theta_w}Z_\mu(T_3-Q\sin^2\theta_w) \psi
+ \label{eq_nc}
+\end{align}
+with $T_3=\sigma_3/2$ as the third component of the weak isospin operator. In comparison with the photonic interaction, $Q=T_3+Y$ and 
+$g=e/\sin\theta_w$ are used. Unitary transformations of the fermion fields leave \eqref{eq_nc} invariant since flavour is not changed. For 
+charged currents via interactions with $W^\pm$ on the other hand, flavour violation occurs and the interaction is hence not invariant under
+such transformations
+\begin{align}
+ \mathcal{L}_\text{CC} = \frac{g}{\sqrt{2}} W^+_\mu \left[(u'_L)_i \gamma^\mu(V_u V^\dagger_d)_{ij} (d'_L)_j + (\nu'_L)_i \gamma^\mu(V_\nu V^\dagger_e)_{ij} (e'_L)_j\right] + \text{h.c.}
+ \label{eq_cc}
+\end{align}
+which is expressed by $V_\text{CKM}:=V_uV^\dagger_d$ and $V_\text{PMNS}:=V_\nu V^\dagger_e$. Within the SM, these matrices represent the only
+source of flavour violation. The almost diagonal CKM-matrix can be expanded in a small pertubating parameter $\lambda:=\sin(\theta_C)=\epsilon$ with
+the Cabibbo angle $\theta_C$ in the Wolfenstein parametrisation as
+\begin{align}
+ V_\text{CKM} = \begin{pmatrix}
+                 1-\frac{\lambda^2}{2} & \lambda & A\lambda^3(\bar\rho -\ti \bar\eta)\\
+                 -\lambda & 1-\frac{\lambda^2}{2} & A\lambda^2\\
+                 A\lambda^3(1-\bar\rho -\ti \bar\eta) & -A\lambda^2 & 1
+                \end{pmatrix} + \mathcal{O}(\lambda^4).
+            \label{eq_ckm}
+\end{align}
+The structure of the PMNS-matrix is not hierachical, rather democratic and reads according to latest fits to the experimental data
+\begin{align}
+ V_\text{PMNS} = \begin{pmatrix}
+                 1-\frac{\lambda^2}{2} & \lambda & A\lambda^3(\bar\rho -\ti \bar\eta)\\
+                 -\lambda & 1-\frac{\lambda^2}{2} & A\lambda^2\\
+                 A\lambda^3(1-\bar\rho -\ti \bar\eta) & -A\lambda^2 & 1
+                \end{pmatrix} + \mathcal{O}(\lambda^4).
+\end{align}
+\\ \\ \textit{Majorana particles}\\
+\noindent Besides the addition of a right handed neutrino to construct a mass term, the possibility that the left handed neutrino is
+its own antiparticle also yields a mass term. This is the Majorana condition. For reasons which will be explained later on, we assume that
+the dark matter particle complies it. The particle-antiparticle conjugation is described by an operator $\hat C$ \cite{1412.3320}acting as 
+\begin{align}
+\hat C: \psi\rightarrow \psi^c=C\bar\psi^T 
+\label{eq_ChargeConj}
+\end{align}
+and $\bar\psi = \psi^\dagger\gamma^0$ while $C$ is skew symmetric and transforms the Dirac matrices
+$\Gamma_J=I,\gamma_5,\gamma^\mu,\gamma^\mu\gamma_5,\sigma^{\mu\nu}$ for $J=S,P,V,A,T$, respectively, as \cite{Fierz}
+\begin{align}
+ C^{-1}\Gamma_J C = \eta \Gamma_J^T
+ \label{eq_Ctrafo}
+\end{align}
+where $\eta=+1$ for $J=S,P,A$ and $\eta=-1$ for $J=V,T$. Furthermore, $C$ flips the chirality of a chiral field
+\begin{flalign}
+ \hat C: \psi_L \rightarrow (\psi_L)^c = (\psi^c)_R.
+ \label{eq_chiralflip}
+\end{flalign}
+In contrast to a Dirac mass term \eqref{eq_diracmass}, the right handed component of a left handed Majorana particle can be expressed with this
+property and a Majorana mass term  \cite{1006.1718} can hence be written down $\sim \overline{(\psi_L)^c}m_M\psi_L+\overline{\psi_L}m_M^\dagger(\psi_L)^c$
+with a generally complex mass $m_M$.This mass term
+already shows that a Majorana particle cannot hold any not violated $U(1)$ charge, e.g. electromagnetic charge, which is why the neutrino is the 
+only viable particle in the SM to be of Majorana type. \\
+\noindent A Dirac quantum field $\psi$ annihilates the particle and creates the antiparticle, whereas, $\psi^\dagger$  does the contrary. In
+the Majorana case, the same field $\chi$ creates and annihilates the Majorana particle \cite{Luty}. 
+This results in three possible propagators for Majorana fermions \cite{haberkane}
 
+\begin{minipage}{0.49\textwidth}
+ \includegraphics[scale=1]{../pics/diracprog.pdf}\\
+ \includegraphics[scale=]{../pics/majo1.pdf}\\
+ \includegraphics[scale=1]{../pics/majo2.pdf}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\begin{flushleft}
+\begin{subequations}
+\begin{align}
+&\frac{\slashed{k}+m}{k^2-m^2}\label{eq_diracprop}\\
+ C^{-1}&\frac{(\slashed{k}+m)}{k^2-m^2}\label{eq_majproptowards}\\
+ &\frac{(\slashed{k}+m)}{k^2-m^2}C\label{eq_majpropoutwards}
+\end{align}
+\end{subequations}
+\end{flushleft}
+\end{minipage}
+\\
+\noindent where the first one \eqref{eq_diracprop} corresponds to the standard Dirac propagator and the remaining two lead to fermion number 
+violating diagrams. In case a Dirac fermion $\psi$ interacts chirally with a Majorana fermion, the action of $C$ reads as \cite{Langacker}
+\begin{align}
+ \left[\bar\psi \gamma^\mu (1-\gamma_5)\right]_\beta (C)_{\alpha\beta} = \left[(1-\gamma_5)\gamma^\mu \psi^c\right]_\alpha
+ \label{eq_DirMaj}
+\end{align}
+using \eqref{eq_Ctrafo} and \eqref{eq_chiralflip} and with $\alpha$, $\beta$ as spinor indices. 
 
-
-Now comes one of the basic questions motivating this thesis: Are these patterns random or is there rather an underlying broken family-symmetry which
-could serve as a blindman's stick for the SM? We go with our guts and prefer the latter suggestion.
 
