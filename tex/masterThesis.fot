@@ -17,6 +17,20 @@
 \c@footnote \z@ 
 \c@footnote \z@ 
 \c@footnote \z@ 
+\advance\c@footnote \@ne \expandafter\xdef \csname f@3\endcsname {\number\c@footnote }
+\c@footnote \z@ 
+\c@footnote \z@ 
+\c@footnote \z@ 
+\c@footnote \z@ 
+\c@footnote \z@ 
+\c@footnote \z@ 
+\c@footnote \z@ 
+\c@footnote \z@ 
+\c@footnote \z@ 
+\c@footnote \z@ 
+\c@footnote \z@ 
+\c@footnote \z@ 
+\c@footnote \z@ 
 \c@footnote \z@ 
 \c@footnote \z@ 
 \c@footnote \z@ 

@@ -2,47 +2,43 @@
 \label{sec_bsmumu}
 \begin{figure}[t]
  \includegraphics[width=1\textwidth]{../pics/bsmumu.pdf}
- \caption{Feynman diagrams for $b\rightarrow s \bar\mu\mu$ processes. In case of a Majorana particle being able to mediate such processes, crossed
+ \caption{Feynman diagrams for $b\rightarrow s \bar\mu\mu$ transitions. In case of a Majorana particle being able to mediate such processes, crossed
  diagrams as (b) contribute (see text).}
  \label{pic_Bsmumu}
 \end{figure}
-Our first process targets anomalies in decays being induced by the quark level transition $b\rightarrow s\bar\mu\mu$. Our parameter set for this 
+Anomalies in decays induced by the quark level transition $b\rightarrow s\bar\mu\mu$ are first of all targeted. The parameter set for this 
 semileptonic process includes all our model parameters
 \begin{align}
- \left(m, M_l, M_q, g_2^l\right).
+ \left\{m, M_l, M_q, g_2^l\right\}.
 \end{align}
-Box diagrams of the kind as in picture \ref{pic_Bsmumu}a are usually not calculated 
-all the way down to cross sections but one rather uses the formalism of effective field theory since the typical hadronic energy scale is of
-$\mathcal{O}$(1 GeV) which is much lower than the weak scale $\mathcal{O}$(100 GeV) that is also the expected mass scale of our NP states. 
+Box diagrams of the kind as depicted in figure \ref{pic_Bsmumu}a are by the formalism of effective field theory since the typical hadronic energy 
+scale is of $\mathcal{O}$(1 GeV) which is much lower than the weak scale $\mathcal{O}$(100 GeV) which is also the expected mass scale of our NP states. 
 \\ \\ \noindent \textit{Matrix Element}\\
-\noindent So we can use 
-the OPE framework where they are integrated out and the external masses and momenta are set to zero. The amplitude in the full theory is
+\noindent Within the OPE framework (see sec. \ref{sec_flAnom}) where the BSM fields are integrated out 
+and the external masses and momenta are set to zero, the amplitude in the full theory is
 \begin{align}
- M =g_i^{q*} g_j^{q} g_m^{l*} g_n^l\int \frac{\dx^4 k}{(2\pi)^4} \frac{k^\rho}{D^\chi_k}\frac{1}{D^q_k} \frac{1}{D^l_k} \frac{k^\sigma}{D^\chi_k} \left(\bar L_L^n \gamma_\rho Q_L^j\right) \left(\bar Q_L^i \gamma_\sigma L_L^m\right)
+ \mathcal{M} =&\,g_i^{q*} g_j^{q} g_m^{l*} g_n^l\int \frac{\dx^4 k}{(2\pi)^4} \frac{k^\rho}{D^\chi_k}\frac{1}{D^q_k} \frac{1}{D^l_k} \frac{k^\sigma}{D^\chi_k} \nonumber\\
+ \times&\left[\left(\bar L_L^n \gamma_\rho Q_L^j\right) \left(\bar Q_L^i \gamma_\sigma L_L^m\right) + \xi\left(\bar L_L^n \gamma_\rho\vec\tau Q_L^j\right) \left(\bar Q_L^i \gamma_\sigma \vec\tau L_L^m\right)\right].
  \label{eq_matElemBSmumu}
 \end{align}
-with $k$ as the internal momentum and the denominators of the respective particle $a$ with momentum $q$ $D^a_q = q^2-M_a^2$ and the $\ti\epsilon$ terms in the denominators are already omitted
-due to Wick-rotation later on when the integral is performed. The reasons why $m$ in the fermion propagators is missing
-and why there is a Lorentz structure in the couplings, are connected. Since we have a model which couples only to left handed particles $\psi_L = P_L \psi$,
-the fermion currents look like $\bar \psi_L (\slashed{k}+m)\varphi_L = \bar \psi P_R (k^\mu \gamma_\mu+m) P_L\varphi$. Further
-$\{P_{L,R},\gamma^\mu\} = \gamma^\mu P_{R,L}$, $P_{L,R}^2 = P_{L,R}$ and $P_R P_L = 0$, so we are left over with the four fermion expression in 
-\eqref{eq_matElemBSmumu}. We can also reexpress $k^\rho k^\sigma = k^2 g^{\rho\sigma}/4$ under the integral. This results from spherical coordinates where
-every combination $\rho\neq\sigma$ would include at least one uneven angular function. When the spherical integral is performed, they would lead to zero. The 
-4 in the denominator is the spacetime dimension. The spherical integral $\dx \Omega$ itself just gives a $2\pi^2$ and we are left with the momentum integral
-which is not problematic since it does not diverge
-\begin{align}
- M \propto \frac{1}{32\pi^2} \int\limits_0^\infty \dx k \frac{k^5}{{D^\chi_k}^2D^l_k D^q_k} = \frac{K(x_q,x_l)}{64\pi^2 m_\chi^2}
-\end{align}
-with a loop function $K(x,y)$ \eqref{eq_boxloop}.
+The denominators are $D_q^a = q^2-M_a^2$ for a particle $a$ with mass $M_a$ and momentum $q$. For these transitions involving four only left-handed
+fermions, the two operators 
+$O_{lq}^{(1)}:=\left(\bar Q_L^i \gamma_\rho Q_L^j\right)\left(\bar L_L^m \gamma^\rho L_L^n\right)$ and 
+$O_{lq}^{(3)}:=\left(\bar Q_L^i\vec \tau \gamma_\rho Q_L^j\right)\left(\bar L_L^m\vec \tau \gamma^\rho L_L^n\right)$ are the only ones being
+$SU(2)_L$ invariant \cite{1008.4884}. Their relative Wilson coefficient $\xi$ depends on the NP representations and its calculation is sketched
+below. With the commutator relations of the projections
+$P_{R,L}=\frac12(1\pm\gamma_5)$ the Lorentz structure is obtained. The numerators can be re-expressed as $k^\rho k^\sigma = k^2g^{\rho\sigma}/4$
+under the integral \footnote{This results from spherical coordinates where
+every combination $\rho\neq\sigma$ would include at least one uneven angular function. When the spherical integral is performed, they would lead to zero.}.
+Performing the non divergent momentum integral after going into spherical coordinates yields a loop function $K(x,y)$ (see \eqref{eq_boxloop}).
 In the SM, the fermion currents do not combine quarks and leptons. To compare the NP contribution to this process, we have to rearrange the fermion currents,
-so that we have the same structure. This will be done by the Fierz identities.
+so that we have the same structure. This will be done by Fierz identities.
 \\ \\ \noindent \textit{Fierz Identities}\\
-They usually relate a Dirac quadrilinear, containing four spinors, with a sum of rearranged Dirac quadrilinears \cite{Fierz}
+ A fermion quadrilinear, containing four spinors, is related with a sum of rearranged Dirac quadrilinears \cite{Fierz}
 \begin{align}
   \left[\bar w_1\Gamma_J^{} w_2\right] \left[\bar w_3 \Gamma^J w_4 \right] =: e_J(1234) = \sum\limits_K M_{JK} e_K(1432)
 \end{align}
-with an (anti)spinor $w$ and $\Gamma_J$ as a set of Dirac matrices whereby $J=S,V,T,A,P$ representing $I,\gamma^\mu,\sigma^{\mu\nu},\gamma^\mu\gamma_5,\gamma_5$, 
-respectively. The coefficients $M_{JK}$ are real numbers and can differ for other arrangements.
+with an (anti)spinor $w$ and $\Gamma_J$ as in \eqref{eq_Ctrafo}. The coefficients $M_{JK}$ are real numbers and can differ for other arrangements.
 % \begin{align}
 %  F_{IJ}=\frac14\begin{pmatrix}
 %     1&1&\frac12&-1&1\\
@@ -52,105 +48,232 @@ respectively. The coefficients $M_{JK}$ are real numbers and can differ for othe
 %     1&-1&\frac12&1&1\\
 %  \end{pmatrix}_{IJ}.
 % \end{align}
-\noindent For our purpose we want to transform the quadrilinear in \eqref{eq_matElemBSmumu}. By expanding there are four terms
-\begin{align}
- e_V(1234)+e_A(1234)-\left(e'_V(1234) + e'_A(1234)\right).
- \label{eq_fierz}
-\end{align}
-The primed quadrilinears represent a pseudoscalar combination of two parity partners, e.g. $e'_V = \left[\bar w\gamma^\mu w\right]\left[w\gamma_\mu\gamma_5w\right]$
-which are transformed with $M^\text{T}$. We can see that \eqref{eq_fierz} is an invariant for every ordering and so we can simply rearrange the quadrilinear.
-\\ \noindent For later cases \eqref{eq_crossedBox} we also point out that 
+For our purpose the quadrilinear in \eqref{eq_matElemBSmumu} has to be rearranged. This case is represented by $J=V-A$ and it follows that this
+Lorentz-structure is an invariant under this transformation so that the quadrilinear can be simply rearranged. For later cases two additional
+transformations are pointed out 
 \begin{subequations}
 \begin{align}
+ \left[\bar w_1 \gamma^\mu P_L w_2\right]\left[\bar w_3 \gamma^\mu P_L w_4\right] =& 1  \left[\bar w_3 \gamma_\mu P_L w_2\right]\left[\bar w_1 \gamma^\mu P_L w_4\right]\\
  \left[\bar w_1 P_R w_2\right]\left[\bar w_3 P_L w_4\right] =& \frac12  \left[\bar w_3 \gamma_\mu P_L w_2\right]\left[\bar w^c_4 \gamma^\mu P_L w_1^c\right]\\
  =& \frac12  \left[\bar w_3 \gamma_\mu P_L w_2\right]\left[\bar w_1 \gamma^\mu P_L w_4\right].
  \label{eq_fierzSPtoVA}
 \end{align} 
 \end{subequations}
- \noindent \textit{Additional $SU(2)_L$-invariant term}\\
-\noindent The operator $O_\delta=\left(\bar Q_L^i \gamma_\rho Q_L^j\right)\left(\bar L_L^m \gamma^\rho L_L^n\right)$ is not the only one which is a singlet
-in the isospin space but $O_\tau=\left(\bar Q_L^i\vec \tau \gamma_\rho Q_L^j\right)\left(\bar L_L^m\vec \tau \gamma^\rho L_L^n\right)$ as well which enables
-charged currents. The eventual operator is a superposition of these two. One possibility to compute the representation dependent, relative 
-prefactor $\xi$ of $O_\tau$ is to regard the particles at each vertex as isospin multiplets. Since we want the vertices to be 
-$SU(2)_L$-invariant, we 
-decompose the product and focus on the singlet (cf. sec. \ref{sec_FNGT}). This will be done for all four vertices per diagram which are multiplied and then added up for every diagram,
-one can write down using these operators. For the singlet, this calculus can be done equivalently but can be skipped because charged currents as 
-$b \bar u \rightarrow \mu \bar \nu$ are not induced, thus the prefactor of $O_\tau$ has to be zero and therefore 
+\\ \\ \textit{Determining $\xi$}\\
+\noindent While $O_{lq}^{(1)}$ only induces neutral currents, $O_{lq}^{(3)}$ enables charged ones as well. One possibility to compute $\xi$ is
+to determine the isospin singlet (cf. sec. \ref{sec_FNGT}) in the decomposed tensor product of the respective isospin representations of the 
+particles at each vertex. This is be done for all four vertices per diagram which are multiplied and then added up for every diagram,
+one can write down using these operators. Since charged currents cannot be induced by $\chi$ being a singlet, this calculation can be skipped
+and $\xi$ has to be zero. Hence,
 \begin{align}
-  \mathcal{L}^{\textbf{1}}_\text{eff} \supset \frac{K(x_q,x_l)}{m_\chi^2}\frac{g_i^{q*} g_j^{q*} g_m^l g_n^l}{64\pi^2} \times O_\delta.
+  \mathcal{L}^{{122}}_\text{eff} \supset \frac{K(x_q,x_l)}{m_\chi^2}\frac{g_i^{q*} g_j^{q*} g_m^l g_n^l}{64\pi^2} \times O_{lq}^{(1)}.
  \label{eq_LagBSmumuModA}
 \end{align}
-In the case of higher dimensional isospin multiplets, processes of the just mentioned kind occur and thus we have three distinct types, with respect to 
-their prefactor that can be checked by expanding $O_\delta + \xi O_\tau$, namely $\bar d d\rightarrow \bar l l$, $\bar d d \rightarrow \bar\nu \nu$ and 
-$d \bar u\rightarrow l\bar\nu$. \\
-\noindent To get the isospin singlet expression we can make use of the Clebsch-Gordan coefficients, known from spin arithmetics which also obey an $SU(2)$-group.
-They can be read off the tables from \cite{PDG}. For a triplet ($\chi$) and two doublets ($\Phi$ and $D=Q,L$) we get
+The superscript denotes the isosopin representations for $\chi$, $\Phi_l$ and $\Phi_q$, respectively. In cases of higher dimensional multiplets, 
+processes of the aforementioned kind occur and thus we have three distinct types, with respect 
+to their prefactor, namely $\bar d d\rightarrow \bar l l$, $\bar d d \rightarrow \bar\nu \nu$ and $d \bar u\rightarrow l\bar\nu$. The expression
+for the singlet can be derived with Clebsch-Gordan coefficients for an $SU(2)$ which can be read off the tables from \cite{PDG}.
+For a triplet ($\chi$) and two doublets ($\Phi$ and $D=Q,L$) we find
 \begin{align}
- \frac{1}{\sqrt{3}}\left(\chi_3\Phi_1D_1 - \frac{1}{\sqrt{2}}\chi_2\left(\Phi_2D_1+\Phi_1 D_2\right) + \chi_1\Phi_2D_2 \right).
+{\textbf{1}} = \frac{1}{\sqrt{3}}\left(\chi_3\Phi_1D_1 - \frac{1}{\sqrt{2}}\chi_2\left(\Phi_2D_1+\Phi_1 D_2\right) + \chi_1\Phi_2D_2 \right).
  \label{eq_CG}
 \end{align}
-The indices represent the components of the respective multiplets. One has to be careful which vertex one is looking at while using \eqref{eq_CG} in reference
-to the Lagrangian \eqref{eq_modelLagrangian}. An incoming $u$-quark occupies the first isospin component in the quark doublet $Q$ but an outgoing one the 
-second of $\bar Q$. Keeping this in mind we can look at each vertex of figure \ref{pic_Bsmumu} and examine the applicable coefficient. This is examplarily
-depicted in figure \ref{pic_CG} for a generic $\bar d d\rightarrow \bar l l$ process that also represents $ b  \rightarrow s\bar \mu \mu$.
+The indices represent the components of the respective multiplets. With \eqref{eq_CG} and \eqref{eq_modelLagrangian} a generic 
+$\bar d d\rightarrow \bar l l$ process which also represents $ b  \rightarrow s\bar \mu \mu$ can be calculated and is examplarily depicted in
+figure \ref{pic_CG}.
 \begin{figure}[t]
  \includegraphics[width=\textwidth]{../pics/CG.pdf}
  \caption{$SU(2)_L$ singlet representation at each vertex of figure \ref{pic_Bsmumu} with the respective Clebsch-Gordan coefficients from \eqref{eq_CG}. 
  This is exemplary for $\bar d d\rightarrow \bar d d$ processes which get contributions from two different particle configurations.}
  \label{pic_CG}
 \end{figure}
-This gives an overall factor of $\sfrac{5}{36}$. The computation for the remaining two types is similar and yields $\sfrac{4}{36}$ for 
-$\bar d d\rightarrow \bar \bar \nu \nu$ and $\sfrac{1}{36}$ for $\bar u d \rightarrow \bar \nu l$. With these three fractions, multiplied by a 
-phenomenological constant $\eta=\sqrt{2}\,^4\cdot R_\chi$ (norm for two doublet product at four vertices and $R_\chi$ is the dimension of the $\chi$ multiplet) 
-and the respective relations from $O_\delta + \xi O_\tau$ for each prcoess type 
-we can extract the prefactor $\xi=\sfrac23$. Finally, we can write down the effective Lagrangian for the triplet case
+For the remaining two types the computation is similar. With these three results, multiplied by a 
+phenomenological constant $\eta=\sqrt{2}\,^4 R_\chi$ (norm for two doublet product at four vertices and $R_\chi$ is the dimension of the $\chi$ multiplet) 
+we can extract the $\xi=\sfrac23$. Finally, we can write down the effective Lagrangian for the triplet case
 \begin{align}
- \mathcal{L}^{\textbf{3}}_\text{eff} \supset \frac{K(x_q,x_l)}{m_\chi^2}\frac{g_i^{q*} g_j^{q*} g_m^l g_n^l}{64\pi^2}\times\left(O_\delta + \frac23 O_\tau\right).
+ \mathcal{L}^{{322}}_\text{eff} \supset \frac{K(x_q,x_l)}{m_\chi^2}\frac{g_i^{q*} g_j^{q*} g_m^l g_n^l}{64\pi^2}\times\left(O_{lq}^{(1)} + \frac23 O_{lq}^{(3)}\right).
  \label{eq_LagBSmumuModB}
+\end{align}
+There is further another possible assignment for a triplet DM in which the two scalars have different representations. Similar to the former, we
+present the effective Lagrangian for a quadruplet $\Phi_l$ and a doublet $\Phi_q$
+\begin{align}
+ \mathcal{L}^{{342}}_\text{eff} \supset \frac{K(x_q,x_l)}{m_\chi^2}\frac{g_i^{q*} g_j^{q*} g_m^l g_n^l}{64\pi^2}\times\left(O_{lq}^{(1)} - \frac13 O_{lq}^{(3)}\right).
+ \label{eq_LagBSmumuModC}
 \end{align}
 \\ \textit{Crossed Boxes}\\
 \noindent As we assume our DM candidate $\chi^0$ to be Majorana, there are also contributions from crossed boxes (fig. \ref{pic_Bsmumu}b) for uncharged
-currents like our process of interest $\bar d d\rightarrow \bar l l$. Compared to the former matrix element \eqref{eq_matElemBSmumu} we have some changes
-for the crossed box diagram \cite{1411.6743}. Using the Feynman rules for internal Majorana particles \eqref{eq_diracprop}-\eqref{eq_majpropoutwards} 
-and the action of $C$ \eqref{eq_DirMaj}, 
-we see that now the masses in the fermion propagators remain. The momentum integral similarly to the pure Dirac case yields
-\begin{align}
- M_\text{crossed} \propto \int\limits_0^\infty \dx k \frac{k^3 \cdot m_\chi^2}{{D^\chi_k}^2D^l_k D^q_k} = \frac{G(x_q,x_l)}{2m_\chi^2}
- \label{eq_crossedBox}
-\end{align}
-with a similar (but not identical) loop function $G(x,y)$ \eqref{eq_boxcrossed}.
-Concerning the $SU(2)_L$ invariance, the crossed box can require only the uncharged particle state for the internal lines. Therefore one gets only $\sfrac{1}{36}$
-which is one fifth of the bare Dirac contribution. The two terms with $K(x_q,x_l)$ and $G(x_q,x_l)$, respectively, have opposite signs so that they can cancel
-each other out and hence may reduce the impact of constraints from observables.\\
-\\ \textit{New Physics Contribution}\\
+currents like our process of interest $\bar d d\rightarrow \bar l l$. Compared to the former matrix element \eqref{eq_matElemBSmumu} there are
+some differences for a crossed box diagram \cite{1411.6743}. Using the Feynman rules for internal Majorana particles 
+\eqref{eq_diracprop}-\eqref{eq_majpropoutwards} and the action of $C$ \eqref{eq_DirMaj}, 
+the masses in the fermion propagators remain. The momentum integral similarly to the pure Dirac case yields
+a similar (but not identical) loop function $G(x,y)$ (see \eqref{eq_boxcrossed}).
+Concerning the $SU(2)_L$ invariance, the crossed box can require only the uncharged particle state for the internal lines. 
+This results in a contribution which is one fifth of the bare Dirac case\footnote{This term enters according to \cite{1608.07832} with an additional 
+factor of 2}. The two terms with $K(x_q,x_l)$ and $G(x_q,x_l)$ have opposite signs so 
+that they can cancel each other out and hence may reduce the impact of constraints from observables.\\
+\\ \textit{New Physics Contributions}\\
 \noindent Now we will gather up the information to get a first bound for our model. There are two operators in the effective Hamiltonian for $b\rightarrow s\mu\mu$
 transitions, $O_9$ and $O_{10}$ (sec. \ref{sec_flAnom}). The expression for the Wilson coefficient $C_9 = -C_{10}$ \cite{1408.1627} is obtained by comparing the 
-coefficients from the 4-fermi operator in the effective Lagrangians and the effective Hamiltonian
+coefficients from the 4-Fermi operator in the effective Lagrangians and the effective Hamiltonian
 \begin{align}
- C_9^{\textbf{1}} &= N \frac{g_2^{q*}g_3^q|g_2^l|^2}{m^2} \frac{1}{128\pi^2} \left(K(x_q,x_l) + G(x_q,x_l)\right)\\
- C_9^{\textbf{3}} &= N \frac{g_2^{q*}g_3^q|g_2^l|^2}{m^2} \frac{5}{384\pi^2} \left(K(x_q,x_l) + \frac15 G(x_q,x_l)\right)
- \label{eq_WilsonBsmumu}
+ C_9^{122} &= N \frac{g_2^{q*}g_3^q|g_2^l|^2}{m_\chi^2} \frac{1}{128\pi^2} \left(K(x_q,x_l) + 2G(x_q,x_l)\right)\label{eq_WilsonBsmumu122}\\
+ C_9^{{322}} &= N \frac{g_2^{q*}g_3^q|g_2^l|^2}{m_\chi^2} \frac{5}{384\pi^2} \left(K(x_q,x_l) + 2\cdot\frac15 G(x_q,x_l)\right)\\
+ C_9^{{342}} &= N \frac{g_2^{q*}g_3^q|g_2^l|^2}{m_\chi^2} \frac{1}{192\pi^2} \left(K(x_q,x_l) + 2\cdot\frac13 G(x_q,x_l)\right)
+ \label{eq_WilsonBsmumu342}
 \end{align}
 with
 \begin{align}
  N = \left(\frac{4G_F}{\sqrt{2}} V_{ts}^*V_{tb} \frac{\alpha_\text{EM}}{4\pi}\right)^{-1}.
 \end{align}
-With the formulae given here, one could also examine anomalies in other semileptonic decays, i.e. $b \rightarrow s\nu\nu$ \cite{1409.4557} or $b \rightarrow c\tau\nu$ \cite{1507.03233}. 
+With the formulae given here, anomalies in other semileptonic decays could also be examined, i.e. $b \rightarrow s\nu\nu$ \cite{1409.4557} or 
+$b \rightarrow c\tau\nu$ \cite{1507.03233}. 
 It is difficult to explain the latter at least with this kind of model, where these processes emerge at loop level and have to compete with the 
-SM effect, which is at tree-level. The former can give bounds in general but since you cannot distinguish different neutrino flavours experimentally.
-and we are only coupling to muonic ones, the contribution is even lower. In the triplet case \eqref{eq_LagBSmumuModB} the prefactors just calculated 
-of the kind $\bar dd\rightarrow \bar\nu\nu$
-are also small compared to the other ones enabling an even larger parameter space. So we expect $b\rightarrow s\bar \mu \mu$ among the semileptonic
-processes to give the strongest constraints.
- 
+SM effect, which is at tree-level. The former can give bounds but since you cannot distinguish different neutrino flavours experimentally
+and we are only coupling to muonic ones, the contribution is even lower. In the triplet case \eqref{eq_LagBSmumuModB} the prefactor
+for the $\bar dd\rightarrow \bar\nu\nu$ type
+are also small compared to the other ones enabling an even larger parameter space. So we expect $b\rightarrow s\bar \mu \mu$ 
+to give the strongest constraints among the semileptonic processes.
 
-% Prefactors for other representations are listed in table below.
 
-% \begin{table}[h]
-% \begin{tabular}{c|cccc}
-%  $(\chi,\Phi)$& (1,2) & (3,2) & (4,3) & (5,4)\\
-%  \hline
-%  $X$ & $0$ & $\sfrac23$ & $\sfrac59$ & $\sfrac12$
-%  \end{tabular}
+
+
+
+
+% 
+% \begin{align}
+%  M =g_i^{q*} g_j^{q} g_m^{l*} g_n^l\int \frac{\dx^4 k}{(2\pi)^4} \frac{k^\rho}{D^\chi_k}\frac{1}{D^q_k} \frac{1}{D^l_k} \frac{k^\sigma}{D^\chi_k} \left(\bar L_L^n \gamma_\rho Q_L^j\right) \left(\bar Q_L^i \gamma_\sigma L_L^m\right)
+%  \label{eq_matElemBSmumu}
+% \end{align}
+% with $k$ as the internal momentum and the denominators of the respective particle $a$ with momentum $q$ $D^a_q = q^2-M_a^2$ and the $\ti\epsilon$ terms in the denominators are already omitted
+% due to Wick-rotation later on when the integral is performed. The reasons why $m$ in the fermion propagators is missing
+% and why there is a Lorentz structure in the couplings, are connected. Since we have a model which couples only to left handed particles $\psi_L = P_L \psi$,
+% the fermion currents look like $\bar \psi_L (\slashed{k}+m)\varphi_L = \bar \psi P_R (k^\mu \gamma_\mu+m) P_L\varphi$. Further
+% $\{P_{L,R},\gamma^\mu\} = \gamma^\mu P_{R,L}$, $P_{L,R}^2 = P_{L,R}$ and $P_R P_L = 0$, so we are left over with the four fermion expression in 
+% \eqref{eq_matElemBSmumu}. We can also reexpress $k^\rho k^\sigma = k^2 g^{\rho\sigma}/4$ under the integral. This results from spherical coordinates where
+% every combination $\rho\neq\sigma$ would include at least one uneven angular function. When the spherical integral is performed, they would lead to zero. The 
+% 4 in the denominator is the spacetime dimension. The spherical integral $\dx \Omega$ itself just gives a $2\pi^2$ and we are left with the momentum integral
+% which is not problematic since it does not diverge
+% \begin{align}
+%  M \propto \frac{1}{32\pi^2} \int\limits_0^\infty \dx k \frac{k^5}{{D^\chi_k}^2D^l_k D^q_k} = \frac{K(x_q,x_l)}{64\pi^2 m_\chi^2}
+% \end{align}
+% with a loop function $K(x,y)$ \eqref{eq_boxloop}.
+% In the SM, the fermion currents do not combine quarks and leptons. To compare the NP contribution to this process, we have to rearrange the fermion currents,
+% so that we have the same structure. This will be done by the Fierz identities.
+% \\ \\ \noindent \textit{Fierz Identities}\\
+% They usually relate a Dirac quadrilinear, containing four spinors, with a sum of rearranged Dirac quadrilinears \cite{Fierz}
+% \begin{align}
+%   \left[\bar w_1\Gamma_J^{} w_2\right] \left[\bar w_3 \Gamma^J w_4 \right] =: e_J(1234) = \sum\limits_K M_{JK} e_K(1432)
+% \end{align}
+% with an (anti)spinor $w$ and $\Gamma_J$ as a set of Dirac matrices whereby $J=S,V,T,A,P$ representing $I,\gamma^\mu,\sigma^{\mu\nu},\gamma^\mu\gamma_5,\gamma_5$, 
+% respectively. The coefficients $M_{JK}$ are real numbers and can differ for other arrangements.
+% % \begin{align}
+% %  F_{IJ}=\frac14\begin{pmatrix}
+% %     1&1&\frac12&-1&1\\
+% %     4&-2&0&-2&-4\\
+% %     12&0&-2&0&12\\
+% %     -4&-2&0&-2&4\\
+% %     1&-1&\frac12&1&1\\
+% %  \end{pmatrix}_{IJ}.
+% % \end{align}
+% \noindent For our purpose we want to transform the quadrilinear in \eqref{eq_matElemBSmumu}. By expanding there are four terms
+% \begin{align}
+%  e_V(1234)+e_A(1234)-\left(e'_V(1234) + e'_A(1234)\right).
+%  \label{eq_fierz}
+% \end{align}
+% The primed quadrilinears represent a pseudoscalar combination of two parity partners, e.g. $e'_V = \left[\bar w\gamma^\mu w\right]\left[w\gamma_\mu\gamma_5w\right]$
+% which are transformed with $M^\text{T}$. We can see that \eqref{eq_fierz} is an invariant for every ordering and so we can simply rearrange the quadrilinear.
+% \\ \noindent For later cases \eqref{eq_crossedBox} we also point out that 
+% \begin{subequations}
+% \begin{align}
+%  \left[\bar w_1 P_R w_2\right]\left[\bar w_3 P_L w_4\right] =& \frac12  \left[\bar w_3 \gamma_\mu P_L w_2\right]\left[\bar w^c_4 \gamma^\mu P_L w_1^c\right]\\
+%  =& \frac12  \left[\bar w_3 \gamma_\mu P_L w_2\right]\left[\bar w_1 \gamma^\mu P_L w_4\right].
+%  \label{eq_fierzSPtoVA}
+% \end{align} 
+% \end{subequations}
+%  \noindent \textit{Additional $SU(2)_L$-invariant term}\\
+% \noindent The operator $O_\delta=\left(\bar Q_L^i \gamma_\rho Q_L^j\right)\left(\bar L_L^m \gamma^\rho L_L^n\right)$ is not the only one which is a singlet
+% in the isospin space but $O_\tau=\left(\bar Q_L^i\vec \tau \gamma_\rho Q_L^j\right)\left(\bar L_L^m\vec \tau \gamma^\rho L_L^n\right)$ as well which enables
+% charged currents. The eventual operator is a superposition of these two. One possibility to compute the representation dependent, relative 
+% prefactor $\xi$ of $O_\tau$ is to regard the particles at each vertex as isospin multiplets. Since we want the vertices to be 
+% $SU(2)_L$-invariant, we 
+% decompose the product and focus on the singlet (cf. sec. \ref{sec_FNGT}). This will be done for all four vertices per diagram which are multiplied and then added up for every diagram,
+% one can write down using these operators. For the singlet, this calculus can be done equivalently but can be skipped because charged currents as 
+% $b \bar u \rightarrow \mu \bar \nu$ are not induced, thus the prefactor of $O_\tau$ has to be zero and therefore 
+% \begin{align}
+%   \mathcal{L}^{\textbf{1}}_\text{eff} \supset \frac{K(x_q,x_l)}{m_\chi^2}\frac{g_i^{q*} g_j^{q*} g_m^l g_n^l}{64\pi^2} \times O_\delta.
+%  \label{eq_LagBSmumuModA}
+% \end{align}
+% In the case of higher dimensional isospin multiplets, processes of the just mentioned kind occur and thus we have three distinct types, with respect to 
+% their prefactor that can be checked by expanding $O_\delta + \xi O_\tau$, namely $\bar d d\rightarrow \bar l l$, $\bar d d \rightarrow \bar\nu \nu$ and 
+% $d \bar u\rightarrow l\bar\nu$. \\
+% \noindent To get the isospin singlet expression we can make use of the Clebsch-Gordan coefficients, known from spin arithmetics which also obey an $SU(2)$-group.
+% They can be read off the tables from \cite{PDG}. For a triplet ($\chi$) and two doublets ($\Phi$ and $D=Q,L$) we get
+% \begin{align}
+%  \frac{1}{\sqrt{3}}\left(\chi_3\Phi_1D_1 - \frac{1}{\sqrt{2}}\chi_2\left(\Phi_2D_1+\Phi_1 D_2\right) + \chi_1\Phi_2D_2 \right).
+%  \label{eq_CG}
+% \end{align}
+% The indices represent the components of the respective multiplets. One has to be careful which vertex one is looking at while using \eqref{eq_CG} in reference
+% to the Lagrangian \eqref{eq_modelLagrangian}. An incoming $u$-quark occupies the first isospin component in the quark doublet $Q$ but an outgoing one the 
+% second of $\bar Q$. Keeping this in mind we can look at each vertex of figure \ref{pic_Bsmumu} and examine the applicable coefficient. This is examplarily
+% depicted in figure \ref{pic_CG} for a generic $\bar d d\rightarrow \bar l l$ process that also represents $ b  \rightarrow s\bar \mu \mu$.
+% \begin{figure}[t]
+%  \includegraphics[width=\textwidth]{../pics/CG.pdf}
+%  \caption{$SU(2)_L$ singlet representation at each vertex of figure \ref{pic_Bsmumu} with the respective Clebsch-Gordan coefficients from \eqref{eq_CG}. 
+%  This is exemplary for $\bar d d\rightarrow \bar d d$ processes which get contributions from two different particle configurations.}
+%  \label{pic_CG}
+% \end{figure}
+% This gives an overall factor of $\sfrac{5}{36}$. The computation for the remaining two types is similar and yields $\sfrac{4}{36}$ for 
+% $\bar d d\rightarrow \bar \bar \nu \nu$ and $\sfrac{1}{36}$ for $\bar u d \rightarrow \bar \nu l$. With these three fractions, multiplied by a 
+% phenomenological constant $\eta=\sqrt{2}\,^4\cdot R_\chi$ (norm for two doublet product at four vertices and $R_\chi$ is the dimension of the $\chi$ multiplet) 
+% and the respective relations from $O_\delta + \xi O_\tau$ for each prcoess type 
+% we can extract the prefactor $\xi=\sfrac23$. Finally, we can write down the effective Lagrangian for the triplet case
+% \begin{align}
+%  \mathcal{L}^{\textbf{3}}_\text{eff} \supset \frac{K(x_q,x_l)}{m_\chi^2}\frac{g_i^{q*} g_j^{q*} g_m^l g_n^l}{64\pi^2}\times\left(O_\delta + \frac23 O_\tau\right).
+%  \label{eq_LagBSmumuModB}
+% \end{align}
+% \\ \textit{Crossed Boxes}\\
+% \noindent As we assume our DM candidate $\chi^0$ to be Majorana, there are also contributions from crossed boxes (fig. \ref{pic_Bsmumu}b) for uncharged
+% currents like our process of interest $\bar d d\rightarrow \bar l l$. Compared to the former matrix element \eqref{eq_matElemBSmumu} we have some changes
+% for the crossed box diagram \cite{1411.6743}. Using the Feynman rules for internal Majorana particles \eqref{eq_diracprop}-\eqref{eq_majpropoutwards} 
+% and the action of $C$ \eqref{eq_DirMaj}, 
+% we see that now the masses in the fermion propagators remain. The momentum integral similarly to the pure Dirac case yields
+% \begin{align}
+%  M_\text{crossed} \propto \int\limits_0^\infty \dx k \frac{k^3 \cdot m_\chi^2}{{D^\chi_k}^2D^l_k D^q_k} = \frac{G(x_q,x_l)}{2m_\chi^2}
+%  \label{eq_crossedBox}
+% \end{align}
+% with a similar (but not identical) loop function $G(x,y)$ \eqref{eq_boxcrossed}.
+% Concerning the $SU(2)_L$ invariance, the crossed box can require only the uncharged particle state for the internal lines. Therefore one gets only $\sfrac{1}{36}$
+% which is one fifth of the bare Dirac contribution. The two terms with $K(x_q,x_l)$ and $G(x_q,x_l)$, respectively, have opposite signs so that they can cancel
+% each other out and hence may reduce the impact of constraints from observables.\\
+% \\ \textit{New Physics Contribution}\\
+% \noindent Now we will gather up the information to get a first bound for our model. There are two operators in the effective Hamiltonian for $b\rightarrow s\mu\mu$
+% transitions, $O_9$ and $O_{10}$ (sec. \ref{sec_flAnom}). The expression for the Wilson coefficient $C_9 = -C_{10}$ \cite{1408.1627} is obtained by comparing the 
+% coefficients from the 4-fermi operator in the effective Lagrangians and the effective Hamiltonian
+% \begin{align}
+%  C_9^{\textbf{1}} &= N \frac{g_2^{q*}g_3^q|g_2^l|^2}{m^2} \frac{1}{128\pi^2} \left(K(x_q,x_l) + G(x_q,x_l)\right)\\
+%  C_9^{\textbf{3}} &= N \frac{g_2^{q*}g_3^q|g_2^l|^2}{m^2} \frac{5}{384\pi^2} \left(K(x_q,x_l) + \frac15 G(x_q,x_l)\right)
+%  \label{eq_WilsonBsmumu}
+% \end{align}
+% with
+% \begin{align}
+%  N = \left(\frac{4G_F}{\sqrt{2}} V_{ts}^*V_{tb} \frac{\alpha_\text{EM}}{4\pi}\right)^{-1}.
+% \end{align}
+% With the formulae given here, one could also examine anomalies in other semileptonic decays, i.e. $b \rightarrow s\nu\nu$ \cite{1409.4557} or $b \rightarrow c\tau\nu$ \cite{1507.03233}. 
+% It is difficult to explain the latter at least with this kind of model, where these processes emerge at loop level and have to compete with the 
+% SM effect, which is at tree-level. The former can give bounds in general but since you cannot distinguish different neutrino flavours experimentally.
+% and we are only coupling to muonic ones, the contribution is even lower. In the triplet case \eqref{eq_LagBSmumuModB} the prefactors just calculated 
+% of the kind $\bar dd\rightarrow \bar\nu\nu$
+% are also small compared to the other ones enabling an even larger parameter space. So we expect $b\rightarrow s\bar \mu \mu$ among the semileptonic
+% processes to give the strongest constraints.
 %  
-% \end{table}
+% 
+% % Prefactors for other representations are listed in table below.
+% 
+% % \begin{table}[h]
+% % \begin{tabular}{c|cccc}
+% %  $(\chi,\Phi)$& (1,2) & (3,2) & (4,3) & (5,4)\\
+% %  \hline
+% %  $X$ & $0$ & $\sfrac23$ & $\sfrac59$ & $\sfrac12$
+% %  \end{tabular}
+% %  
+% % \end{table}

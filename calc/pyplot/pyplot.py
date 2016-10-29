@@ -210,14 +210,14 @@ ax.set_xlabel(r'$\mathcal{G}$')
 
 #Direct Detection m-sigma
 
-
+"""
 ax.plot(m,sigmaDDsiB(m,1)/cmToGeV2)
 ax.set_xscale('log')
 ax.set_yscale('log')
 ax.set_xlabel(r'$m_\chi$ / GeV')
 ax.set_ylabel(r'$\sigma_{SI}$ / cm$^2$')
 ax.set_xlim(81,500)
-
+"""
 
 """
 #g-2 m-a
@@ -238,17 +238,17 @@ n = np.linspace(gq2f*gq3f,gq2f*gq3f,1000)
 #ax.plot(m,(g23mumu(preB,C9low2f,m,gl2f,preGA)),label=r'$C_9 2\sigma$')
 #ax.plot(m,(g23mumu(preB,C9high2f,m,gl2f,preGA)))
 
-"""
+
 ax.plot(m,(np.sqrt(g23mix(preA,m,preGA))),label=r'Singlet M')
 ax.plot(m,(np.sqrt(g23mix(preA,m,0))),label=r'Singlet D')
 ax.plot(m,(np.sqrt(g23mix(preB,m,preGB))),label=r'Triplet M')
 ax.plot(m,(np.sqrt(g23mix(preB,m,0))),label=r'Triplet D')
-ax.plot(m,(np.sqrt(g23mix(preQ,m,preGQ))),label=r'Quintuplet M')
-ax.plot(m,(np.sqrt(g23mix(preQ,m,0))),label=r'Quintuplet D')
+ax.plot(m,(np.sqrt(g23mix(preA*2/3,m,-1/3))),label=r'Quintuplet M')
+ax.plot(m,(np.sqrt(g23mix(preA*2/3,m,0))),label=r'Quintuplet D')
 ax.plot(m,n,label=r'$\mathcal{G}: g^{q*}_2 g^q_3$')
 ax.set_xlabel(r'$m_\chi$ / GeV')
 ax.set_ylabel(r'$g^{q*}_2 g^q_3$')
-"""
+
 
 """
 ax.plot(t,MixAddPlot(t,preGA))

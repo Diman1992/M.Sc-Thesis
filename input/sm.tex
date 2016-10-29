@@ -14,7 +14,7 @@ the quantum chromodynamics (QCD) whose charge is called color $C$ and the electr
 \noindent These quantum numbers (QN) are carried by a set of particle fields, ordinary matter is composed
 of and messenger fields mediating these interactions between them. In particular twelve gauge vector boson fields, eight gluon fields $G^A_\mu$ ($A=1,2,...,8$)
 for strong 
-interactions and four electroweak boson fields from which $W^a_\mu$ ($a=1,2,3$) couple to the weak isospin and $B_\mu$ to the weak hypercharge. Now we have 12
+interactions and four electroweak boson fields from which $W^a_\mu$ ($a=1,2,3$) couple to the weak isospin and $B_\mu$ to the weak hypercharge. There are twelve
 fermion fields, six leptons $e$, $\mu$, $\tau$ as well as their respective neutrinos $\nu$ and six quarks $u$, $d$, $s$, $c$, $b$, and $t$. Actually there
 are even more since they are defined by their QN. So for each fermion there is a distinction drawn between left handed $f_L$ ($T=\sfrac12$) and right 
 handed $f_R$ ($T=0$), $f=f_L+f_R$. The left handed fields form isospin doublets as $Q_L=(u_L,d_L)$
@@ -47,7 +47,7 @@ with the respective couplings $g_s$, $g$, $g'$ and group generators $\lambda$, $
  B_{\mu\nu} = \partial_\mu B_\nu - \partial_\nu B_\mu.
 \end{align}
 As messenger of an abelian $U(1)_Y$ there are no self-interactions for $B$, whereas, for messengers of the non-abelian ones $G$ and $W$ interact 
-with themselves whose amplitude is expressed with the connection $f$, $\epsilon$. Mass terms for fermions $\bar\psi_R m\psi_L + \bar\psi_L m\psi_R$ 
+with themselves whose amplitude is expressed with the respective connection $f$, $\epsilon$. Mass terms for fermions $\bar\psi_R m\psi_L + \bar\psi_L m\psi_R$ 
 break gauge invariance since $\psi_L$ and $\psi_R$ have different representations under the electroweak symmetry group. 
 \\ \\ \textit{Yukawa Interaction} \\
 \noindent In order to assign a 
@@ -72,7 +72,7 @@ it becomes
  \mathcal{L}_m \supset -v u_L V_u^\dagger V_u y_u U^\dagger_u U_u u_R = -v u'_L \hat{y}_u u'_R.
  \label{eq_diracmass}
 \end{align}
-The masses $m_\alpha$ enter through $m_\alpha = v\hat{y}_\alpha$ with the hierarchies
+The masses $m_\alpha$ enter through $m_\alpha = v\hat{y}_\alpha$ with the hierarchies \cite{0712.1419}
 \begin{equation}
 \begin{aligned}
  m_u:m_c:m_t\,=\epsilon^8\,:\epsilon^4\,:1,\\
@@ -83,18 +83,19 @@ The masses $m_\alpha$ enter through $m_\alpha = v\hat{y}_\alpha$ with the hierar
 \end{equation}
 expressed by $\epsilon\approx0.2$. 
 \\ \\ \textit{Weak Interaction}\\
-\noindent We express the electroweak part of $\left(D_\mu\phi\right)\left(D^\mu\phi\right)$ in \eqref{eq_smlagrange} as
+\noindent The electroweak part of $\left(D_\mu\phi\right)\left(D^\mu\phi\right)$ in \eqref{eq_smlagrange} is expressed as
 \begin{align}
  \left(D_\mu\phi\right)\left(D^\mu\phi\right) \supset \frac{v^2}{8} \left[g^2(W^1_\mu)^2 + g^2(W^2_\mu)^2 + (-gW^3_\mu+g'B_\mu)^2\right].
 \end{align}
 Spontaneous breaking of the electroweak symmetry $SU(2)_L\times U(1)_Y\rightarrow U(1)_Q$ (electric charge $Q$) leads to three massive
-and one massless vector boson. They are
+and one massless vector boson. They are superpositions of the electroweak bosons as 
 \begin{align}
- A_\mu & := \frac{1}{\sqrt{g^2+g'^2}}\left(gA^3_\mu + g'B_\mu\right)\hspace{2cm}\text{with }m_A = 0,\\
- Z^0_\mu & := \frac{1}{\sqrt{g^2+g'^2}}\left(gA^3_\mu - g'B_\mu\right)\hspace{2cm}\text{with }m_Z = \sqrt{g^2+g'^2}\frac{v}{2},\\
- W^\pm_\mu &:= \frac{1}{\sqrt{2}}\left(A^1_\mu \pm \ti A^2_\mu\right)\hspace{3cm}\text{with }m_W=\frac{vg}{2},
+ A_\mu & := \frac{1}{\sqrt{g^2+g'^2}}\left(gW^3_\mu + g'B_\mu\right)\hspace{2cm}\text{with }m_A = 0,\\
+ Z^0_\mu & := \frac{1}{\sqrt{g^2+g'^2}}\left(gW^3_\mu - g'B_\mu\right)\hspace{2cm}\text{with }m_Z = \sqrt{g^2+g'^2}\frac{v}{2},\\
+ W^\pm_\mu &:= \frac{1}{\sqrt{2}}\left(W^1_\mu \pm \ti W^2_\mu\right)\hspace{3cm}\text{with }m_W=\frac{vg}{2},
 \end{align}
-where $A_\mu$, the photon, and $Z^0$ are their own antiparticles. The transition from $(W^3,B)$ to $(Z^0,A)$ can be described by a rotation around an angle $\theta_w$. Weak interactions
+where $A_\mu$, the photon, and $Z^0$ are their own antiparticles. The transition from $(W^3,B)$ to $(Z^0,A)$ can be described by a rotation 
+through an angle $\theta_w$. Weak interactions
 between fermions and $Z^0$ are hence described by the Lagrangian for neutral currents
 \begin{align}
  \mathcal{L}_\text{NC} = \bar \psi \ti\frac{g}{\cos\theta_w}Z_\mu(T_3-Q\sin^2\theta_w) \psi
@@ -109,7 +110,7 @@ such transformations
  \label{eq_cc}
 \end{align}
 which is expressed by $V_\text{CKM}:=V_uV^\dagger_d$ and $V_\text{PMNS}:=V_\nu V^\dagger_e$. Within the SM, these matrices represent the only
-source of flavour violation. The almost diagonal CKM-matrix can be expanded in a small pertubating parameter $\lambda:=\sin(\theta_C)=\epsilon$ with
+source of flavour violation. The almost diagonal CKM-matrix can be expanded in a small pertubating parameter $\lambda:=\sin\theta_C=\epsilon$ with
 the Cabibbo angle $\theta_C$ in the Wolfenstein parametrisation as
 \begin{align}
  V_\text{CKM} = \begin{pmatrix}
@@ -136,7 +137,7 @@ the dark matter particle complies it. The particle-antiparticle conjugation is d
 \label{eq_ChargeConj}
 \end{align}
 and $\bar\psi = \psi^\dagger\gamma^0$ while $C$ is skew symmetric and transforms the Dirac matrices
-$\Gamma_J=I,\gamma_5,\gamma^\mu,\gamma^\mu\gamma_5,\sigma^{\mu\nu}$ for $J=S,P,V,A,T$, respectively, as \cite{Fierz}
+$\Gamma_J=I,\gamma_5,\gamma^\mu,\gamma^\mu\gamma_5,\sigma^{\mu\nu}$ for $J=S,P,V,A,T$ (scalar, pseudoscalar, vector, axialvector, tensor), respectively, as \cite{Fierz}
 \begin{align}
  C^{-1}\Gamma_J C = \eta \Gamma_J^T
  \label{eq_Ctrafo}
@@ -161,15 +162,13 @@ This results in three possible propagators for Majorana fermions \cite{haberkane
  \includegraphics[scale=1]{../pics/majo2.pdf}
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
-\begin{flushleft}
-\begin{subequations}
+% \begin{subequations}
 \begin{align}
-&\frac{\slashed{k}+m}{k^2-m^2}\label{eq_diracprop}\\
+\hspace*{-25cm}&\frac{\slashed{k}+m}{k^2-m^2}\label{eq_diracprop}\\
  C^{-1}&\frac{(\slashed{k}+m)}{k^2-m^2}\label{eq_majproptowards}\\
  &\frac{(\slashed{k}+m)}{k^2-m^2}C\label{eq_majpropoutwards}
 \end{align}
-\end{subequations}
-\end{flushleft}
+% \end{subequations}
 \end{minipage}
 \\
 \noindent where the first one \eqref{eq_diracprop} corresponds to the standard Dirac propagator and the remaining two lead to fermion number 
