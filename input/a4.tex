@@ -13,7 +13,7 @@ Consider the operator $A^{\alpha\beta}_{jl}$ \cite{georgi}
  \label{eq_orthoOp}
 \end{align}
 where $D_{\alpha,\beta}$ are irreducible representations. Computation yields $D_\alpha(g_1)A^{\alpha\beta}_{ij} = A^{\alpha\beta}_{ij}D_\beta(g_1)$. Schur's lemma now implies that
- $A^{\alpha\beta}_{ij}=\delta^{\alpha\beta} \lambda_{ij} I$ with the idendity matrix $I$. Taking the trace and applying its cyclic property to \eqref{eq_orthoOp}
+ $A^{\alpha\beta}_{ij}=\delta^{\alpha\beta} \lambda_{ij} I$ with the identity matrix $I$. Taking the trace and applying its cyclic property to \eqref{eq_orthoOp}
 results in
 \begin{align}
  \text{Tr}A^{\alpha\beta}_{ij} &= \delta^{\alpha\beta}\text{Tr}\left(\lambda_{ij} I\right) = \delta^{\alpha\beta}\lambda_{ij} \text{Tr}I = \delta^{\alpha\beta}\lambda_{ij}n_\alpha,\\
@@ -21,7 +21,7 @@ results in
  \label{eq_orthoRelA}
 \end{align}
 with the dimension of the representation $n_\alpha$ and the number of elements (order) in the group $N_G$. We further define characters as the trace of
-representations $\chi^{(\alpha)}(g):= \text{Tr}D_\alpha(g)$ and introduce the term conjugacy class $C$ which is a set of group elements $g$ and $a$ which 
+representations ($\chi^{(\alpha)}(g):= \text{Tr}D_\alpha(g)$) and introduce the term conjugacy class $C$ which is a set of group elements $g$ and $a$ which 
 fulfil $gag^{-1}=a$.  The number of irreducibles with a multiplicity $m$ is equal to the number of conjugacy classes $N_C$. From \eqref{eq_orthoRelA} the 
 orthonormality relations for characters can be written as
 \begin{align}
@@ -29,7 +29,7 @@ orthonormality relations for characters can be written as
  &\sum\limits_\alpha \chi^{(\alpha)}(g^{-1}_i)\chi^{(\alpha)}(g_j) = \frac{N_G}{N_i} \delta_{C_iC_j}.
  \label{eq_orthoRelChi2}
 \end{align}
-The number of elements in conjugacy class $C_i$ is denoted by $N_i$. One conjugacy class $C_1$ only consists of the idendity $e$ and its character 
+The number of elements in conjugacy class $C_i$ is denoted by $N_i$. One conjugacy class $C_1$ only consists of the identity $e$ and its character 
 is hence always the dimension of the respective representation. Using this fact and \eqref{eq_orthoRelChi2}, we can deduce the dimension and the
 multiplicity of representations with 
 \begin{align}
@@ -38,22 +38,22 @@ multiplicity of representations with
 \end{align}
 There exists for each conjugacy class and each representation a character which can be put into a character table which is exemplarily shown
 for $A_4$ in table \ref{tab_charactertable}. The scalar product of two characters is defined as 
-$\langle \chi^{(\alpha)},\chi^{(\beta)}=\delta^{\alpha\beta}$ in resemblance to \eqref{eq_orthoRelChi1}. This can be used to determine 
+$\langle \chi^{(\alpha)},\chi^{(\beta)}\rangle=\delta^{\alpha\beta}$ in resemblance to \eqref{eq_orthoRelChi1}. This can be used to determine 
 the multiplicity of a distinct representation $D_\gamma$ in a given tensor product $D_\alpha\times D_\beta$ \cite{1273369} 
 \begin{align}
  m_\gamma = \langle \chi_\alpha \chi_\beta,\chi_\gamma\rangle.
  \label{eq_multiplicity}
 \end{align}
-\\ \\ \textit{Flavour pattern}\\
+ \\ \textit{Flavour pattern}\\
 \noindent Following \cite{0512103}, the flavour symmetry associated to $A_4$ 
-(sec. \ref{sec_appendixA4}) may be broken into its subgroups by a vev of a triplet 
+(appendix \ref{sec_appendixA4}) may be broken into its subgroups by a vev of a triplet 
 $\phi=(\phi_1,\phi_2,\phi_3)$ of scalar fields $\phi_i$. With a vacuum alignment as $\langle\phi_S\rangle = (1,1,1)v_S$ it breaks down to $G_S$
-and with $\langle\phi_T\rangle=(1,0,0)v_T$ to $G_T$. Another scalar $\xi$ gets introduced also developing a vev $\langle\xi\rangle=u$. 
-A discrete $Z_3$ is further needed to seperate the neutrino from the charged lepton sector and to prevent unwanted couplings.
+and with $\langle\phi_T\rangle=(1,0,0)v_T$ to $G_T$, each being subgroups. Another scalar $\xi$ gets introduced also developing a vev $\langle\xi\rangle=u$. 
+A discrete $Z_3$ is further needed to separate the neutrino from the charged lepton sector and to prevent unwanted couplings.
 With the charge assignment for the leptons and the scalars from table \ref{tab_a4charges} one can write down the following Lagrangian
 \begin{table}
  \begin{tabular}{c|cccc|ccc}
-  &$L$&$e_R$&$\mu_R$&$\tau_R$&$\phi_T$&$\phi_S$&$\xi$\\
+  &$l$&$e_R$&$\mu_R$&$\tau_R$&$\phi_T$&$\phi_S$&$\xi$\\
   \hline
   $A_4$ & 3&1&$1''$&$1'$&3&3&1\\
   $Z_3$ & $\omega$&$\omega^2$&$\omega^2$&$\omega^2$&$1$&$\omega^2$&$\omega^2$\\
@@ -63,10 +63,10 @@ With the charge assignment for the leptons and the scalars from table \ref{tab_a
 \label{tab_a4charges}
 \end{table}
 \begin{align}
- \mathcal{L}_l = y_e e_R(\phi_T l)_{\textbf{1}} + y_\mu \mu (\phi_T l)_{\textbf{1}'} + y_\tau (\phi_Tl)_{\textbf{1}''} + x_a\xi(ll)_{\textbf{1}} + x_b \phi_S (ll)_{\textbf{3}} + \text{h.c.}+...
+ \mathcal{L}_l = y_e e_R(\phi_T l) + y_\mu \mu_R (\phi_T l) + y_\tau \tau_R(\phi_Tl) + x_a\xi(ll) + x_b \phi_S (ll) + \text{h.c.}+...
 \end{align}
 Operators of higher dimension (...), as well as the vevs $v_{u,d}$ of the supersymmetric Higgs-fields $h_{u,d}$ are omitted for compactness. 
-For this leading order expression we already get a diagonal charged lepton mass matrix from which want to note the muonic entry
+For this leading order expression we already get a diagonal charged lepton mass matrix from which we want to note the muonic entry
 \begin{align}
  m_\mu = y_\mu v_d \frac{v_T}{\Lambda}
  \label{eq_muonmass}
@@ -80,7 +80,7 @@ stated back then when $A_4$ was initially considered, the neutrino mixing would 
                  -\sqrt{1/6}&\sqrt{1/3}&+\sqrt{1/2}
                 \end{pmatrix}.
 \end{align}
-With this leading approximation the neutrino mass matrix gets diagonalised $\hat{m}_\nu=2v_u^2/\Lambda^2 \text{diag}(x_au+x_bv_S,x_au,-x_au+x_bv_S)$
+With this leading approximation the neutrino mass matrix gets diagonalised (\,$\hat{m}_\nu=2v_u^2/\Lambda^2 \text{diag}(x_au+x_bv_S,x_au,-x_au+x_bv_S)$\,)
 and the PMNS matrix can be expressed as \cite{1211.5370}
 \begin{align}
  V_\text{PMNS} = U_\text{TBM}\begin{pmatrix}

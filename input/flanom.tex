@@ -19,38 +19,48 @@ state with $p_2$. The matrix element for this process can be written as
  \langle \mu_2|J^\mu(0)|\mu_1\rangle = \bar u_2 \left[F_D(q^2)\gamma^\mu + F_P(q^2)\frac{\ti \sigma^{\mu\nu}q_\nu}{2m}\right] u_1
  \label{eq_gordon}
 \end{align}
-which is the most general parametrisation one can write thanks to Ward identity and parity conservation in QED. $J^\mu$ is the electric current
+which is the most general parametrisation one can write due to Ward identity and parity conservation in QED. The electric current is $J^\mu$ 
 and $F_D$, $F_P$ are form factors from which the latter is used to calculate the deviation for the magnetic moment. Ideally, the model makes up
 for the whole deviation. Hence,
 \begin{align}
  \Delta a_\mu = F_P^\text{mod}(0).
 \end{align}
 \\ \\ \textit{Semileptonic four-fermion operators}\\
-
-Wilson Coefficient \cite{150306199} \cite{1608.07832}
+When hadrons are involved the methods of effective field theories (EFT) are used \cite{BurasEFT}. At their energy scale of order $\mathcal{O}$(1-10 GeV) processes
+are expressed by an effective Hamiltonian which is a series of point-like vertices represented by local operators $O_i$ multiplied by effective 
+couplings (Wilson coefficients) $C_i$. For $b\rightarrow s\bar\mu\mu$ transitions it can be written down as \cite{1411.3161}
+\begin{align}
+ \mathcal{H}^\text{eff} = -\frac{4G_F}{\sqrt{2}} V_{tb} V_{ts}^*\frac{e^2}{16\pi^2}\sum\limits_i (C_i(\mu)O_i(\mu) + C_i'(\mu)O_i'(\mu)) + \text{h.c.}
+\end{align}
+The crucial property of this is that this operator product expansion (OPE) allows a seperation of scales for calculating the process. At energies 
+above a separation scale $\mu$ the perturbative calculation is encoded in the $C_i(\mu)$. Below this scale the matrix elements $\langle O_i(\mu)\rangle$
+have to be calculated with non-perturbative methods. From the set of six-dimensional operators we consider NP effects in
+\begin{align}
+ O_9^{(')} &= (\bar s\gamma_\mu P_{L(R)}b)(\bar l\gamma^\mu l)\\
+ O_{10}^{(')} &= (\bar s\gamma_\mu P_{L(R)}b)(\bar l\gamma^\mu\gamma_5 l).
+\end{align}
+Their Wilson coefficients ($C_i^\text{NP} = C_i - C_i^\text{SM}$) can be obtained by constructing a $\chi^2(\vec C^\text{NP})$ which contains the theory predictions for the observables,
+the experimental central values and the corresponding (assumed to be Gaussian) uncertainties \cite{150306199}. For a left chiral model wherein the
+NP states only couple to left-handed fermions the Wilson coefficients are thus derived as \cite{1608.07832}
 \begin{align}
  C_9^\text{NP} = -C_{10}^\text{NP} \in [-0.81,-0.51]\quad \text{(at 1}\sigma), \label{eq_mumuBound1s}\\
- C_9^\text{NP} = -C_{10}^\text{NP} \in [-0.97,-0.37]\quad \text{(at 2}\sigma),
+ C_9^\text{NP} = -C_{10}^\text{NP} \in [-0.97,-0.37]\quad \text{(at 2}\sigma).
 \end{align}
 \\ \\ \textit{Four quark operators}\\
-Bag parameter \cite{1607.00299}
+The observable relevant for $B_q$-mixing is $\Delta m_q$. By comparing its experimental value 
+$\Delta m_s^\text{exp} = 1.1688(14) \cdot 10^{-11}$ GeV \cite{PDG} and the one from the SM 
+$\Delta m_s^\text{SM} = 1.332(213)\cdot 10^{-11}$ GeV \cite{0612167} it appears that NP effect should have a destructive impact. 
+With the SM Wilson coefficient $C_{B\bar B}^\text{SM} \simeq 8.2\cdot 10^{-5}$ TeV$^{-2}$ \cite{1608.07832} the determination of the NP contribution 
+is estimated with 
 \begin{align}
- B_{B_q}(\mu) = \frac{3}{8f_{B_q}^2 m_B^2} \langle \bar B_q |O_q|B_q \rangle
+ \frac{\Delta m_s^\text{exp}}{\Delta m_s^\text{SM}}-1 = \frac{C^\text{NP}_{B\bar B}}{C^\text{SM}_{B\bar B}}
 \end{align}
-Mass difference \cite{1102.0009}
+to be
 \begin{align}
- \Delta m_q \propto f^2_{B_q} \hat{B}_{B_q}
-\end{align}
-Wilson Coefficient
-\begin{align}
- \frac{\Delta m_s^\text{exp}}{\Delta m_s^\text{SM}}-1 = \frac{C_{B\bar B}}{C^\text{SM}_{B\bar B}}
-\end{align}
-with $\Delta m_s^\text{exp} = 1.1688(14) \cdot 10^{-11}$ GeV \cite{PDG} \cite{1602.03560} and $\Delta m_s^\text{SM} = 1.332(213)\cdot 10^{-11}$ GeV \cite{0612167}%\cite{1102.0009}
-and $C_{B\bar B}^\text{SM} \simeq 8.2\cdot 10^{-5}$ TeV$^{-2}$ 
-\begin{align}
- C_{BB} \in [-2.0,0.3] \cdot 10^{-5} \text{TeV}^{-2}.%\quad \text{(at 2}\sigma).
+ C^\text{NP}_{BB} \in [-2.0,0.3] \cdot 10^{-5} \text{TeV}^{-2}.%\quad \text{(at 2}\sigma).
  \label{eq_mixBound}
 \end{align}
+
 
 
 

@@ -19,6 +19,9 @@
 \fancyhead[RE]{\rightmark}
 \newcommand{\FN}{U(1)_\text{FN}}
 \newcommand{\overbar}[1]{\mkern .5mu\overline{\mkern-2.5mu#1\mkern-2.5mu}\mkern 5.5mu}
+\newcommand{\picdirac}{\mathord{\includegraphics[height=2ex]{../pics/diracprog.pdf}}}
+\newcommand{\picmaje}{\mathord{\includegraphics[height=2ex]{../pics/majo1.pdf}}}
+\newcommand{\picmajz}{\mathord{\includegraphics[height=2ex]{../pics/majo2.pdf}}}
 
 
 
@@ -82,19 +85,19 @@ Technische Universität Dortmund \\ 2016
 \vspace{11pt}
 Datum des Einreichens der Arbeit: 31. Oktober, 2016
 \newpage
-\thispagestyle{empty}
-\begin{flushright} 
-\textit{\grqq Es gibt nichts Praktischeres, als eine gute Theorie.\grqq}\\
-- \textit{Kant, Immanuel}\\
-\vspace{2cm}
-% \textit{``Was dürfen wir hoffen?''}\\
+% \thispagestyle{empty}
+% \begin{flushright} 
+% \textit{\grqq Es gibt nichts Praktischeres, als eine gute Theorie.\grqq}\\
 % - \textit{Kant, Immanuel}\\
 % \vspace{2cm}
-% \textit{``Kein Mensch ist so wichtig, wie er sich nimmt.''}\\
-% - \textit{Kant, Immanuel}
-\end{flushright}
-
-\newpage
+% % \textit{``Was dürfen wir hoffen?''}\\
+% % - \textit{Kant, Immanuel}\\
+% % \vspace{2cm}
+% % \textit{``Kein Mensch ist so wichtig, wie er sich nimmt.''}\\
+% % - \textit{Kant, Immanuel}
+% \end{flushright}
+% 
+% \newpage
 
 
 % >>> Kurzfassung/Abstract <<<
@@ -102,10 +105,36 @@ Datum des Einreichens der Arbeit: 31. Oktober, 2016
 \thispagestyle{empty}
 %Kuzfassung
  \section*{Kurzfassung}
-
+ Ein Modell zur Beschreibung von Flavouranomalien und der Phänomenologie dunkler Materie (DM) wird diskutiert. Neben zwei skalaren wird auch ein fermionisches
+ Feld $\chi$ eingeführt, dessen elektrische neutrale Komponente $\chi^0$ als Majorana Fermion durch neue Symmetriegruppen ein Kandidat für DM wird. Die 
+ Gruppen $\FN$ und $A_4$ sorgen für eine bevorzugte Kopplung an Quarks der dritten Generation sowie an das Myon. 
+ Es werden drei elektroschwache
+ Darstellungskonfigurationen für die neuen Felder auf fünf Prozesse untersucht. Diese umfassen Übergänge wie $b\rightarrow s\mu\mu$, $B_s$-Mixing,
+ $(g-2)_\mu$, Annihilierung und Nukleonenstreuung von $\chi^0$. In keiner Konfiguration wird $\chi^0$ als DM Kandidat wiederlegt, wenn auch nur
+ das Triplet mit ungleicher Isospindarstellung für die Skalare auch noch alle Flavouranomalien erklären kann. Der Bereich für $m_\chi$ in diesem Fall
+ liegt bei 40-50 GeV bei noch perturbativen Kopplungen.
  \section*{Abstract}
+ A model is discussed targeting flavour anomalies and dark matter (DM) phenomenology. Two scalar fields and one fermionic field $\chi$ are introduced. 
+ The neutral component $\chi^0$ is assumed to be a Majorana fermion and holds for a DM candidate through new symmetry groups. With $\FN$ and $A_4$
+ they couple preferably to third generation quarks and the muon. Three electroweak configurations for the representations of the new fields are
+ tested for five processes. They involve transitions as $b\rightarrow s\mu\mu$, $B_s$-Mixing,
+ $(g-2)_\mu$, annihilation and nucleon scattering of $\chi^0$. While $\chi^0$ is not excluded as a DM candidate by none of the configurations only
+ the triplet case with unequal isospin representations for the scalars can explain all flavour anomalies. The mass region in this case is around
+ 40-50 GeV with still perturbative couplings.
 
  \section*{Abrégé}
+ Nous présentons un modèle qui porte sur les anomalies de saveurs et la phénoménologie de la matière noire. Nous introduisons deux champs scalaires 
+ et un champ fermionique $\chi$.
+Nous supposons que la composante neutre $\chi^0$ est un fermion de Majorana pouvant être un candidat de la matière noire à travers une nouvelle 
+symétrie de groupes.
+Avec $\FN$ et $A_4$, ils se couplent à la troisième génération de quarks et au muon. Trois configurations électrofaibles pour les représentations 
+des nouveaux champs sont testés à travers cinq processus.
+Ils impliquent des transitions comme la désintégration $b\rightarrow s\mu\mu$, le mélange du méson $B_s$, l'annihilation $(g-2)_\mu$ et la diffusion 
+par un nucléon du $\chi^0$
+Aucune configuration n'exclue $\chi^0$ comme candidat de la matière noire sauf dans le cas d'un triplet avec une représentation d'isospin inéguale 
+pour les scalaires qui pourrait expliquer toutes les anomalies de saveur.
+La masse se situe dans une région comprise entre 40 et 50 GeV avec toujours des couplages perturbatifs.
+
  \newpage
 
 % >>> Hauptteil <<<
@@ -148,7 +177,7 @@ Datum des Einreichens der Arbeit: 31. Oktober, 2016
 \input{../input/rd.tex}
 
 
-\subsubsection{Detection Methods}
+\subsubsection{Direct Detection}
 \label{sec_DMDetection}
 \input{../input/detTheo.tex}
 
@@ -170,7 +199,7 @@ The contributions from NP are fitted to their respective
 constraints which results in bounds and the DM mass which are cross-checked with the remaining two DM phenomenological processes, the annihilation 
 and nucleon scattering. In what follows the mass
 of the $\chi$ is denoted by $m_\chi$ and is the parameter of interest, whereby the masses of the scalars are denoted by $M_l$ and $M_q$, respectively.
-Furthermore we introduce the fractions $x_l=\frac{M^2_l}{m_\chi^2}$ and $x_q = \frac{M^2_q}{m_\chi^2}$. 
+Furthermore, we introduce the fractions $x_l=\frac{M^2_l}{m_\chi^2}$ and $x_q = \frac{M^2_q}{m_\chi^2}$. 
 % (why especially these 5 processes? ID not compatible here; Collider? b->sgamma? )
 
 
